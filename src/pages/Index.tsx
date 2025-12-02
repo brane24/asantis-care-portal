@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight } from "lucide-react";
+import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -55,6 +55,22 @@ const Index = () => {
       price: "39",
       link: "/storitve/kids-family",
       color: "text-green-500"
+    },
+    {
+      icon: Sparkles,
+      title: "Estetika & Vitalnost",
+      description: "Estetsko pomlajevanje, kožna diagnostika in svetovanje o vitalnosti.",
+      price: "79",
+      link: "/storitve/estetika-vitalnost",
+      color: "text-rose-500"
+    },
+    {
+      icon: CircleDot,
+      title: "Zobni Plus",
+      description: "Osnovna zobozdravstvena preventiva in ohranjanje ustnega zdravja.",
+      price: "39",
+      link: "/storitve/zobozdravstvo",
+      color: "text-cyan-500"
     }
   ];
 
