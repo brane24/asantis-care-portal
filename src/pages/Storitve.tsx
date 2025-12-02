@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Users, Activity, Brain, Smile, Baby, Stethoscope, ArrowRight } from "lucide-react";
+import { Heart, Users, Activity, Brain, Smile, Baby, Stethoscope, ArrowRight, Scale } from "lucide-react";
 
 const Storitve = () => {
   const services = [
@@ -77,6 +77,16 @@ const Storitve = () => {
       link: "/storitve/zobozdravstvo",
       color: "text-cyan-500",
       features: ["Preventivni pregledi", "Zobni kamen", "Plombe", "Estetika"]
+    },
+    {
+      icon: Scale,
+      title: "Slim+ Medikacija",
+      tagline: "Medicinska izguba teže z GLP-1 terapijo",
+      description: "Izguba teže pod zdravniškim nadzorom z uporabo GLP-1 agonistov (Mounjaro, Wegovy), psihološko podporo in telesno rehabilitacijo.",
+      price: "129€/mesec + zdravila",
+      link: "/storitve/slim-medikacija",
+      color: "text-orange-500",
+      features: ["GLP-1 terapija", "Mesečni posveti", "Psihološka podpora", "Fizioterapija"]
     }
   ];
 
