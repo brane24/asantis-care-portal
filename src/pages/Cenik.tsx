@@ -95,6 +95,19 @@ const Cenik = () => {
         "Popust za več otrok"
       ],
       link: "/storitve/kids-family"
+    },
+    {
+      name: "Estetika & Vitalnost",
+      description: "Estetsko pomlajevanje in vitalnost",
+      price: 79,
+      period: "mesec",
+      features: [
+        "Posvet z dermatologom 1x na 6 mesecev",
+        "Neinvazivni estetski tretma 1x/mesec",
+        "Prehransko svetovanje in program vitalnosti",
+        "Popusti na botoks, filerje, laser"
+      ],
+      link: "/storitve/estetika-vitalnost"
     }
   ];
 
@@ -110,6 +123,19 @@ const Cenik = () => {
         "RTG po indikaciji",
         "Popusti na plombe in posege",
         "Prednostno naročanje"
+      ],
+      link: "/storitve/zobozdravstvo"
+    },
+    {
+      name: "Zobni Plus",
+      description: "Osnovna preventiva in ohranjanje ustnega zdravja",
+      price: 39,
+      period: "mesec",
+      features: [
+        "Letni zobozdravstveni pregled",
+        "Profesionalno čiščenje zobnega kamna 1x/leto",
+        "2 brezplačni popravili (plombi) na leto",
+        "20% popust na dodatne storitve"
       ],
       link: "/storitve/zobozdravstvo"
     },
@@ -239,7 +265,7 @@ const Cenik = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {dentalPackages.map((pkg) => (
               <Card key={pkg.name} className="hover:shadow-soft transition-all duration-300">
                 <CardHeader>
