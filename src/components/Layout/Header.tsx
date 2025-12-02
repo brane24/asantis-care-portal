@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import asantisLogo from "@/assets/asantis-logo.svg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,11 +11,11 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <NavLink to="/" className="flex items-center space-x-2">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              ASANTIS
-            </span>
-          </div>
+          <img 
+            src={asantisLogo} 
+            alt="ASANTIS" 
+            className="h-8 w-auto"
+          />
         </NavLink>
 
         {/* Desktop Navigation */}
