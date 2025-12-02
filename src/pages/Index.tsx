@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot } from "lucide-react";
+import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -71,6 +71,14 @@ const Index = () => {
       price: "39",
       link: "/storitve/zobozdravstvo",
       color: "text-cyan-500"
+    },
+    {
+      icon: Scale,
+      title: "Slim+ Medikacija",
+      description: "Izguba teže pod zdravniškim nadzorom z GLP-1 terapijo in celostno podporo.",
+      price: "129",
+      link: "/storitve/slim-medikacija",
+      color: "text-orange-500"
     }
   ];
 
