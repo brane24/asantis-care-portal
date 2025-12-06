@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale } from "lucide-react";
+import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -79,6 +79,14 @@ const Index = () => {
       price: "129",
       link: "/storitve/slim-medikacija",
       color: "text-orange-500"
+    },
+    {
+      icon: Scan,
+      title: "Dermatologija",
+      description: "Strokovni dermatološki pregled in zdravljenje bolezni kože, nohtov in lasišča.",
+      price: "60",
+      link: "/dermatologija",
+      color: "text-teal-500"
     }
   ];
 
