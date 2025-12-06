@@ -24,6 +24,7 @@ import ProtetikaPage from "./pages/zobozdravstvo/ProtetikaPage";
 import ZobozdravnikNujnoPage from "./pages/zobozdravstvo/ZobozdravnikNujnoPage";
 import BeljenjeZobPage from "./pages/zobozdravstvo/BeljenjeZobPage";
 import NevidniZobniAparatPage from "./pages/zobozdravstvo/NevidniZobniAparatPage";
+import ZobniImplantatiPage from "./pages/zobozdravstvo/ZobniImplantatiPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/zobozdravstvo/zobozdravnik-nujno-zobobol" element={<ZobozdravnikNujnoPage />} />
           <Route path="/zobozdravstvo/beljenje-zob" element={<BeljenjeZobPage />} />
           <Route path="/zobozdravstvo/nevidni-zobni-aparat" element={<NevidniZobniAparatPage />} />
+          <Route path="/zobozdravstvo/zobni-implantati" element={<ZobniImplantatiPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
