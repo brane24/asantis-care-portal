@@ -23,6 +23,7 @@ import OrtodontLjubljanaPage from "./pages/zobozdravstvo/OrtodontLjubljanaPage";
 import ProtetikaPage from "./pages/zobozdravstvo/ProtetikaPage";
 import ZobozdravnikNujnoPage from "./pages/zobozdravstvo/ZobozdravnikNujnoPage";
 import BeljenjeZobPage from "./pages/zobozdravstvo/BeljenjeZobPage";
+import NevidniZobniAparatPage from "./pages/zobozdravstvo/NevidniZobniAparatPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/zobozdravstvo/protetika" element={<ProtetikaPage />} />
           <Route path="/zobozdravstvo/zobozdravnik-nujno-zobobol" element={<ZobozdravnikNujnoPage />} />
           <Route path="/zobozdravstvo/beljenje-zob" element={<BeljenjeZobPage />} />
+          <Route path="/zobozdravstvo/nevidni-zobni-aparat" element={<NevidniZobniAparatPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
