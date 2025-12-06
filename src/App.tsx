@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import Kontakt from "./pages/Kontakt";
 import ONas from "./pages/ONas";
 import ZenskaPage from "./pages/services/ZenskaPage";
+import DermatologijaPage from "./pages/services/DermatologijaPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/storitve" element={<Storitve />} />
           <Route path="/storitve/zenska-360" element={<ZenskaPage />} />
+          <Route path="/dermatologija" element={<DermatologijaPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
