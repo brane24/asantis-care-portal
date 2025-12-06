@@ -16,6 +16,7 @@ import OdstranjevanjeBradavicPage from "./pages/dermatologija/OdstranjevanjeBrad
 import LaserskoOdstranjevanjeZilPage from "./pages/dermatologija/LaserskoOdstranjevanjeZilPage";
 import LaserskoOdstranjevanjeDlacicPage from "./pages/dermatologija/LaserskoOdstranjevanjeDlacicPage";
 import PomlajevanjeKozePage from "./pages/dermatologija/PomlajevanjeKozePage";
+import OdstranjevanjeZnamenjPage from "./pages/dermatologija/OdstranjevanjeZnamenjPage";
 import DermatologijaLanding from "./pages/landing/DermatologijaLanding";
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/dermatologija/lasersko-odstranjevanje-zil" element={<LaserskoOdstranjevanjeZilPage />} />
           <Route path="/dermatologija/lasersko-odstranjevanje-dlacic" element={<LaserskoOdstranjevanjeDlacicPage />} />
           <Route path="/dermatologija/pomlajevanje-koze" element={<PomlajevanjeKozePage />} />
+          <Route path="/dermatologija/odstranjevanje-znamenj" element={<OdstranjevanjeZnamenjPage />} />
           <Route path="/dermatologija/pregled-koze-oglasi" element={<DermatologijaLanding />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
