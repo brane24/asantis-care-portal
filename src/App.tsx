@@ -10,9 +10,9 @@ import Blog from "./pages/Blog";
 import Kontakt from "./pages/Kontakt";
 import ONas from "./pages/ONas";
 import ZenskaPage from "./pages/services/ZenskaPage";
-import DermatologijaPage from "./pages/services/DermatologijaPage";
-import PregledZnamenjPage from "./pages/services/PregledZnamenjPage";
-import OdstranjevanjeBradavicPage from "./pages/services/OdstranjevanjeBradavicPage";
+import DermatologijaPage from "./pages/dermatologija/DermatologijaPage";
+import PregledZnamenjPage from "./pages/dermatologija/PregledZnamenjPage";
+import OdstranjevanjeBradavicPage from "./pages/dermatologija/OdstranjevanjeBradavicPage";
 import DermatologijaLanding from "./pages/landing/DermatologijaLanding";
 import NotFound from "./pages/NotFound";
 
