@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Users, Activity, Brain, Smile, Baby, Stethoscope, ArrowRight, Scale } from "lucide-react";
+import { Heart, Users, Activity, Brain, Smile, Baby, Stethoscope, ArrowRight, Scale, Scan } from "lucide-react";
 
 const Storitve = () => {
   const services = [
@@ -87,6 +87,16 @@ const Storitve = () => {
       link: "/storitve/slim-medikacija",
       color: "text-orange-500",
       features: ["GLP-1 terapija", "Mesečni posveti", "Psihološka podpora", "Fizioterapija"]
+    },
+    {
+      icon: Scan,
+      title: "Dermatologija",
+      tagline: "Strokovni pregled in zdravljenje bolezni kože",
+      description: "Celostni dermatološki pregledi in zdravljenje najpogostejših bolezni kože, nohtov in lasišča – brez čakalnih vrst in napotnice.",
+      price: "od 60€",
+      link: "/dermatologija",
+      color: "text-teal-500",
+      features: ["Dermatoskopija", "Zdravljenje kože", "Krioterapija", "Brez napotnice"]
     }
   ];
 
