@@ -1,0 +1,495 @@
+import { Helmet } from "react-helmet";
+import { useState } from "react";
+import Layout from "@/components/Layout/Layout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { 
+  Phone, MapPin, Clock, Car, Train, Star, Baby, Syringe, 
+  Stethoscope, Brain, TrendingUp, Heart, CheckCircle, Send,
+  Calendar, Building, Users
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Ime je obvezno").max(100, "Ime je predolgo"),
+  contact: z.string().trim().min(1, "Kontakt je obvezen").max(255, "Kontakt je predolg"),
+  childAge: z.string().trim().min(1, "Starost otroka je obvezna").max(50, "Vrednost je predolga"),
+  message: z.string().trim().min(1, "Opis težave je obvezen").max(1000, "Opis je predolg")
+});
+
+const PrivatPediaterPage = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    childAge: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach((err) => {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message;
+        }
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setErrors({});
+    toast({
+      title: "Zahtevek poslan!",
+      description: "Kontaktirali vas bomo v najkrajšem možnem času.",
+    });
+    setFormData({ name: "", contact: "", childAge: "", message: "" });
+  };
+
+  const storitve = [
+    { icon: Baby, title: "Preventivni pregledi", desc: "Redni pregledi dojenčkov, otrok in mladostnikov po starostnih skupinah" },
+    { icon: Syringe, title: "Cepljenja", desc: "Obvezna in priporočena cepljenja, svetovanje staršem" },
+    { icon: Stethoscope, title: "Zdravljenje bolezni", desc: "Pregled in zdravljenje okužb, alergij, prebavnih težav, vročine, kašlja ipd." },
+    { icon: Heart, title: "Specialistična diagnostika", desc: "Laboratorijske preiskave, UZ trebuha, EKG, napotitev k specialistom" },
+    { icon: Brain, title: "Psihofizični razvoj", desc: "Svetovanje pri razvoju, vedenjskih in učnih težavah" },
+    { icon: TrendingUp, title: "Spremljanje rasti", desc: "Redno merjenje in interpretacija rasti, telesne mase in razvoja otroka" }
+  ];
+
+  const cenik = [
+    { storitev: "Prvi pediatrični pregled", cena: "od 60 €" },
+    { storitev: "Kontrolni pregled", cena: "od 45 €" },
+    { storitev: "Preventivni pregled dojenčka", cena: "od 70 €" },
+    { storitev: "Cepljenje (brez cene cepiva)", cena: "od 30 €" },
+    { storitev: "Izdaja potrdila za vrtec/šolo", cena: "20 €" }
+  ];
+
+  const prednosti = [
+    { icon: Clock, text: "Brez čakalnih vrst in administrativnih zamud" },
+    { icon: Users, text: "Individualen pristop in več časa za vsakega otroka" },
+    { icon: Heart, text: "Prijazno okolje, prilagojeno otrokom" },
+    { icon: Stethoscope, text: "Možnost dodatnih pregledov (UZ, laboratorij, dermatolog, alergolog)" },
+    { icon: Calendar, text: "Možnost vključitve v letni naročniški program za družine" }
+  ];
+
+  const testimonials = [
+    {
+      quote: "Končno pediater, ki si vzame čas in res posluša. Hčerka se ne boji več pregleda.",
+      author: "Maja",
+      location: "Ljubljana"
+    },
+    {
+      quote: "Super izkušnja, hitro naročanje in profesionalen pristop.",
+      author: "Andrej",
+      location: "oče dveh otrok"
+    }
+  ];
+
+  const postopek = [
+    { step: "1", title: "Kontaktirajte nas", desc: "preko obrazca ali telefona" },
+    { step: "2", title: "Izberite termin", desc: "ki vam ustreza (tudi isti dan)" },
+    { step: "3", title: "Obiščite pediatra", desc: "v prijetnem ambientu centra Asantis" },
+    { step: "4", title: "Nadaljnje preiskave", desc: "po potrebi napotitev k specialistom" }
+  ];
+
+  return (
+    <Layout>
+      <Helmet>
+        <title>Privat pediater Ljubljana | Asantis zdravstveni center</title>
+        <meta
+          name="description"
+          content="Zasebni pediater v Ljubljani brez čakalne dobe. Celostni pregledi, cepljenja in diagnostika otrok v varnem okolju centra Asantis."
+        />
+        <meta
+          name="keywords"
+          content="privat pediater Ljubljana, zasebni pediater, pediatrična ambulanta Ljubljana, otroški zdravnik Ljubljana, pregled pri pediatru, pediater brez čakalne dobe, cepljenje otrok Ljubljana, preventivni pregledi otrok, zasebni pediater cena"
+        />
+        <link rel="canonical" href="https://asantis.si/pediatrija/privat-pediater-ljubljana" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+                🩺 Pediatrija
+              </span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+                Privat pediater v Ljubljani – brez čakalne dobe, z osebnim pristopom
+              </h1>
+              <p className="text-lg text-muted-foreground mb-8">
+                Hiter dostop do izkušenega pediatra za vašega otroka. Celostni pregledi, 
+                diagnostika in zdravljenje – v varnem okolju zasebnega medicinskega centra Asantis.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button size="lg" className="text-lg px-8" asChild>
+                  <a href="#obrazec">Naročite pregled</a>
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8">
+                  <Phone className="mr-2 h-5 w-5" />
+                  01 234 56 78
+                </Button>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  "Brez čakalnih vrst",
+                  "Prijazen pristop do otrok",
+                  "Izkušeni specialist pediater",
+                  "Sodobna oprema in laboratorij"
+                ].map((badge, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span>{badge}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+                <div className="text-center p-8">
+                  <Baby className="h-24 w-24 text-primary/50 mx-auto mb-4" />
+                  <p className="text-muted-foreground">Slika pediatra z otrokom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Uvodni opis Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+              Zakaj izbrati zasebnega pediatra v Ljubljani?
+            </h2>
+            <div className="text-muted-foreground space-y-4 text-left md:text-center">
+              <p>
+                Starši si želite, da ima vaš otrok vedno dostop do strokovnega in prijaznega zdravnika.
+              </p>
+              <p>
+                V Asantis centru nudimo celostno pediatrično obravnavo brez čakalnih vrst – 
+                z individualnim pristopom, daljšim pregledom in sproščenim okoljem.
+              </p>
+              <p>
+                Naš privat pediater pokriva vse od rutinskih preventivnih pregledov, cepljenj in 
+                meritev rasti do diagnostike in zdravljenja pogostih bolezni otrok in mladostnikov.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Storitve Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
+            Kaj vključuje obisk pri našem pediatru?
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Celovita pediatrična oskrba na enem mestu
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {storitve.map((storitev, index) => (
+              <Card key={index} className="bg-card hover:shadow-lg transition-shadow border-border">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <storitev.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">{storitev.title}</h3>
+                  <p className="text-sm text-muted-foreground">{storitev.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cenik Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
+            Cene storitev – pregled pri privat pediatru
+          </h2>
+          <p className="text-center text-muted-foreground mb-10">
+            Transparentne cene brez skritih stroškov
+          </p>
+
+          <div className="max-w-2xl mx-auto">
+            <Card className="overflow-hidden border-border">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50">
+                    <TableHead className="font-semibold">Storitev</TableHead>
+                    <TableHead className="font-semibold text-right">Cena</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {cenik.map((item, index) => (
+                    <TableRow key={index}>
+                      <TableCell className="font-medium">{item.storitev}</TableCell>
+                      <TableCell className="text-right text-primary font-semibold">{item.cena}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Card>
+
+            <div className="mt-6 p-4 bg-accent/30 rounded-lg">
+              <p className="text-sm text-muted-foreground">
+                💬 Možnost mesečnega paketa za družine z več otroki – po dogovoru.
+              </p>
+              <Button variant="link" className="p-0 h-auto mt-2 text-primary">
+                ➡️ Povprašajte za ponudbo
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Prednosti Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
+            Zakaj starši zaupajo Asantis pediatru
+          </h2>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {prednosti.map((prednost, index) => (
+              <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <prednost.icon className="h-5 w-5 text-primary" />
+                </div>
+                <p className="text-foreground">{prednost.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
+            Mnenja staršev
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-card border-border">
+                <CardContent className="p-6">
+                  <div className="flex mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-sm font-medium text-foreground">
+                    — {testimonial.author}, {testimonial.location}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <div className="flex items-center justify-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="font-medium text-foreground">4.9 / 5</span>
+              <span className="text-muted-foreground">(Google Reviews)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Postopek Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
+            Kako poteka obisk pri privat pediatru
+          </h2>
+          <p className="text-center text-muted-foreground mb-12">
+            Enostaven postopek v štirih korakih
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {postopek.map((korak, index) => (
+              <div key={index} className="text-center">
+                <div className="w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  {korak.step}
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">{korak.title}</h3>
+                <p className="text-sm text-muted-foreground">{korak.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-muted-foreground mt-10">
+            📅 Delujemo tudi popoldne in ob sobotah po dogovoru.
+          </p>
+        </div>
+      </section>
+
+      {/* Lokacija Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
+            Asantis zdravstveni center – Ljubljana
+          </h2>
+
+          <div className="max-w-2xl mx-auto">
+            <Card className="bg-card border-border">
+              <CardContent className="p-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-foreground">Naslov</p>
+                        <p className="text-muted-foreground">Dunajska cesta 123, Ljubljana</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Car className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-foreground">Parkiranje</p>
+                        <p className="text-muted-foreground">Brezplačno parkirišče za paciente</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <Train className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-foreground">Javni prevoz</p>
+                        <p className="text-muted-foreground">LPP linije 6, 8, 11</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-foreground">Delovni čas</p>
+                        <p className="text-muted-foreground">Pon–pet 8:00–19:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Kontaktni obrazec Section */}
+      <section id="obrazec" className="py-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
+            Rezervirajte termin pri pediatru
+          </h2>
+          <p className="text-center text-muted-foreground mb-10">
+            Izpolnite obrazec in poklicali vas bomo v najkrajšem času
+          </p>
+
+          <div className="max-w-xl mx-auto">
+            <Card className="bg-card border-border">
+              <CardContent className="p-6">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <Label htmlFor="name">Ime in priimek *</Label>
+                    <Input
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="Vaše ime in priimek"
+                      className={errors.name ? "border-destructive" : ""}
+                    />
+                    {errors.name && <p className="text-sm text-destructive mt-1">{errors.name}</p>}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="contact">E-naslov ali telefon *</Label>
+                    <Input
+                      id="contact"
+                      value={formData.contact}
+                      onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
+                      placeholder="vas.email@primer.si ali 040 123 456"
+                      className={errors.contact ? "border-destructive" : ""}
+                    />
+                    {errors.contact && <p className="text-sm text-destructive mt-1">{errors.contact}</p>}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="childAge">Starost otroka *</Label>
+                    <Input
+                      id="childAge"
+                      value={formData.childAge}
+                      onChange={(e) => setFormData({ ...formData, childAge: e.target.value })}
+                      placeholder="npr. 3 leta"
+                      className={errors.childAge ? "border-destructive" : ""}
+                    />
+                    {errors.childAge && <p className="text-sm text-destructive mt-1">{errors.childAge}</p>}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="message">Kratek opis težave *</Label>
+                    <Textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Opišite razlog za obisk..."
+                      rows={4}
+                      className={errors.message ? "border-destructive" : ""}
+                    />
+                    {errors.message && <p className="text-sm text-destructive mt-1">{errors.message}</p>}
+                  </div>
+
+                  <Button type="submit" size="lg" className="w-full">
+                    <Send className="mr-2 h-5 w-5" />
+                    Pošlji zahtevek
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+
+            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>01 234 56 78</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Building className="h-4 w-4 text-primary" />
+                <span>Asantis, Ljubljana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default PrivatPediaterPage;
