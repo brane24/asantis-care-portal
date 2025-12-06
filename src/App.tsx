@@ -21,6 +21,7 @@ import DermatologijaLanding from "./pages/landing/DermatologijaLanding";
 import ZobozdravnikLjubljanaPage from "./pages/zobozdravstvo/ZobozdravnikLjubljanaPage";
 import OrtodontLjubljanaPage from "./pages/zobozdravstvo/OrtodontLjubljanaPage";
 import ProtetikaPage from "./pages/zobozdravstvo/ProtetikaPage";
+import ZobozdravnikNujnoPage from "./pages/zobozdravstvo/ZobozdravnikNujnoPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/zobozdravstvo/zobozdravnik-ljubljana" element={<ZobozdravnikLjubljanaPage />} />
           <Route path="/zobozdravstvo/ortodont-ljubljana" element={<OrtodontLjubljanaPage />} />
           <Route path="/zobozdravstvo/protetika" element={<ProtetikaPage />} />
+          <Route path="/zobozdravstvo/zobozdravnik-nujno-zobobol" element={<ZobozdravnikNujnoPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
