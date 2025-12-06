@@ -3,91 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Heart, Users, Activity, Brain, Smile, Baby, Stethoscope, ArrowRight, Scale, Scan } from "lucide-react";
+import { Users, Activity, Brain, Smile, Baby, Stethoscope, ArrowRight, Scale, Scan } from "lucide-react";
 
 const Storitve = () => {
+  // Posamezne storitve (ne paketi)
   const services = [
-    {
-      icon: Heart,
-      title: "Srce & Presnova",
-      tagline: "Preventiva, energija in dolgoročno zdravje",
-      description: "Internistični pristop za optimalno delovanje srca, presnove in celotnega organizma. Preventivni pregledi, laboratorijske preiskave in individualni zdravstveni načrti.",
-      price: "39€/mesec",
-      link: "/storitve/srce-presnova",
-      color: "text-red-500",
-      features: ["Preventivni pregledi", "Laboratorijske analize", "EKG", "Zdravstveni načrt"]
-    },
-    {
-      icon: Users,
-      title: "Ženska 360",
-      tagline: "Celostna skrb za žensko zdravje",
-      description: "Kompleksna zdravstvena oskrba žensk od preventive do terapije. Ginekologija, hormonsko zdravje, dermatologija in splošna medicina na enem mestu.",
-      price: "65€/mesec",
-      link: "/storitve/zenska-360",
-      color: "text-pink-500",
-      popular: true,
-      features: ["Ginekološki pregledi", "Hormonsko zdravje", "Dermatologija", "Online posveti"]
-    },
-    {
-      icon: Activity,
-      title: "FreeMove - Bolečina & Gibanje",
-      tagline: "Življenje brez bolečin",
-      description: "Ortopedija in fizioterapija za aktivno življenje brez bolečin. Posebej zasnovano za težave s hrbtenico, sklepi in gibanjem.",
-      price: "69€/mesec",
-      link: "/storitve/freemove",
-      color: "text-blue-500",
-      features: ["Ortopedski pregledi", "Fizioterapija", "Program vaj", "Kontrolni pregledi"]
-    },
-    {
-      icon: Brain,
-      title: "MindCare",
-      tagline: "Duševno zdravje, fokus in ravnovesje",
-      description: "Psihiatrična in psihoterapevtska podpora za duševno zdravje. Strokovna pomoč pri stresu, anksioznosti, depresiji in drugih izzivih.",
-      price: "od 99€/mesec",
-      link: "/storitve/mindcare",
-      color: "text-purple-500",
-      features: ["Psihiatrični pregledi", "Psihoterapija", "Online posveti", "TMS terapija"]
-    },
-    {
-      icon: Smile,
-      title: "Skin & Estetika",
-      tagline: "Zdrava koža in preventiva",
-      description: "Dermatološka oskrba od preventivnih pregledov do estetskih posegov. Skrb za zdravje kože in samozavest.",
-      price: "49€/mesec",
-      link: "/storitve/skin-estetika",
-      color: "text-amber-500",
-      features: ["Dermatoskopija", "Preventiva", "Estetski posegi", "Laser terapije"]
-    },
-    {
-      icon: Baby,
-      title: "Kids & Family",
-      tagline: "Privat pediater za vašo družino",
-      description: "Pediatrična oskrba, ko jo potrebujete. Preventivni pregledi, akutna obravnava in online posveti za starše.",
-      price: "39€/mesec/otrok",
-      link: "/storitve/kids-family",
-      color: "text-green-500",
-      features: ["Preventiva", "Akutni pregledi", "Online posveti", "Prioritetno naročanje"]
-    },
-    {
-      icon: Stethoscope,
-      title: "Zobozdravstvo",
-      tagline: "Zdrav nasmeh za življenje",
-      description: "Celostna zobozdravstvena oskrba od preventive do zahtevnejših posegov. Basic in Plus paketi za različne potrebe.",
-      price: "29€-49€/mesec",
-      link: "/storitve/zobozdravstvo",
-      color: "text-cyan-500",
-      features: ["Preventivni pregledi", "Zobni kamen", "Plombe", "Estetika"]
-    },
-    {
-      icon: Scale,
-      title: "Slim+ Medikacija",
-      tagline: "Medicinska izguba teže z GLP-1 terapijo",
-      description: "Izguba teže pod zdravniškim nadzorom z uporabo GLP-1 agonistov (Mounjaro, Wegovy), psihološko podporo in telesno rehabilitacijo.",
-      price: "129€/mesec + zdravila",
-      link: "/storitve/slim-medikacija",
-      color: "text-orange-500",
-      features: ["GLP-1 terapija", "Mesečni posveti", "Psihološka podpora", "Fizioterapija"]
-    },
     {
       icon: Scan,
       title: "Dermatologija",
@@ -97,6 +17,76 @@ const Storitve = () => {
       link: "/dermatologija",
       color: "text-teal-500",
       features: ["Dermatoskopija", "Zdravljenje kože", "Krioterapija", "Brez napotnice"]
+    },
+    {
+      icon: Stethoscope,
+      title: "Internistični pregled",
+      tagline: "Kompleten zdravstveni pregled",
+      description: "Celostni internistični pregled z laboratorijskimi analizami, EKG in posvetom o preventivi ter zdravem življenjskem slogu.",
+      price: "od 80€",
+      link: "/storitve/internistika",
+      color: "text-red-500",
+      features: ["Anamneza", "Klinični pregled", "EKG", "Laboratorij"]
+    },
+    {
+      icon: Users,
+      title: "Ginekologija",
+      tagline: "Celostna skrb za žensko zdravje",
+      description: "Ginekološki pregledi, PAP test, ultrazvok in svetovanje za ženske v vseh življenjskih obdobjih.",
+      price: "od 70€",
+      link: "/storitve/ginekologija",
+      color: "text-pink-500",
+      features: ["PAP test", "UZ pregled", "Posvet", "Preventiva"]
+    },
+    {
+      icon: Activity,
+      title: "Ortopedija",
+      tagline: "Diagnostika in zdravljenje gibalnega sistema",
+      description: "Ortopedski pregledi za težave s sklepi, hrbtenico in mišicami. Diagnostika in načrt zdravljenja.",
+      price: "od 90€",
+      link: "/storitve/ortopedija",
+      color: "text-blue-500",
+      features: ["Pregled sklepov", "Hrbtenica", "Diagnostika", "Načrt zdravljenja"]
+    },
+    {
+      icon: Brain,
+      title: "Psihiatrija",
+      tagline: "Strokovna pomoč za duševno zdravje",
+      description: "Psihiatrični pregledi, diagnostika in zdravljenje duševnih motenj. Strokovna in diskretna obravnava.",
+      price: "od 100€",
+      link: "/storitve/psihiatrija",
+      color: "text-purple-500",
+      features: ["Diagnoza", "Terapija", "Zdravljenje", "Posveti"]
+    },
+    {
+      icon: Smile,
+      title: "Zobozdravstvo",
+      tagline: "Zdrav nasmeh za življenje",
+      description: "Preventivni in kurativni zobozdravstveni pregledi, zobni kamen, plombe in estetski posegi.",
+      price: "od 50€",
+      link: "/storitve/zobozdravstvo",
+      color: "text-cyan-500",
+      features: ["Preventiva", "Plombe", "Zobni kamen", "Estetika"]
+    },
+    {
+      icon: Baby,
+      title: "Pediatrija",
+      tagline: "Zdravstvena oskrba za otroke",
+      description: "Preventivni in akutni pediatrični pregledi za dojenčke, malčke in mladostnike.",
+      price: "od 60€",
+      link: "/storitve/pediatrija",
+      color: "text-green-500",
+      features: ["Preventiva", "Akutni pregledi", "Cepljenja", "Svetovanje"]
+    },
+    {
+      icon: Scale,
+      title: "Slim+ Medikacija",
+      tagline: "Medicinska izguba teže z GLP-1 terapijo",
+      description: "Izguba teže pod zdravniškim nadzorom z uporabo GLP-1 agonistov (Mounjaro, Wegovy), psihološko podporo in telesno rehabilitacijo.",
+      price: "od 129€/mesec",
+      link: "/storitve/slim-medikacija",
+      color: "text-orange-500",
+      features: ["GLP-1 terapija", "Mesečni posveti", "Psihološka podpora", "Fizioterapija"]
     }
   ];
 
@@ -109,11 +99,11 @@ const Storitve = () => {
             Celostna zdravstvena oskrba
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Naše storitve in dejavnosti
+            Posamezne storitve
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Od preventive do terapije – vse storitve na enem mestu z jasnimi paketi 
-            in mesečno naročnino. Izberite področje, ki ga potrebujete.
+            Rezervirajte posamezen pregled ali poseg pri naših specialistih – 
+            brez napotnice in brez dolgih čakalnih vrst.
           </p>
         </div>
       </section>
@@ -124,16 +114,9 @@ const Storitve = () => {
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className={`relative hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in ${
-                service.popular ? 'border-primary' : ''
-              }`}
+              className="relative hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {service.popular && (
-                <Badge className="absolute -top-3 right-6 bg-gradient-secondary border-0">
-                  ⭐ Najbolj izbran
-                </Badge>
-              )}
               <CardHeader>
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-14 h-14 rounded-xl bg-muted flex items-center justify-center ${service.color}`}>
@@ -162,7 +145,7 @@ const Storitve = () => {
                     ))}
                   </div>
                 </div>
-                <Button asChild className="w-full" variant={service.popular ? "default" : "outline"}>
+                <Button asChild className="w-full" variant="outline">
                   <NavLink to={service.link}>
                     Več o storitvi <ArrowRight className="ml-2 h-4 w-4" />
                   </NavLink>

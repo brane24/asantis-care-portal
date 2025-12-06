@@ -20,7 +20,7 @@ const Cenik = () => {
         "Pisni zdravstveni načrt",
         "Popusti na dodatne preiskave"
       ],
-      link: "/storitve/srce-presnova"
+      link: "/paketi/srce-presnova"
     },
     {
       name: "Ženska 360",
@@ -36,7 +36,7 @@ const Cenik = () => {
         "Online posvet",
         "Popusti na dodatne storitve"
       ],
-      link: "/storitve/zenska-360"
+      link: "/paketi/zenska-360"
     },
     {
       name: "FreeMove",
@@ -51,7 +51,7 @@ const Cenik = () => {
         "Individualni program vaj",
         "Popusti na dodatne terapije"
       ],
-      link: "/storitve/freemove"
+      link: "/paketi/freemove"
     },
     {
       name: "MindCare",
@@ -66,7 +66,7 @@ const Cenik = () => {
         "Možnost hitrih online posvetov",
         "Posebne cene za TMS terapijo"
       ],
-      link: "/storitve/mindcare"
+      link: "/paketi/mindcare"
     },
     {
       name: "Skin & Estetika",
@@ -80,7 +80,7 @@ const Cenik = () => {
         "Popusti na odstranjevanje sprememb",
         "Popusti na laser in pomlajevanje"
       ],
-      link: "/storitve/skin-estetika"
+      link: "/paketi/skin-estetika"
     },
     {
       name: "Kids & Family",
@@ -94,7 +94,7 @@ const Cenik = () => {
         "Prioritetno naročanje",
         "Popust za več otrok"
       ],
-      link: "/storitve/kids-family"
+      link: "/paketi/kids-family"
     },
     {
       name: "Estetika & Vitalnost",
@@ -107,7 +107,7 @@ const Cenik = () => {
         "Prehransko svetovanje in program vitalnosti",
         "Popusti na botoks, filerje, laser"
       ],
-      link: "/storitve/estetika-vitalnost"
+      link: "/paketi/estetika-vitalnost"
     }
   ];
 
@@ -124,7 +124,7 @@ const Cenik = () => {
         "Popusti na plombe in posege",
         "Prednostno naročanje"
       ],
-      link: "/storitve/zobozdravstvo"
+      link: "/paketi/dental-basic"
     },
     {
       name: "Zobni Plus",
@@ -137,7 +137,7 @@ const Cenik = () => {
         "2 brezplačni popravili (plombi) na leto",
         "20% popust na dodatne storitve"
       ],
-      link: "/storitve/zobozdravstvo"
+      link: "/paketi/zobni-plus"
     },
     {
       name: "Dental Care PLUS",
@@ -151,7 +151,7 @@ const Cenik = () => {
         "Višji popusti na estetske posege",
         "Višji popusti na protetične posege"
       ],
-      link: "/storitve/zobozdravstvo"
+      link: "/paketi/dental-plus"
     }
   ];
 
@@ -183,11 +183,11 @@ const Cenik = () => {
             Pregledni paketi
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Cenik in paketi
+            Naročniški paketi
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ena članarina. Jasna vrednost. Brez presenečenj.
-            Izberite paket glede na svoje potrebe.
+            Mesečna naročnina za celovito zdravstveno oskrbo. 
+            Ena članarina, jasne ugodnosti, brez presenečenj.
           </p>
         </div>
       </section>
