@@ -28,6 +28,7 @@ import ZobniImplantatiPage from "./pages/zobozdravstvo/ZobniImplantatiPage";
 import PrivatPediaterPage from "./pages/pediatrija/PrivatPediaterPage";
 import OkuzbaDihalPage from "./pages/pediatrija/OkuzbaDihalPage";
 import AtopijskiDermatitisPage from "./pages/pediatrija/AtopijskiDermatitisPage";
+import PediaterPulmologPage from "./pages/pediatrija/PediaterPulmologPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/pediatrija/privat-pediater-ljubljana" element={<PrivatPediaterPage />} />
           <Route path="/pediatrija/okuzba-dihal-pri-otroku" element={<OkuzbaDihalPage />} />
           <Route path="/pediatrija/atopijski-dermatitis" element={<AtopijskiDermatitisPage />} />
+          <Route path="/pediatrija/pediater-pulmolog" element={<PediaterPulmologPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
