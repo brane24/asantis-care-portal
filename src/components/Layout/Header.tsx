@@ -1,11 +1,68 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import asantisLogo from "@/assets/asantis-logo.svg";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+
+const serviceCategories = [
+  {
+    title: "Dermatologija",
+    href: "/dermatologija",
+    items: [
+      { title: "Pregled znamenj", href: "/dermatologija/pregled-znamenj" },
+      { title: "Odstranjevanje znamenj", href: "/dermatologija/odstranjevanje-znamenj" },
+      { title: "Odstranjevanje bradavic", href: "/dermatologija/odstranjevanje-bradavic" },
+      { title: "Lasersko odstranjevanje žil", href: "/dermatologija/lasersko-odstranjevanje-zil" },
+      { title: "Lasersko odstranjevanje dlačic", href: "/dermatologija/lasersko-odstranjevanje-dlacic" },
+      { title: "Pomlajevanje kože", href: "/dermatologija/pomlajevanje-koze" },
+    ],
+  },
+  {
+    title: "Zobozdravstvo",
+    href: "/zobozdravstvo",
+    items: [
+      { title: "Zobozdravnik Ljubljana", href: "/zobozdravstvo/zobozdravnik-ljubljana" },
+      { title: "Ortodont Ljubljana", href: "/zobozdravstvo/ortodont-ljubljana" },
+      { title: "Zobni implantati", href: "/zobozdravstvo/zobni-implantati" },
+      { title: "Protetika", href: "/zobozdravstvo/protetika" },
+      { title: "Beljenje zob", href: "/zobozdravstvo/beljenje-zob" },
+      { title: "Nevidni zobni aparat", href: "/zobozdravstvo/nevidni-zobni-aparat" },
+      { title: "Zobozdravnik nujno", href: "/zobozdravstvo/zobozdravnik-nujno" },
+    ],
+  },
+  {
+    title: "Pediatrija",
+    href: "/pediatrija",
+    items: [
+      { title: "Privat pediater", href: "/pediatrija/privat-pediater" },
+      { title: "Okužba dihal", href: "/pediatrija/okuzba-dihal" },
+      { title: "Atopijski dermatitis", href: "/pediatrija/atopijski-dermatitis" },
+      { title: "Pediater pulmolog", href: "/pediatrija/pediater-pulmolog" },
+      { title: "Obravnava astme", href: "/pediatrija/pediater-astma-pri-otroku" },
+    ],
+  },
+  {
+    title: "Ostale storitve",
+    href: "/storitve",
+    items: [
+      { title: "Ženska 360", href: "/storitve/zenska" },
+      { title: "Slim+ Medikacija", href: "/storitve/slim-medikacija" },
+    ],
+  },
+];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -27,13 +84,57 @@ const Header = () => {
           >
             Domov
           </NavLink>
-          <NavLink
-            to="/storitve"
-            className="text-sm font-medium transition-colors hover:text-primary"
-            activeClassName="text-primary"
-          >
-            Storitve
-          </NavLink>
+          
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent hover:text-primary data-[state=open]:bg-transparent">
+                  Storitve
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[600px] gap-3 p-4 md:grid-cols-2 lg:grid-cols-2">
+                    {serviceCategories.map((category) => (
+                      <div key={category.title} className="space-y-2">
+                        <NavigationMenuLink asChild>
+                          <NavLink
+                            to={category.href}
+                            className="block text-sm font-semibold text-primary hover:underline"
+                          >
+                            {category.title}
+                          </NavLink>
+                        </NavigationMenuLink>
+                        <ul className="space-y-1">
+                          {category.items.map((item) => (
+                            <li key={item.href}>
+                              <NavigationMenuLink asChild>
+                                <NavLink
+                                  to={item.href}
+                                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
+                                >
+                                  {item.title}
+                                </NavLink>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t p-3 bg-muted/50">
+                    <NavigationMenuLink asChild>
+                      <NavLink
+                        to="/storitve"
+                        className="text-sm font-medium text-primary hover:underline"
+                      >
+                        Vse storitve →
+                      </NavLink>
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <NavLink
             to="/cenik"
             className="text-sm font-medium transition-colors hover:text-primary"
@@ -85,26 +186,58 @@ const Header = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-background">
-          <nav className="container flex flex-col space-y-4 py-4">
+          <nav className="container flex flex-col space-y-2 py-4">
             <NavLink
               to="/"
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Domov
             </NavLink>
-            <NavLink
-              to="/storitve"
-              className="text-sm font-medium transition-colors hover:text-primary"
-              activeClassName="text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Storitve
-            </NavLink>
+            
+            {/* Mobile Services Dropdown */}
+            <div className="space-y-1">
+              <button
+                className="flex items-center justify-between w-full text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setExpandedCategory(expandedCategory === 'storitve' ? null : 'storitve')}
+              >
+                Storitve
+                <ChevronDown className={cn("h-4 w-4 transition-transform", expandedCategory === 'storitve' && "rotate-180")} />
+              </button>
+              
+              {expandedCategory === 'storitve' && (
+                <div className="pl-4 space-y-2 border-l-2 border-muted ml-2">
+                  {serviceCategories.map((category) => (
+                    <div key={category.title} className="space-y-1">
+                      <NavLink
+                        to={category.href}
+                        className="block text-sm font-semibold text-primary py-1"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {category.title}
+                      </NavLink>
+                      <div className="pl-3 space-y-1">
+                        {category.items.map((item) => (
+                          <NavLink
+                            key={item.href}
+                            to={item.href}
+                            className="block text-sm text-muted-foreground hover:text-foreground py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.title}
+                          </NavLink>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <NavLink
               to="/cenik"
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -112,7 +245,7 @@ const Header = () => {
             </NavLink>
             <NavLink
               to="/blog"
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -120,7 +253,7 @@ const Header = () => {
             </NavLink>
             <NavLink
               to="/o-nas"
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -128,7 +261,7 @@ const Header = () => {
             </NavLink>
             <NavLink
               to="/kontakt"
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
