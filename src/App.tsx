@@ -31,6 +31,7 @@ import OkuzbaDihalPage from "./pages/pediatrija/OkuzbaDihalPage";
 import AtopijskiDermatitisPage from "./pages/pediatrija/AtopijskiDermatitisPage";
 import PediaterPulmologPage from "./pages/pediatrija/PediaterPulmologPage";
 import PediaterAstmaPage from "./pages/pediatrija/PediaterAstmaPage";
+import PediaterAlergologPage from "./pages/pediatrija/PediaterAlergologPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/pediatrija/atopijski-dermatitis" element={<AtopijskiDermatitisPage />} />
           <Route path="/pediatrija/pediater-pulmolog" element={<PediaterPulmologPage />} />
           <Route path="/pediatrija/pediater-astma-pri-otroku" element={<PediaterAstmaPage />} />
+          <Route path="/pediatrija/pediater-alergolog" element={<PediaterAlergologPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />

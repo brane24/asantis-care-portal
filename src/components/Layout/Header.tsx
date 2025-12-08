@@ -48,6 +48,7 @@ const serviceCategories = [
       { title: "Atopijski dermatitis", href: "/pediatrija/atopijski-dermatitis" },
       { title: "Pediater pulmolog", href: "/pediatrija/pediater-pulmolog" },
       { title: "Obravnava astme", href: "/pediatrija/pediater-astma-pri-otroku" },
+      { title: "Pediater alergolog", href: "/pediatrija/pediater-alergolog" },
     ],
   },
   {
