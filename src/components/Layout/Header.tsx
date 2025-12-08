@@ -67,6 +67,7 @@ const serviceCategories = [
       { title: "Ginekološki ultrazvok", href: "/ginekologija/ginekoloski-ultrazvok" },
       { title: "Kontracepcija", href: "/ginekologija/kontracepcija" },
       { title: "Manjši posegi", href: "/ginekologija/manjsi-posegi" },
+      { title: "Ginekološka vnetja", href: "/ginekologija/ginekoloska-vnetja" },
     ],
   },
   {
