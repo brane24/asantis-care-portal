@@ -156,8 +156,8 @@ const Index = () => {
                   ⭐ Najbolj izbran
                 </Badge>
               )}
-              <CardHeader>
-                <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 ${service.color}`}>
+              <CardHeader className="text-center">
+                <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 mx-auto ${service.color}`}>
                   <service.icon className="h-6 w-6" />
                 </div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
