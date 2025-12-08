@@ -68,6 +68,7 @@ const serviceCategories = [
       { title: "Kontracepcija", href: "/ginekologija/kontracepcija" },
       { title: "Manjši posegi", href: "/ginekologija/manjsi-posegi" },
       { title: "Ginekološka vnetja", href: "/ginekologija/ginekoloska-vnetja" },
+      { title: "Uhajanje urina", href: "/ginekologija/uhajanje-urina-urinska-inkontinenca" },
     ],
   },
   {
