@@ -80,14 +80,6 @@ const Index = () => {
       link: "/storitve/slim-medikacija",
       color: "text-orange-500"
     },
-    {
-      icon: Scan,
-      title: "Dermatologija",
-      description: "Strokovni dermatološki pregled in zdravljenje bolezni kože, nohtov in lasišča.",
-      price: "60",
-      link: "/dermatologija",
-      color: "text-teal-500"
-    }
   ];
 
   const benefits = [
