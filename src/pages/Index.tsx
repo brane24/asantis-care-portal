@@ -165,8 +165,8 @@ const Index = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="flex items-baseline mb-4">
+              <CardContent className="text-center">
+                <div className="flex items-baseline justify-center mb-4">
                   <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                     {service.price}€
                   </span>
