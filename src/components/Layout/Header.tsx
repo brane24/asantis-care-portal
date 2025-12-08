@@ -68,6 +68,20 @@ const serviceCategories = [
     ],
   },
   {
+    title: "Ultrazvok",
+    href: "/ultrazvok",
+    items: [
+      { title: "Ultrazvok trebuha", href: "/ultrazvok/ultrazvok-trebuha" },
+      { title: "Ultrazvok ščitnice", href: "/ultrazvok/ultrazvok-scitnice" },
+      { title: "Ultrazvok mod", href: "/ultrazvok/ultrazvok-mod" },
+      { title: "Ultrazvok mehkih tkiv", href: "/ultrazvok/ultrazvok-mehkih-tkiv" },
+      { title: "Ultrazvok dojk", href: "/ultrazvok/ultrazvok-dojk" },
+      { title: "Ultrazvok ven", href: "/ultrazvok/ultrazvok-ven" },
+      { title: "Ultrazvok arterij nog", href: "/ultrazvok/ultrazvok-arterij-nog" },
+      { title: "Karotidni ultrazvok", href: "/ultrazvok/ultrazvok-vratnih-arterij" },
+    ],
+  },
+  {
     title: "Ginekologija",
     href: "/ginekologija",
     items: [
