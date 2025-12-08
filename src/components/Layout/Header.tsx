@@ -132,6 +132,13 @@ const Header = () => {
           </NavigationMenu>
 
           <NavLink
+            to="/zakaj-asantis"
+            className="text-base font-medium transition-colors hover:text-primary"
+            activeClassName="text-primary"
+          >
+            Zakaj Asantis
+          </NavLink>
+          <NavLink
             to="/cenik"
             className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
@@ -139,18 +146,18 @@ const Header = () => {
             Cenik
           </NavLink>
           <NavLink
+            to="/o-nas"
+            className="text-base font-medium transition-colors hover:text-primary"
+            activeClassName="text-primary"
+          >
+            Kdo smo
+          </NavLink>
+          <NavLink
             to="/blog"
             className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
           >
             Blog
-          </NavLink>
-          <NavLink
-            to="/o-nas"
-            className="text-base font-medium transition-colors hover:text-primary"
-            activeClassName="text-primary"
-          >
-            O nas
           </NavLink>
           <NavLink
             to="/kontakt"
@@ -223,6 +230,14 @@ const Header = () => {
             </div>
 
             <NavLink
+              to="/zakaj-asantis"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
+              activeClassName="text-primary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Zakaj Asantis
+            </NavLink>
+            <NavLink
               to="/cenik"
               className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
@@ -231,20 +246,20 @@ const Header = () => {
               Cenik
             </NavLink>
             <NavLink
+              to="/o-nas"
+              className="text-sm font-medium transition-colors hover:text-primary py-2"
+              activeClassName="text-primary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Kdo smo
+            </NavLink>
+            <NavLink
               to="/blog"
               className="text-sm font-medium transition-colors hover:text-primary py-2"
               activeClassName="text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
-            </NavLink>
-            <NavLink
-              to="/o-nas"
-              className="text-sm font-medium transition-colors hover:text-primary py-2"
-              activeClassName="text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              O nas
             </NavLink>
             <NavLink
               to="/kontakt"
