@@ -43,6 +43,14 @@ import ManjsiPosegiPage from "./pages/ginekologija/ManjsiPosegiPage";
 import GinekoloskaVnetjaPage from "./pages/ginekologija/GinekoloskaVnetjaPage";
 import UhajanjeUrinaPage from "./pages/ginekologija/UhajanjeUrinaPage";
 import OrtopedLjubljanaPage from "./pages/ortopedija/OrtopedLjubljanaPage";
+import UltrazvokTrebuhaPage from "./pages/ultrazvok/UltrazvokTrebuhaPage";
+import UltrazvokScitnicePage from "./pages/ultrazvok/UltrazvokScitnicePage";
+import UltrazvokModPage from "./pages/ultrazvok/UltrazvokModPage";
+import UltrazvokMehkihTkivPage from "./pages/ultrazvok/UltrazvokMehkihTkivPage";
+import UltrazvokDojkPage from "./pages/ultrazvok/UltrazvokDojkPage";
+import UltrazvokVenPage from "./pages/ultrazvok/UltrazvokVenPage";
+import UltrazvokArterijNogPage from "./pages/ultrazvok/UltrazvokArterijNogPage";
+import UltrazvokVratnihArterijPage from "./pages/ultrazvok/UltrazvokVratnihArterijPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -89,6 +97,14 @@ const App = () => (
           <Route path="/ginekologija/ginekoloska-vnetja" element={<GinekoloskaVnetjaPage />} />
           <Route path="/ginekologija/uhajanje-urina-urinska-inkontinenca" element={<UhajanjeUrinaPage />} />
           <Route path="/ortopedija/ortoped-ljubljana" element={<OrtopedLjubljanaPage />} />
+          <Route path="/ultrazvok/ultrazvok-trebuha" element={<UltrazvokTrebuhaPage />} />
+          <Route path="/ultrazvok/ultrazvok-scitnice" element={<UltrazvokScitnicePage />} />
+          <Route path="/ultrazvok/ultrazvok-mod" element={<UltrazvokModPage />} />
+          <Route path="/ultrazvok/ultrazvok-mehkih-tkiv" element={<UltrazvokMehkihTkivPage />} />
+          <Route path="/ultrazvok/ultrazvok-dojk" element={<UltrazvokDojkPage />} />
+          <Route path="/ultrazvok/ultrazvok-ven" element={<UltrazvokVenPage />} />
+          <Route path="/ultrazvok/ultrazvok-arterij-nog" element={<UltrazvokArterijNogPage />} />
+          <Route path="/ultrazvok/ultrazvok-vratnih-arterij" element={<UltrazvokVratnihArterijPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
