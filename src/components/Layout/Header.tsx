@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import asantisLogo from "@/assets/asantis-logo.svg";
+import asantisLogo from "@/assets/asantis-logo.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -72,6 +72,9 @@ const Header = () => {
             src={asantisLogo} 
             alt="ASANTIS" 
             className="h-8 w-auto"
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(56%) sepia(60%) saturate(600%) hue-rotate(155deg) brightness(95%) contrast(90%)' 
+            }}
           />
         </NavLink>
 
