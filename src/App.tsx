@@ -38,6 +38,7 @@ import PreventivniPregledPage from "./pages/ginekologija/PreventivniPregledPage"
 import GinekoloskiUltrazvokPage from "./pages/ginekologija/GinekoloskiUltrazvokPage";
 import KontracepcijPage from "./pages/ginekologija/KontracepcijPage";
 import ManjsiPosegiPage from "./pages/ginekologija/ManjsiPosegiPage";
+import GinekoloskaVnetjaPage from "./pages/ginekologija/GinekoloskaVnetjaPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -79,6 +80,7 @@ const App = () => (
           <Route path="/ginekologija/ginekoloski-ultrazvok" element={<GinekoloskiUltrazvokPage />} />
           <Route path="/ginekologija/kontracepcija" element={<KontracepcijPage />} />
           <Route path="/ginekologija/manjsi-posegi" element={<ManjsiPosegiPage />} />
+          <Route path="/ginekologija/ginekoloska-vnetja" element={<GinekoloskaVnetjaPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
