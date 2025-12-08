@@ -9,6 +9,7 @@ import Cenik from "./pages/Cenik";
 import Blog from "./pages/Blog";
 import Kontakt from "./pages/Kontakt";
 import ONas from "./pages/ONas";
+import ZakajAsantis from "./pages/ZakajAsantis";
 import ZenskaPage from "./pages/services/ZenskaPage";
 import DermatologijaPage from "./pages/dermatologija/DermatologijaPage";
 import PregledZnamenjPage from "./pages/dermatologija/PregledZnamenjPage";
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/o-nas" element={<ONas />} />
+          <Route path="/zakaj-asantis" element={<ZakajAsantis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
