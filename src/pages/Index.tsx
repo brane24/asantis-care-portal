@@ -105,7 +105,7 @@ const Index = () => {
       <section className="relative overflow-hidden bg-gradient-hero">
         <div className="container py-20 md:py-32">
           <div className="mx-auto max-w-3xl text-center animate-fade-in">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-base px-5 py-2">
               Medicinski center nove generacije
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
