@@ -52,6 +52,13 @@ const serviceCategories = [
     ],
   },
   {
+    title: "Fizioterapija",
+    href: "/fizioterapija",
+    items: [
+      { title: "Fizioterapija Ljubljana", href: "/fizioterapija/fizioterapija-ljubljana" },
+    ],
+  },
+  {
     title: "Ostale storitve",
     href: "/storitve",
     items: [
