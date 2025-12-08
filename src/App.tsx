@@ -35,6 +35,7 @@ import PediaterAlergologPage from "./pages/pediatrija/PediaterAlergologPage";
 import FizioterapijaLjubljanaPage from "./pages/fizioterapija/FizioterapijaLjubljanaPage";
 import GinekologijaLjubljanaPage from "./pages/ginekologija/GinekologijaLjubljanaPage";
 import PreventivniPregledPage from "./pages/ginekologija/PreventivniPregledPage";
+import GinekoloskiUltrazvokPage from "./pages/ginekologija/GinekoloskiUltrazvokPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +74,7 @@ const App = () => (
           <Route path="/fizioterapija/fizioterapija-ljubljana" element={<FizioterapijaLjubljanaPage />} />
           <Route path="/ginekologija/ginekologija-ljubljana" element={<GinekologijaLjubljanaPage />} />
           <Route path="/ginekologija/preventivni-pregled" element={<PreventivniPregledPage />} />
+          <Route path="/ginekologija/ginekoloski-ultrazvok" element={<GinekoloskiUltrazvokPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
