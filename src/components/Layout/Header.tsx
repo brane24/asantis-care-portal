@@ -65,6 +65,7 @@ const serviceCategories = [
       { title: "Ginekologija Ljubljana", href: "/ginekologija/ginekologija-ljubljana" },
       { title: "Preventivni pregled", href: "/ginekologija/preventivni-pregled" },
       { title: "Ginekološki ultrazvok", href: "/ginekologija/ginekoloski-ultrazvok" },
+      { title: "Kontracepcija", href: "/ginekologija/kontracepcija" },
     ],
   },
   {
