@@ -73,7 +73,7 @@ const Header = () => {
             alt="ASANTIS" 
             className="h-8 w-auto"
             style={{ 
-              filter: 'brightness(0) saturate(100%) invert(56%) sepia(60%) saturate(600%) hue-rotate(155deg) brightness(95%) contrast(90%)' 
+              filter: 'brightness(0) saturate(100%) invert(58%) sepia(75%) saturate(500%) hue-rotate(140deg) brightness(92%) contrast(90%)' 
             }}
           />
         </NavLink>
