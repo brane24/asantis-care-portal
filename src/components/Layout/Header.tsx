@@ -61,6 +61,13 @@ const serviceCategories = [
     ],
   },
   {
+    title: "Ortopedija",
+    href: "/ortopedija",
+    items: [
+      { title: "Ortoped Ljubljana", href: "/ortopedija/ortoped-ljubljana" },
+    ],
+  },
+  {
     title: "Ginekologija",
     href: "/ginekologija",
     items: [
