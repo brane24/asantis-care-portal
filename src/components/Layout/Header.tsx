@@ -59,6 +59,13 @@ const serviceCategories = [
     ],
   },
   {
+    title: "Ginekologija",
+    href: "/ginekologija",
+    items: [
+      { title: "Ginekologija Ljubljana", href: "/ginekologija/ginekologija-ljubljana" },
+    ],
+  },
+  {
     title: "Ostale storitve",
     href: "/storitve",
     items: [

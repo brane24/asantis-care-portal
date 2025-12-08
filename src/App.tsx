@@ -33,6 +33,7 @@ import PediaterPulmologPage from "./pages/pediatrija/PediaterPulmologPage";
 import PediaterAstmaPage from "./pages/pediatrija/PediaterAstmaPage";
 import PediaterAlergologPage from "./pages/pediatrija/PediaterAlergologPage";
 import FizioterapijaLjubljanaPage from "./pages/fizioterapija/FizioterapijaLjubljanaPage";
+import GinekologijaLjubljanaPage from "./pages/ginekologija/GinekologijaLjubljanaPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -69,6 +70,7 @@ const App = () => (
           <Route path="/pediatrija/pediater-astma-pri-otroku" element={<PediaterAstmaPage />} />
           <Route path="/pediatrija/pediater-alergolog" element={<PediaterAlergologPage />} />
           <Route path="/fizioterapija/fizioterapija-ljubljana" element={<FizioterapijaLjubljanaPage />} />
+          <Route path="/ginekologija/ginekologija-ljubljana" element={<GinekologijaLjubljanaPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
