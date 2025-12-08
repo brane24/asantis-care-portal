@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import asantisLogo from "@/assets/asantis-logo.png";
 import {
   NavigationMenu,
@@ -63,6 +64,8 @@ const serviceCategories = [
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -80,13 +83,15 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <NavLink
-            to="/"
-            className="text-base font-medium transition-colors hover:text-primary"
-            activeClassName="text-primary"
-          >
-            Domov
-          </NavLink>
+          {!isHomePage && (
+            <NavLink
+              to="/"
+              className="text-base font-medium transition-colors hover:text-primary"
+              activeClassName="text-primary"
+            >
+              Domov
+            </NavLink>
+          )}
           
           <NavigationMenu>
             <NavigationMenuList>
@@ -190,14 +195,16 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-background">
           <nav className="container flex flex-col space-y-2 py-4">
-            <NavLink
-              to="/"
-              className="text-sm font-medium transition-colors hover:text-primary py-2"
-              activeClassName="text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Domov
-            </NavLink>
+            {!isHomePage && (
+              <NavLink
+                to="/"
+                className="text-sm font-medium transition-colors hover:text-primary py-2"
+                activeClassName="text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Domov
+              </NavLink>
+            )}
             
             {/* Mobile Services Dropdown */}
             <div className="space-y-1">
