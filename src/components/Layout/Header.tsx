@@ -56,6 +56,7 @@ const serviceCategories = [
     href: "/fizioterapija",
     items: [
       { title: "Fizioterapija Ljubljana", href: "/fizioterapija/fizioterapija-ljubljana" },
+      { title: "Bolečina v vratu", href: "/fizioterapija/bolecina-v-vratu" },
     ],
   },
   {
