@@ -71,7 +71,7 @@ const Header = () => {
           <img 
             src={asantisLogo} 
             alt="ASANTIS" 
-            className="h-8 w-auto"
+            className="h-6 w-auto"
             style={{ 
               filter: 'brightness(0) saturate(100%) invert(58%) sepia(75%) saturate(500%) hue-rotate(140deg) brightness(92%) contrast(90%)' 
             }}
@@ -82,7 +82,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink
             to="/"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
           >
             Domov
@@ -91,7 +91,7 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent hover:text-primary data-[state=open]:bg-transparent">
+                <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent hover:text-primary data-[state=open]:bg-transparent">
                   Storitve
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -140,28 +140,28 @@ const Header = () => {
 
           <NavLink
             to="/cenik"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
           >
             Cenik
           </NavLink>
           <NavLink
             to="/blog"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
           >
             Blog
           </NavLink>
           <NavLink
             to="/o-nas"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
           >
             O nas
           </NavLink>
           <NavLink
             to="/kontakt"
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-base font-medium transition-colors hover:text-primary"
             activeClassName="text-primary"
           >
             Kontakt
