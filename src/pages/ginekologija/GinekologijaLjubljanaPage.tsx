@@ -13,7 +13,12 @@ import {
   MapPin,
   Stethoscope,
   Baby,
-  Sparkles
+  Sparkles,
+  ArrowRight,
+  Scan,
+  Pill,
+  Scissors,
+  Droplets
 } from "lucide-react";
 import {
   Accordion,
@@ -453,6 +458,112 @@ const GinekologijaLjubljanaPage = () => {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Naše ginekološke storitve
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Raziščite vse naše specializirane ginekološke storitve
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <a href="/preventivni-ginekoloski-pregled" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Shield className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Preventivni ginekološki pregled</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Celovit preventivni pregled s PAP testom</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/ginekoloski-ultrazvok" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Scan className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Ginekološki ultrazvok</h3>
+                  <p className="text-muted-foreground text-sm mb-4">2D/3D/4D ultrazvočna diagnostika</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/kontracepcija" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Pill className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Kontracepcija</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Svetovanje in vstavitev spirale</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/manjsi-ginekoloski-posegi" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Scissors className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Manjši ginekološki posegi</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Odstranitev polipov, konizacija, biopsija</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/ginekoloska-vnetja" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Stethoscope className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Ginekološka vnetja</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Diagnostika in zdravljenje okužb</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/uhajanje-urina" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Droplets className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Uhajanje urina</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Diagnostika in zdravljenje inkontinence</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
           </div>
         </div>
       </section>
