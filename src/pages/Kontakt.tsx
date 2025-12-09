@@ -127,7 +127,7 @@ const Kontakt = () => {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <MapPin className="h-5 w-5 text-primary" />
-              <span>Naša lokacija</span>
+              <span>Poljanski nasip 44, 1000 Ljubljana</span>
             </CardTitle>
             <CardDescription>Lahek dostop z javnim prevozom (avtobusne postaje Klinični center, Roška, Cukrarna  ali Gornje poljane)  in brezplačno na našem parkirišču pred kliniko. </CardDescription>
           </CardHeader>
