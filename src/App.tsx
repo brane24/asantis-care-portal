@@ -51,6 +51,13 @@ import UltrazvokDojkPage from "./pages/ultrazvok/UltrazvokDojkPage";
 import UltrazvokVenPage from "./pages/ultrazvok/UltrazvokVenPage";
 import UltrazvokArterijNogPage from "./pages/ultrazvok/UltrazvokArterijNogPage";
 import UltrazvokVratnihArterijPage from "./pages/ultrazvok/UltrazvokVratnihArterijPage";
+import PsihiaterLjubljanaPage from "./pages/psihiatrija/PsihiaterLjubljanaPage";
+import DepresijaAnksioznostPage from "./pages/psihiatrija/DepresijaAnksioznostPage";
+import IzgorelostPage from "./pages/psihiatrija/IzgorelostPage";
+import NespečnostPage from "./pages/psihiatrija/NespečnostPage";
+import MotnjeHranjenjaPage from "./pages/psihiatrija/MotnjeHranjenjaPage";
+import PostCovidSindromPage from "./pages/psihiatrija/PostCovidSindromPage";
+import OKMPage from "./pages/psihiatrija/OKMPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -105,6 +112,13 @@ const App = () => (
           <Route path="/ultrazvok/ultrazvok-ven" element={<UltrazvokVenPage />} />
           <Route path="/ultrazvok/ultrazvok-arterij-nog" element={<UltrazvokArterijNogPage />} />
           <Route path="/ultrazvok/ultrazvok-vratnih-arterij" element={<UltrazvokVratnihArterijPage />} />
+          <Route path="/psihiatrija/psihiater-ljubljana" element={<PsihiaterLjubljanaPage />} />
+          <Route path="/psihiatrija/depresija-anksioznost" element={<DepresijaAnksioznostPage />} />
+          <Route path="/psihiatrija/izgorelost-burnout" element={<IzgorelostPage />} />
+          <Route path="/psihiatrija/nespečnost-motnje-spanja" element={<NespečnostPage />} />
+          <Route path="/psihiatrija/motnje-hranjenja" element={<MotnjeHranjenjaPage />} />
+          <Route path="/psihiatrija/post-covid-sindrom" element={<PostCovidSindromPage />} />
+          <Route path="/psihiatrija/okm-ocd" element={<OKMPage />} />
           <Route path="/cenik" element={<Cenik />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
