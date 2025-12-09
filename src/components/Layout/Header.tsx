@@ -219,7 +219,7 @@ const Header = () => {
 
         <div className="hidden md:flex items-center space-x-4">
           <Button variant="ghost" asChild>
-            <NavLink to="/prijava">Prijava</NavLink>
+            <NavLink to="/prijava">Online naročanje</NavLink>
           </Button>
           <Button asChild>
             <NavLink to="/cenik">Začni z naročnino</NavLink>
@@ -320,7 +320,7 @@ const Header = () => {
             </NavLink>
             <div className="flex flex-col space-y-2 pt-4 border-t">
               <Button variant="ghost" asChild className="w-full">
-                <NavLink to="/prijava">Prijava</NavLink>
+                <NavLink to="/prijava">Online naročanje</NavLink>
               </Button>
               <Button asChild className="w-full">
                 <NavLink to="/cenik">Začni z naročnino</NavLink>
