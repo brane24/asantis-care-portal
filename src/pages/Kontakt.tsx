@@ -129,23 +129,13 @@ const Kontakt = () => {
               <MapPin className="h-5 w-5 text-primary" />
               <span>Naša lokacija</span>
             </CardTitle>
-            <CardDescription>
-              Obiščite nas v centru Ljubljane – lahek dostop z javnim prevozom in brezplačno parkiranje v bližini.
-            </CardDescription>
+            <CardDescription>Lahek dostop z javnim prevozom (avtobusne postaje Klinični center, Roška, Cukrarna  ali Gornje poljane)  in brezplačno na našem parkirišču pred kliniko. </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="aspect-video w-full rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.8465!2d14.5058!3d46.0569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLjubljana%2C%20Slovenia!5e0!3m2!1sen!2ssi!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Asantis Medical Center lokacija"
-                className="w-full h-full"
-              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.8465!2d14.5058!3d46.0569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLjubljana%2C%20Slovenia!5e0!3m2!1sen!2ssi!4v1234567890" width="100%" height="100%" style={{
+              border: 0
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Asantis Medical Center lokacija" className="w-full h-full" />
             </div>
           </CardContent>
         </Card>
