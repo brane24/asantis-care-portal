@@ -71,6 +71,7 @@ const serviceCategories = [
     title: "Ultrazvok",
     href: "/ultrazvok",
     items: [
+      { title: "Ultrazvok Ljubljana", href: "/ultrazvok/ultrazvok-ljubljana" },
       { title: "Ultrazvok trebuha", href: "/ultrazvok/ultrazvok-trebuha" },
       { title: "Ultrazvok ščitnice", href: "/ultrazvok/ultrazvok-scitnice" },
       { title: "Ultrazvok mod", href: "/ultrazvok/ultrazvok-mod" },
@@ -165,7 +166,7 @@ const Header = () => {
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <NavLink to="/ultrazvok/ultrazvok-trebuha" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Ultrazvok</NavLink>
+                        <NavLink to="/ultrazvok/ultrazvok-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Ultrazvok</NavLink>
                       </NavigationMenuLink>
                     </li>
                     <li>
