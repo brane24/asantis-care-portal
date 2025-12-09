@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Check, Brain, Clock, Shield, MessageCircle, Star, Phone, Calendar, AlertCircle } from "lucide-react";
+import { Check, Brain, Clock, Shield, MessageCircle, Star, Phone, Calendar, AlertCircle, Flame, Moon, Utensils, Activity, Repeat, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -229,6 +229,47 @@ const PsihiaterLjubljanaPage = () => {
             </Button>
           </CardContent>
         </Card>
+      </section>
+
+      {/* Naše psihiatrične storitve */}
+      <section className="container py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">Naše psihiatrične storitve</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Pomagamo pri različnih duševnih težavah – od blažjih do kompleksnejših.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Depresija in anksioznost", description: "Strokovna obravnava depresije, tesnobe in paničnih napadov.", icon: Brain, href: "/depresija-anksioznost" },
+              { title: "Izgorelost", description: "Pomoč pri poklicni izgorelosti, kroničnem stresu in izgubi motivacije.", icon: Flame, href: "/izgorelost" },
+              { title: "Nespečnost", description: "Diagnostika in zdravljenje motenj spanja.", icon: Moon, href: "/nespecnost" },
+              { title: "Motnje hranjenja", description: "Celostna obravnava anoreksije, bulimije in kompulzivnega prenajedanja.", icon: Utensils, href: "/motnje-hranjenja" },
+              { title: "Post COVID sindrom", description: "Pomoč pri psihičnih posledicah po prebolelem COVID-19.", icon: Activity, href: "/post-covid-sindrom" },
+              { title: "OKM (obsesivno-kompulzivna motnja)", description: "Zdravljenje vsiljenih misli in ponavljajočih se vedenj.", icon: Repeat, href: "/okm" },
+            ].map((service, index) => (
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                      <service.icon className="h-6 w-6" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                      <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
+                      <NavLink 
+                        to={service.href} 
+                        className="inline-flex items-center text-primary hover:underline text-sm font-medium"
+                      >
+                        Več informacij
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </NavLink>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* FAQ */}
