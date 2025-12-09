@@ -17,7 +17,10 @@ import {
   Eye,
   Smile,
   MapPin,
-  CreditCard
+  CreditCard,
+  ArrowRight,
+  Wrench,
+  AlertCircle
 } from "lucide-react";
 import { Helmet } from "react-helmet";
 import {
@@ -431,6 +434,109 @@ const ZobozdravnikLjubljanaPage = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Dental Sub-Services */}
+      <section className="container py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Naše zobozdravstvene storitve</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Izberite storitev in izveste več o naših specializiranih zobozdravstvenih obravnavah.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <NavLink to="/zobozdravstvo/ortodont-ljubljana" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Smile className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Ortodont Ljubljana</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Ortodontsko zdravljenje za otroke in odrasle – klasični in nevidni aparati.</p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Več informacij <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+            
+            <NavLink to="/zobozdravstvo/nevidni-zobni-aparat" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Eye className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Nevidni zobni aparat</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Prozorne opornice za diskretno poravnavo zob brez kovinskih elementov.</p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Več informacij <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+            
+            <NavLink to="/zobozdravstvo/zobni-implantati" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Wrench className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Zobni implantati</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Trajna rešitev za manjkajoče zobe z vrhunskimi materiali Straumann.</p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Več informacij <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+            
+            <NavLink to="/zobozdravstvo/protetika" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Shield className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Protetika</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Kronice, mostički in proteze za popolno obnovo funkcije in estetike zob.</p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Več informacij <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+            
+            <NavLink to="/zobozdravstvo/beljenje-zob" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Beljenje zob</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Profesionalno beljenje za bleščeče bel nasmeh z dolgoročnim učinkom.</p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Več informacij <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+            
+            <NavLink to="/zobozdravstvo/zobozdravnik-nujno" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <AlertCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Nujna pomoč – zobobol</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Hitra pomoč pri akutni bolečini, vnetjih in poškodbah zob.</p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Več informacij <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+          </div>
         </div>
       </section>
 
