@@ -53,6 +53,7 @@ import ArtrozaKolenaPage from "./pages/ortopedija/ArtrozaKolenaPage";
 import ArtrozaKolkaPage from "./pages/ortopedija/ArtrozaKolkaPage";
 import BolecinaVKrizuOrtopedijaPage from "./pages/ortopedija/BolecinaVKrizuOrtopedijaPage";
 import BolecinaVRamiPage from "./pages/ortopedija/BolecinaVRamiPage";
+import UltrazvokLjubljanaPage from "./pages/ultrazvok/UltrazvokLjubljanaPage";
 import UltrazvokTrebuhaPage from "./pages/ultrazvok/UltrazvokTrebuhaPage";
 import UltrazvokScitnicePage from "./pages/ultrazvok/UltrazvokScitnicePage";
 import UltrazvokModPage from "./pages/ultrazvok/UltrazvokModPage";
@@ -124,6 +125,7 @@ const App = () => (
           <Route path="/ortopedija/artroza-kolka" element={<ArtrozaKolkaPage />} />
           <Route path="/ortopedija/bolecina-v-krizu" element={<BolecinaVKrizuOrtopedijaPage />} />
           <Route path="/ortopedija/bolecina-v-rami" element={<BolecinaVRamiPage />} />
+          <Route path="/ultrazvok/ultrazvok-ljubljana" element={<UltrazvokLjubljanaPage />} />
           <Route path="/ultrazvok/ultrazvok-trebuha" element={<UltrazvokTrebuhaPage />} />
           <Route path="/ultrazvok/ultrazvok-scitnice" element={<UltrazvokScitnicePage />} />
           <Route path="/ultrazvok/ultrazvok-mod" element={<UltrazvokModPage />} />
