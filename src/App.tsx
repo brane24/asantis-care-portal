@@ -43,6 +43,10 @@ import ManjsiPosegiPage from "./pages/ginekologija/ManjsiPosegiPage";
 import GinekoloskaVnetjaPage from "./pages/ginekologija/GinekoloskaVnetjaPage";
 import UhajanjeUrinaPage from "./pages/ginekologija/UhajanjeUrinaPage";
 import OrtopedLjubljanaPage from "./pages/ortopedija/OrtopedLjubljanaPage";
+import ArtrozaKolenaPage from "./pages/ortopedija/ArtrozaKolenaPage";
+import ArtrozaKolkaPage from "./pages/ortopedija/ArtrozaKolkaPage";
+import BolecinaVKrizuOrtopedijaPage from "./pages/ortopedija/BolecinaVKrizuOrtopedijaPage";
+import BolecinaVRamiPage from "./pages/ortopedija/BolecinaVRamiPage";
 import UltrazvokTrebuhaPage from "./pages/ultrazvok/UltrazvokTrebuhaPage";
 import UltrazvokScitnicePage from "./pages/ultrazvok/UltrazvokScitnicePage";
 import UltrazvokModPage from "./pages/ultrazvok/UltrazvokModPage";
@@ -104,6 +108,10 @@ const App = () => (
           <Route path="/ginekologija/ginekoloska-vnetja" element={<GinekoloskaVnetjaPage />} />
           <Route path="/ginekologija/uhajanje-urina-urinska-inkontinenca" element={<UhajanjeUrinaPage />} />
           <Route path="/ortopedija/ortoped-ljubljana" element={<OrtopedLjubljanaPage />} />
+          <Route path="/ortopedija/artroza-kolena" element={<ArtrozaKolenaPage />} />
+          <Route path="/ortopedija/artroza-kolka" element={<ArtrozaKolkaPage />} />
+          <Route path="/ortopedija/bolecina-v-krizu" element={<BolecinaVKrizuOrtopedijaPage />} />
+          <Route path="/ortopedija/bolecina-v-rami" element={<BolecinaVRamiPage />} />
           <Route path="/ultrazvok/ultrazvok-trebuha" element={<UltrazvokTrebuhaPage />} />
           <Route path="/ultrazvok/ultrazvok-scitnice" element={<UltrazvokScitnicePage />} />
           <Route path="/ultrazvok/ultrazvok-mod" element={<UltrazvokModPage />} />
