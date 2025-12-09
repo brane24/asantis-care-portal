@@ -33,7 +33,14 @@ import {
   Train,
   Phone,
   MessageCircle,
-  Quote
+  Quote,
+  Hand,
+  Zap,
+  Brain,
+  HeartPulse,
+  Dumbbell,
+  Bone,
+  Target
 } from "lucide-react";
 
 const FizioterapijaLjubljanaPage = () => {
@@ -439,6 +446,142 @@ const FizioterapijaLjubljanaPage = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="bg-muted/30 py-16 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Naše fizioterapevtske storitve
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Raziščite vse naše specializirane fizioterapevtske storitve
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <NavLink to="/bolecina-vratu" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Bone className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Bolečina v vratu</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Učinkovito zdravljenje bolečin v vratu in rami</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/bolecina-v-krizu-fizioterapija" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Activity className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Bolečina v križu</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Specializirana terapija za bolečine v hrbtenici</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/manualna-fizioterapija" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Hand className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Manualna fizioterapija</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Ročne tehnike za sproščanje in mobilizacijo</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/rehabilitacija-po-poskodbah" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <HeartPulse className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Rehabilitacija po poškodbah</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Celovita rehabilitacija po operacijah in poškodbah</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/fizioterapija-sportnikov" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Dumbbell className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Fizioterapija športnikov</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Specializirana oskrba za športne poškodbe</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/akupunktura" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Target className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Akupunktura</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Tradicionalna metoda za lajšanje bolečin</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/fizioterapija-glavobola" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Brain className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Fizioterapija glavobola</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Pomoč pri kroničnih glavobolih in migreni</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/skeletna-bolevcina" className="group">
+              <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Zap className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Skeletna bolečina</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Zdravljenje mišično-skeletnih težav</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </NavLink>
+          </div>
         </div>
       </section>
 
