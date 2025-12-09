@@ -17,7 +17,9 @@ import {
   Syringe,
   ClipboardList,
   Search,
-  ArrowRight
+  ArrowRight,
+  Bone,
+  CircleDot
 } from 'lucide-react';
 import {
   Accordion,
@@ -473,6 +475,82 @@ const OrtopedLjubljanaPage = () => {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-16 md:py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+              Naše ortopedske storitve
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Raziščite vse naše specializirane ortopedske storitve
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <a href="/artroza-kolena" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <CircleDot className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Artroza kolena</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Diagnostika in zdravljenje obrabe kolena</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/artroza-kolka" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Bone className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Artroza kolka</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Zdravljenje bolečin in obrabe kolčnega sklepa</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/bolecina-v-krizu-ortopedija" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Activity className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Bolečina v križu</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Ortopedska obravnava bolečin v hrbtenici</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/bolecina-v-rami" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                    <Target className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Bolečina v rami</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Diagnostika in zdravljenje ramenskih težav</p>
+                  <span className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Več <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </a>
           </div>
         </div>
       </section>
