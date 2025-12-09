@@ -132,44 +132,20 @@ const Header = () => {
                   Storitve
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="z-50">
-                  <div className="grid w-[700px] max-h-[70vh] overflow-y-auto gap-4 p-5 md:grid-cols-3 lg:grid-cols-3">
-                    {serviceCategories.map((category) => (
-                      <div key={category.title} className="space-y-2">
+                  <ul className="grid w-[200px] gap-1 p-3">
+                    {serviceCategories.filter(c => c.title !== "Ostale storitve").map((category) => (
+                      <li key={category.title}>
                         <NavigationMenuLink asChild>
                           <NavLink
-                            to={category.href}
-                            className="block text-sm font-semibold text-primary hover:underline"
+                            to={category.items[0]?.href || category.href}
+                            className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
                           >
                             {category.title}
                           </NavLink>
                         </NavigationMenuLink>
-                        <ul className="space-y-1">
-                          {category.items.map((item) => (
-                            <li key={item.href}>
-                              <NavigationMenuLink asChild>
-                                <NavLink
-                                  to={item.href}
-                                  className="block text-xs text-muted-foreground hover:text-foreground transition-colors py-0.5"
-                                >
-                                  {item.title}
-                                </NavLink>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      </li>
                     ))}
-                  </div>
-                  <div className="border-t p-3 bg-muted/50">
-                    <NavigationMenuLink asChild>
-                      <NavLink
-                        to="/storitve"
-                        className="text-sm font-medium text-primary hover:underline"
-                      >
-                        Vse storitve →
-                      </NavLink>
-                    </NavigationMenuLink>
-                  </div>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
