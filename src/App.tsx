@@ -35,6 +35,12 @@ import PediaterAlergologPage from "./pages/pediatrija/PediaterAlergologPage";
 import FizioterapijaLjubljanaPage from "./pages/fizioterapija/FizioterapijaLjubljanaPage";
 import BolecinaVratuPage from "./pages/fizioterapija/BolecinaVratuPage";
 import BolecinaKrizuPage from "./pages/fizioterapija/BolecinaKrizuPage";
+import ManualnaFizioterapijaPage from "./pages/fizioterapija/ManualnaFizioterapijaPage";
+import SkeletnaBolevcinaPage from "./pages/fizioterapija/SkeletnaBolevcinaPage";
+import FizioterapijaGlavobolaPage from "./pages/fizioterapija/FizioterapijaGlavobolaPage";
+import FizioterapijaSportnikovPage from "./pages/fizioterapija/FizioterapijaSportnikovPage";
+import RehabilitacijaPoPoskodbahPage from "./pages/fizioterapija/RehabilitacijaPoPoskodbahPage";
+import AkupunkturaPage from "./pages/fizioterapija/AkupunkturaPage";
 import GinekologijaLjubljanaPage from "./pages/ginekologija/GinekologijaLjubljanaPage";
 import PreventivniPregledPage from "./pages/ginekologija/PreventivniPregledPage";
 import GinekoloskiUltrazvokPage from "./pages/ginekologija/GinekoloskiUltrazvokPage";
@@ -100,6 +106,12 @@ const App = () => (
           <Route path="/fizioterapija/fizioterapija-ljubljana" element={<FizioterapijaLjubljanaPage />} />
           <Route path="/fizioterapija/bolecina-v-vratu" element={<BolecinaVratuPage />} />
           <Route path="/fizioterapija/bolecina-v-krizu" element={<BolecinaKrizuPage />} />
+          <Route path="/fizioterapija/manualna-terapija" element={<ManualnaFizioterapijaPage />} />
+          <Route path="/fizioterapija/skeletna-bolecina" element={<SkeletnaBolevcinaPage />} />
+          <Route path="/fizioterapija/fizioterapija-glavobola" element={<FizioterapijaGlavobolaPage />} />
+          <Route path="/fizioterapija/fizioterapija-sportnikov" element={<FizioterapijaSportnikovPage />} />
+          <Route path="/fizioterapija/rehabilitacija-po-poskodbah" element={<RehabilitacijaPoPoskodbahPage />} />
+          <Route path="/fizioterapija/akupunktura" element={<AkupunkturaPage />} />
           <Route path="/ginekologija/ginekologija-ljubljana" element={<GinekologijaLjubljanaPage />} />
           <Route path="/ginekologija/preventivni-pregled" element={<PreventivniPregledPage />} />
           <Route path="/ginekologija/ginekoloski-ultrazvok" element={<GinekoloskiUltrazvokPage />} />
