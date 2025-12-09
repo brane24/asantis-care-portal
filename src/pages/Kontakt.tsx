@@ -133,9 +133,9 @@ const Kontakt = () => {
           </CardHeader>
           <CardContent>
             <div className="aspect-video w-full rounded-lg overflow-hidden">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.8465!2d14.5058!3d46.0569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLjubljana%2C%20Slovenia!5e0!3m2!1sen!2ssi!4v1234567890" width="100%" height="100%" style={{
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.0123456789!2d14.5172!3d46.0498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765329e8a8a8a8a%3A0x1234567890abcdef!2sPoljanski%20nasip%2044%2C%201000%20Ljubljana!5e0!3m2!1sen!2ssi!4v1702100000000" width="100%" height="100%" style={{
               border: 0
-            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Asantis Medical Center lokacija" className="w-full h-full" />
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Asantis Medical Center - Poljanski nasip 44, Ljubljana" className="w-full h-full" />
             </div>
           </CardContent>
         </Card>
