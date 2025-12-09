@@ -112,7 +112,7 @@ const Kontakt = () => {
               <CardContent>
                 <div className="space-y-1">
                   <p className="text-sm">Ponedeljek - Petek: 8:00 - 20:00</p>
-                  <p className="text-sm">Sobota: 9:00 - 14:00</p>
+                  <p className="text-sm text-muted-foreground">Sobota: Zaprto</p>
                   <p className="text-sm text-muted-foreground">Nedelja: Zaprto</p>
                 </div>
               </CardContent>
