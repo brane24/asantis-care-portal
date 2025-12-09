@@ -5,17 +5,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-
 const Kontakt = () => {
-  return (
-    <Layout>
+  return <Layout>
       <section className="bg-gradient-hero py-16 md:py-20">
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Kontaktirajte nas
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Smo tu za vas. Pošljite nam sporočilo ali nas pokličite za več informacij.
+            Tu smo za vas.  Pošljite nam sporočilo ali nas pokličite za več informacij. Čakamo na vas!      
           </p>
         </div>
       </section>
@@ -47,11 +45,7 @@ const Kontakt = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Sporočilo</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Zanima me paket Ženska 360..."
-                      rows={5}
-                    />
+                    <Textarea id="message" placeholder="Zanima me paket Ženska 360..." rows={5} />
                   </div>
                   <Button type="submit" className="w-full">
                     Pošlji sporočilo
@@ -126,8 +120,6 @@ const Kontakt = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Kontakt;
