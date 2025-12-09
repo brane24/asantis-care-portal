@@ -131,8 +131,8 @@ const Header = () => {
                 <NavigationMenuTrigger className="text-base font-medium bg-transparent hover:bg-transparent hover:text-primary data-[state=open]:bg-transparent">
                   Storitve
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[600px] gap-3 p-4 md:grid-cols-2 lg:grid-cols-2">
+                <NavigationMenuContent className="z-50">
+                  <div className="grid w-[700px] max-h-[70vh] overflow-y-auto gap-4 p-5 md:grid-cols-3 lg:grid-cols-3">
                     {serviceCategories.map((category) => (
                       <div key={category.title} className="space-y-2">
                         <NavigationMenuLink asChild>
@@ -149,7 +149,7 @@ const Header = () => {
                               <NavigationMenuLink asChild>
                                 <NavLink
                                   to={item.href}
-                                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
+                                  className="block text-xs text-muted-foreground hover:text-foreground transition-colors py-0.5"
                                 >
                                   {item.title}
                                 </NavLink>
