@@ -95,7 +95,7 @@ const Kontakt = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">Ljubljana, Slovenija</p>
+                <p className="text-lg">Poljanski nasip 44, 1000 Ljubljana</p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Lahek dostop z javnim prevozom in parkirišče
                 </p>
