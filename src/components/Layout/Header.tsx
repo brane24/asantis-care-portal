@@ -222,7 +222,7 @@ const Header = () => {
             <NavLink to="/prijava">Prijava</NavLink>
           </Button>
           <Button asChild>
-            <NavLink to="/cenik">Začni zdaj</NavLink>
+            <NavLink to="/cenik">Začni z naročnino</NavLink>
           </Button>
         </div>
 
@@ -323,7 +323,7 @@ const Header = () => {
                 <NavLink to="/prijava">Prijava</NavLink>
               </Button>
               <Button asChild className="w-full">
-                <NavLink to="/cenik">Začni zdaj</NavLink>
+                <NavLink to="/cenik">Začni z naročnino</NavLink>
               </Button>
             </div>
           </nav>
