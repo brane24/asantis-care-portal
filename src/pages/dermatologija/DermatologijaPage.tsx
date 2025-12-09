@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Check, Stethoscope, Clock, Sparkles, MessageCircle, Star, Phone, Calendar } from "lucide-react";
+import { Check, Stethoscope, Clock, Sparkles, MessageCircle, Star, Phone, Calendar, ArrowRight, Search, Scissors, Zap, Syringe, Heart } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -308,6 +308,96 @@ const DermatologijaPage = () => {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="container py-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Naše dermatološke storitve</h2>
+            <p className="text-muted-foreground">Odkrijte vse specializirane dermatološke storitve, ki jih nudimo</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-soft transition-all duration-300 group">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Search className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Pregled kožnih znamenj</h3>
+                <p className="text-muted-foreground text-sm mb-4">Dermatoskopski pregled pigmentnih znamenj za zgodnje odkrivanje melanoma.</p>
+                <NavLink to="/pregled-znamenj" className="inline-flex items-center text-primary font-medium group-hover:underline">
+                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
+                </NavLink>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-soft transition-all duration-300 group">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Scissors className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Odstranjevanje znamenj</h3>
+                <p className="text-muted-foreground text-sm mb-4">Kirurško ali lasersko odstranjevanje nevarnih ali estetsko motečih znamenj.</p>
+                <NavLink to="/odstranjevanje-znamenj" className="inline-flex items-center text-primary font-medium group-hover:underline">
+                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
+                </NavLink>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-soft transition-all duration-300 group">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Odstranjevanje bradavic</h3>
+                <p className="text-muted-foreground text-sm mb-4">Krioterapija, laser ali elektrokavterizacija za učinkovito odstranitev bradavic.</p>
+                <NavLink to="/odstranjevanje-bradavic" className="inline-flex items-center text-primary font-medium group-hover:underline">
+                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
+                </NavLink>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-soft transition-all duration-300 group">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Syringe className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Lasersko odstranjevanje žil</h3>
+                <p className="text-muted-foreground text-sm mb-4">Odstranjevanje vidnih žilic na obrazu in nogah z lasersko terapijo.</p>
+                <NavLink to="/lasersko-odstranjevanje-zil" className="inline-flex items-center text-primary font-medium group-hover:underline">
+                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
+                </NavLink>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-soft transition-all duration-300 group">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Lasersko odstranjevanje dlačic</h3>
+                <p className="text-muted-foreground text-sm mb-4">Trajna odstranitev neželenih dlačic z diodnim in Nd:YAG laserjem.</p>
+                <NavLink to="/lasersko-odstranjevanje-dlacic" className="inline-flex items-center text-primary font-medium group-hover:underline">
+                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
+                </NavLink>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-soft transition-all duration-300 group">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Pomlajevanje kože</h3>
+                <p className="text-muted-foreground text-sm mb-4">Botox, polnila, mikro iglanje, PRP in radiofrekvenca za mladostno kožo.</p>
+                <NavLink to="/pomlajevanje-koze" className="inline-flex items-center text-primary font-medium group-hover:underline">
+                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
+                </NavLink>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
