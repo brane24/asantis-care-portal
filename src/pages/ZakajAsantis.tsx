@@ -63,7 +63,7 @@ const ZakajAsantis = () => {
   const stats = [
     { value: "5000+", label: "Zadovoljnih pacientov letno" },
     { value: "12", label: "Strokovnjakov" },
-    { value: "98%", label: "Priporočil" },
+    { value: "98%", label: "Strank nas priporoča prijateljem in družini" },
     { value: "12h", label: "Odzivni čas" }
   ];
 
