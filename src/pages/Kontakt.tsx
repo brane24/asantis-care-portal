@@ -65,9 +65,9 @@ const Kontakt = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">+386 40 123 456</p>
+                <p className="text-lg">+386 31 876 104</p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Dosegljivi med delovnim časom
+                  Dosegljivi pon-pet od 8h - 20h
                 </p>
               </CardContent>
             </Card>
