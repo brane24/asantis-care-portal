@@ -133,18 +133,46 @@ const Header = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="z-50">
                   <ul className="grid w-[200px] gap-1 p-3">
-                    {serviceCategories.filter(c => c.title !== "Ostale storitve").map((category) => (
-                      <li key={category.title}>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to={category.items[0]?.href || category.href}
-                            className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                          >
-                            {category.title}
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/dermatologija" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Dermatologija</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/zobozdravstvo/zobozdravnik-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Zobozdravstvo</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/pediatrija/privat-pediater-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Pediatrija</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/fizioterapija/fizioterapija-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Fizioterapija</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/ginekologija/ginekologija-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Ginekologija</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/ortopedija/ortoped-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Ortopedija</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/ultrazvok/ultrazvok-trebuha" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Ultrazvok</NavLink>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <NavLink to="/psihiatrija/psihiater-ljubljana" className="block select-none rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">Psihiatrija</NavLink>
+                      </NavigationMenuLink>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
