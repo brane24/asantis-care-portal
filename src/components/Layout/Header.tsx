@@ -36,7 +36,7 @@ const serviceCategories = [
       { title: "Protetika", href: "/zobozdravstvo/protetika" },
       { title: "Beljenje zob", href: "/zobozdravstvo/beljenje-zob" },
       { title: "Nevidni zobni aparat", href: "/zobozdravstvo/nevidni-zobni-aparat" },
-      { title: "Zobozdravnik nujno", href: "/zobozdravstvo/zobozdravnik-nujno" },
+      { title: "Zobozdravnik nujno", href: "/zobozdravstvo/zobozdravnik-nujno-zobobol" },
     ],
   },
   {
