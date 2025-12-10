@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { Heart, Users, Award, Clock } from "lucide-react";
+import monikaSmrkoljImg from "@/assets/monika-smrkolj.jpg";
 
 const ONas = () => {
   const values = [
@@ -80,11 +81,11 @@ const ONas = () => {
       link: "/ekipa/petra-sket"
     },
     {
-      name: "Pia Lina Vilar Kočevar, dipl. fiziot.",
-      role: "Fizioterapevtka",
-      description: "Fizioterapevtka s specialnimi znanji iz manualne terapije.",
-      image: "https://asantis.si/wp-content/uploads/2024/02/PIA-LINA-VILAR-KOCEVAR-1.jpg",
-      link: "/ekipa/pia-lina-vilar-kocevar"
+      name: "Monika Smrkolj, dr. med.",
+      role: "Specialistka psihiatrije",
+      description: "Specialistka psihiatrije s specialnimi znanji iz transkranialne magnetne stimulacije.",
+      image: monikaSmrkoljImg,
+      link: "/ekipa/monika-smrkolj"
     },
     {
       name: "Mateja Sirše, dr. med.",

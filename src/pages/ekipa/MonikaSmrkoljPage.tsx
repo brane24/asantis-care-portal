@@ -4,8 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { ArrowLeft, Phone, Mail } from "lucide-react";
+import monikaSmrkoljImg from "@/assets/monika-smrkolj.jpg";
 
-const PiaLinaVilarKocevarPage = () => {
+const MonikaSmrkoljPage = () => {
   return (
     <Layout>
       <section className="bg-gradient-hero py-16 md:py-20">
@@ -20,21 +21,21 @@ const PiaLinaVilarKocevarPage = () => {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-1">
               <img 
-                src="https://asantis.si/wp-content/uploads/2024/02/PIA-LINA-VILAR-KOCEVAR-1.jpg" 
-                alt="Pia Lina Vilar Kočevar, dipl. fiziot."
+                src={monikaSmrkoljImg} 
+                alt="Monika Smrkolj, dr. med."
                 className="w-full max-w-sm mx-auto rounded-2xl shadow-lg object-cover"
               />
             </div>
             
             <div className="md:col-span-2">
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-                Fizioterapija
+                Psihiatrija
               </Badge>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                Pia Lina Vilar Kočevar, dipl. fiziot.
+                Monika Smrkolj, dr. med.
               </h1>
               <p className="text-xl text-primary font-medium mb-6">
-                Fizioterapevtka s specialnimi znanji iz manualne terapije
+                Specialistka psihiatrije s specialnimi znanji iz transkranialne magnetne stimulacije
               </p>
               
               <div className="flex flex-wrap gap-4 mb-6">
@@ -63,15 +64,15 @@ const PiaLinaVilarKocevarPage = () => {
               <h2 className="text-2xl font-bold mb-6">O meni</h2>
               
               <p>
-                Pia Lina Vilar Kočevar je diplomirana fizioterapevtka s posebnimi znanji iz manualne terapije. Svoje strokovne veščine je pridobivala na različnih področjih fizioterapije, s posebnim poudarkom na manualnih tehnikah zdravljenja.
+                Monika Smrkolj je specialistka psihiatrije s posebnimi znanji iz transkranialne magnetne stimulacije (TMS). Svoje strokovno znanje je pridobivala na različnih področjih psihiatrije, s poudarkom na sodobnih metodah zdravljenja.
               </p>
               
               <p>
-                Pri svojem delu se osredotoča na individualni pristop do vsakega pacienta in celostno obravnavo težav gibalnega aparata. Kombinira tradicionalne fizioterapevtske metode z najsodobnejšimi tehnikami manualne terapije.
+                Pri svojem delu se osredotoča na individualni pristop do vsakega pacienta in celostno obravnavo duševnih težav. Kombinira tradicionalne psihiatrične metode z najsodobnejšimi tehnikami, vključno s transkranialno magnetno stimulacijo.
               </p>
               
               <blockquote className="border-l-4 border-primary pl-6 italic my-8 text-muted-foreground">
-                V kliniki ASANTIS vam nudimo kakovostno fizioterapevtsko obravnavo z individualnim pristopom in sodobnimi metodami zdravljenja.
+                V kliniki ASANTIS vam nudimo kakovostno psihiatrično obravnavo z individualnim pristopom in sodobnimi metodami zdravljenja.
               </blockquote>
             </CardContent>
           </Card>
@@ -81,4 +82,4 @@ const PiaLinaVilarKocevarPage = () => {
   );
 };
 
-export default PiaLinaVilarKocevarPage;
+export default MonikaSmrkoljPage;
