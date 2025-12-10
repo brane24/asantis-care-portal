@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import Layout from '@/components/Layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
+import { NavLink } from 'react-router-dom';
+import {
   Clock, 
   UserCheck, 
   CheckCircle,
@@ -494,7 +495,7 @@ const OrtopedLjubljanaPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <a href="/artroza-kolena" className="group">
+            <NavLink to="/ortopedija/artroza-kolena" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -507,9 +508,9 @@ const OrtopedLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/artroza-kolka" className="group">
+            <NavLink to="/ortopedija/artroza-kolka" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -522,9 +523,9 @@ const OrtopedLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/bolecina-v-krizu-ortopedija" className="group">
+            <NavLink to="/ortopedija/bolecina-v-krizu" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -537,9 +538,9 @@ const OrtopedLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/bolecina-v-rami" className="group">
+            <NavLink to="/ortopedija/bolecina-v-rami" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -552,7 +553,7 @@ const OrtopedLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
           </div>
         </div>
       </section>
