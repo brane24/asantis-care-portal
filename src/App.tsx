@@ -69,6 +69,15 @@ import NespečnostPage from "./pages/psihiatrija/NespečnostPage";
 import MotnjeHranjenjaPage from "./pages/psihiatrija/MotnjeHranjenjaPage";
 import PostCovidSindromPage from "./pages/psihiatrija/PostCovidSindromPage";
 import OKMPage from "./pages/psihiatrija/OKMPage";
+import BrankoPirsPage from "./pages/ekipa/BrankoPirsPage";
+import AnaKotnikPirsPage from "./pages/ekipa/AnaKotnikPirsPage";
+import AlesPorcnikPage from "./pages/ekipa/AlesPorcnikPage";
+import GregorCadezPage from "./pages/ekipa/GregorCadezPage";
+import DraganJejinicPage from "./pages/ekipa/DraganJejinicPage";
+import PetraSketPage from "./pages/ekipa/PetraSketPage";
+import PiaLinaVilarKocevarPage from "./pages/ekipa/PiaLinaVilarKocevarPage";
+import MatejaSirsePage from "./pages/ekipa/MatejaSirsePage";
+import JaniPetrovicPage from "./pages/ekipa/JaniPetrovicPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -146,6 +155,15 @@ const App = () => (
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/o-nas" element={<ONas />} />
           <Route path="/zakaj-asantis" element={<ZakajAsantis />} />
+          <Route path="/ekipa/branko-pirs" element={<BrankoPirsPage />} />
+          <Route path="/ekipa/ana-kotnik-pirs" element={<AnaKotnikPirsPage />} />
+          <Route path="/ekipa/ales-porcnik" element={<AlesPorcnikPage />} />
+          <Route path="/ekipa/gregor-cadez" element={<GregorCadezPage />} />
+          <Route path="/ekipa/dragan-jejinic" element={<DraganJejinicPage />} />
+          <Route path="/ekipa/petra-sket" element={<PetraSketPage />} />
+          <Route path="/ekipa/pia-lina-vilar-kocevar" element={<PiaLinaVilarKocevarPage />} />
+          <Route path="/ekipa/mateja-sirse" element={<MatejaSirsePage />} />
+          <Route path="/ekipa/jani-petrovic" element={<JaniPetrovicPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
