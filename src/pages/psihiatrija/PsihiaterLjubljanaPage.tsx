@@ -247,26 +247,25 @@ const PsihiaterLjubljanaPage = () => {
               { title: "Post COVID sindrom", description: "Pomoč pri psihičnih posledicah po prebolelem COVID-19.", icon: Activity, href: "/post-covid-sindrom" },
               { title: "OKM (obsesivno-kompulzivna motnja)", description: "Zdravljenje vsiljenih misli in ponavljajočih se vedenj.", icon: Repeat, href: "/okm" },
             ].map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <service.icon className="h-6 w-6" />
+              <NavLink key={index} to={service.href} className="group">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                        <service.icon className="h-6 w-6" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
+                        <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
+                        <span className="inline-flex items-center text-primary text-sm font-medium group-hover:underline">
+                          Več informacij
+                          <ArrowRight className="ml-1 h-4 w-4" />
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
-                      <NavLink 
-                        to={service.href} 
-                        className="inline-flex items-center text-primary hover:underline text-sm font-medium"
-                      >
-                        Več informacij
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </NavLink>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </NavLink>
             ))}
           </div>
         </div>
