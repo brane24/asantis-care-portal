@@ -522,7 +522,7 @@ const ZobozdravnikLjubljanaPage = () => {
               </Card>
             </NavLink>
             
-            <NavLink to="/zobozdravstvo/zobozdravnik-nujno" className="group">
+            <NavLink to="/zobozdravstvo/zobozdravnik-nujno-zobobol" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:border-primary/50">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
