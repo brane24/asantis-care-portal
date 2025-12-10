@@ -79,6 +79,7 @@ import MonikaSmrkoljPage from "./pages/ekipa/MonikaSmrkoljPage";
 import MatejaSirsePage from "./pages/ekipa/MatejaSirsePage";
 import JaniPetrovicPage from "./pages/ekipa/JaniPetrovicPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -88,6 +89,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/storitve" element={<Storitve />} />
