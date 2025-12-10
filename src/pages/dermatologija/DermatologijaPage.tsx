@@ -325,7 +325,7 @@ const DermatologijaPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <NavLink to="/pregled-znamenj" className="group">
+            <NavLink to="/dermatologija/pregled-nevarnih-koznih-znamenj" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -340,7 +340,7 @@ const DermatologijaPage = () => {
               </Card>
             </NavLink>
 
-            <NavLink to="/odstranjevanje-znamenj" className="group">
+            <NavLink to="/dermatologija/odstranjevanje-znamenj" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -355,7 +355,7 @@ const DermatologijaPage = () => {
               </Card>
             </NavLink>
 
-            <NavLink to="/odstranjevanje-bradavic" className="group">
+            <NavLink to="/dermatologija/odstranjevanje-bradavic" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -370,7 +370,7 @@ const DermatologijaPage = () => {
               </Card>
             </NavLink>
 
-            <NavLink to="/lasersko-odstranjevanje-zil" className="group">
+            <NavLink to="/dermatologija/lasersko-odstranjevanje-zil" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -385,7 +385,7 @@ const DermatologijaPage = () => {
               </Card>
             </NavLink>
 
-            <NavLink to="/lasersko-odstranjevanje-dlacic" className="group">
+            <NavLink to="/dermatologija/lasersko-odstranjevanje-dlacic" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -400,7 +400,7 @@ const DermatologijaPage = () => {
               </Card>
             </NavLink>
 
-            <NavLink to="/pomlajevanje-koze" className="group">
+            <NavLink to="/dermatologija/pomlajevanje-koze" className="group">
               <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
