@@ -414,7 +414,7 @@ const PrivatPediaterPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <NavLink to="/pediatrija/okuzba-dihal-otrok" className="group">
+            <NavLink to="/pediatrija/okuzba-dihal-pri-otroku" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -422,6 +422,21 @@ const PrivatPediaterPage = () => {
                   </div>
                   <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Okužba dihal pri otroku</h3>
                   <p className="text-sm text-muted-foreground mb-4">Diagnostika in zdravljenje virusnih in bakterijskih okužb dihal.</p>
+                  <div className="inline-flex items-center text-primary font-medium">
+                    Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
+
+            <NavLink to="/pediatrija/kaselj-pri-otroku" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Activity className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Kašelj pri otroku</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Obravnava akutnega in dolgotrajnega kašlja – viroza, astma, alergija, bronhiolitis.</p>
                   <div className="inline-flex items-center text-primary font-medium">
                     Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>

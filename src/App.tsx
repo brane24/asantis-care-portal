@@ -32,6 +32,7 @@ import AtopijskiDermatitisPage from "./pages/pediatrija/AtopijskiDermatitisPage"
 import PediaterPulmologPage from "./pages/pediatrija/PediaterPulmologPage";
 import PediaterAstmaPage from "./pages/pediatrija/PediaterAstmaPage";
 import PediaterAlergologPage from "./pages/pediatrija/PediaterAlergologPage";
+import KaseljPriOtrokuPage from "./pages/pediatrija/KaseljPriOtrokuPage";
 import FizioterapijaLjubljanaPage from "./pages/fizioterapija/FizioterapijaLjubljanaPage";
 import BolecinaVratuPage from "./pages/fizioterapija/BolecinaVratuPage";
 import BolecinaKrizuPage from "./pages/fizioterapija/BolecinaKrizuPage";
@@ -115,6 +116,7 @@ const App = () => (
           <Route path="/pediatrija/pediater-pulmolog" element={<PediaterPulmologPage />} />
           <Route path="/pediatrija/pediater-astma-pri-otroku" element={<PediaterAstmaPage />} />
           <Route path="/pediatrija/pediater-alergolog" element={<PediaterAlergologPage />} />
+          <Route path="/pediatrija/kaselj-pri-otroku" element={<KaseljPriOtrokuPage />} />
           <Route path="/fizioterapija/fizioterapija-ljubljana" element={<FizioterapijaLjubljanaPage />} />
           <Route path="/fizioterapija/bolecina-v-vratu" element={<BolecinaVratuPage />} />
           <Route path="/fizioterapija/bolecina-v-krizu" element={<BolecinaKrizuPage />} />
