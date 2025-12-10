@@ -414,70 +414,80 @@ const PrivatPediaterPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow group">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Wind className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Okužba dihal pri otroku</h3>
-                <p className="text-sm text-muted-foreground mb-4">Diagnostika in zdravljenje virusnih in bakterijskih okužb dihal.</p>
-                <NavLink to="/okuzba-dihal-otrok" className="inline-flex items-center text-primary font-medium group-hover:underline">
-                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
-                </NavLink>
-              </CardContent>
-            </Card>
+            <NavLink to="/pediatrija/okuzba-dihal-otrok" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Wind className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Okužba dihal pri otroku</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Diagnostika in zdravljenje virusnih in bakterijskih okužb dihal.</p>
+                  <div className="inline-flex items-center text-primary font-medium">
+                    Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
 
-            <Card className="hover:shadow-lg transition-shadow group">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Sparkles className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Atopijski dermatitis</h3>
-                <p className="text-sm text-muted-foreground mb-4">Obravnava ekcemov in atopijskega dermatitisa pri otrocih.</p>
-                <NavLink to="/atopijski-dermatitis" className="inline-flex items-center text-primary font-medium group-hover:underline">
-                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
-                </NavLink>
-              </CardContent>
-            </Card>
+            <NavLink to="/pediatrija/atopijski-dermatitis" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Atopijski dermatitis</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Obravnava ekcemov in atopijskega dermatitisa pri otrocih.</p>
+                  <div className="inline-flex items-center text-primary font-medium">
+                    Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
 
-            <Card className="hover:shadow-lg transition-shadow group">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Activity className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Pediater alergolog</h3>
-                <p className="text-sm text-muted-foreground mb-4">Specialistična obravnava alergij pri otrocih – hrana, inhalacijski alergeni.</p>
-                <NavLink to="/pediater-alergolog" className="inline-flex items-center text-primary font-medium group-hover:underline">
-                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
-                </NavLink>
-              </CardContent>
-            </Card>
+            <NavLink to="/pediatrija/pediater-alergolog" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Activity className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Pediater alergolog</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Specialistična obravnava alergij pri otrocih – hrana, inhalacijski alergeni.</p>
+                  <div className="inline-flex items-center text-primary font-medium">
+                    Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
 
-            <Card className="hover:shadow-lg transition-shadow group">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Stethoscope className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Pediater pulmolog</h3>
-                <p className="text-sm text-muted-foreground mb-4">Specialist za kronične bolezni dihal, astmo in alergijsko pljučno bolezen.</p>
-                <NavLink to="/pediater-pulmolog" className="inline-flex items-center text-primary font-medium group-hover:underline">
-                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
-                </NavLink>
-              </CardContent>
-            </Card>
+            <NavLink to="/pediatrija/pediater-pulmolog" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Stethoscope className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Pediater pulmolog</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Specialist za kronične bolezni dihal, astmo in alergijsko pljučno bolezen.</p>
+                  <div className="inline-flex items-center text-primary font-medium">
+                    Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
 
-            <Card className="hover:shadow-lg transition-shadow group">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Obravnava astme pri otroku</h3>
-                <p className="text-sm text-muted-foreground mb-4">Diagnostika, zdravljenje in dolgoročno spremljanje otroške astme.</p>
-                <NavLink to="/pediater-astma" className="inline-flex items-center text-primary font-medium group-hover:underline">
-                  Več informacij <ArrowRight className="ml-1 h-4 w-4" />
-                </NavLink>
-              </CardContent>
-            </Card>
+            <NavLink to="/pediatrija/pediater-astma" className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Heart className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">Obravnava astme pri otroku</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Diagnostika, zdravljenje in dolgoročno spremljanje otroške astme.</p>
+                  <div className="inline-flex items-center text-primary font-medium">
+                    Več informacij <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </NavLink>
           </div>
         </div>
       </section>
