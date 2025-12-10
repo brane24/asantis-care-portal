@@ -350,32 +350,32 @@ const UltrazvokLjubljanaPage = () => {
             
             <div className="grid sm:grid-cols-2 gap-6">
               {ultrasoundServices.map((service, index) => (
-                <Card key={index} className="border-primary/20 hover:shadow-lg transition-all hover:border-primary/40 group">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <service.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                          {service.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mb-2">
-                          {service.description}
-                        </p>
-                        <p className="text-sm text-muted-foreground/80 mb-4">
-                          <span className="font-medium">Odkrivanje:</span> {service.conditions}
-                        </p>
-                        <Link to={service.link}>
-                          <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <Link key={index} to={service.link} className="group">
+                  <Card className="h-full border-primary/20 hover:shadow-lg transition-all hover:border-primary/40">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
+                          <service.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm mb-2">
+                            {service.description}
+                          </p>
+                          <p className="text-sm text-muted-foreground/80 mb-4">
+                            <span className="font-medium">Odkrivanje:</span> {service.conditions}
+                          </p>
+                          <span className="inline-flex items-center text-primary font-medium text-sm group-hover:underline">
                             Več informacij
                             <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
