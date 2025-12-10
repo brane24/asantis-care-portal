@@ -75,7 +75,7 @@ import AlesPorcnikPage from "./pages/ekipa/AlesPorcnikPage";
 import GregorCadezPage from "./pages/ekipa/GregorCadezPage";
 import DraganJejinicPage from "./pages/ekipa/DraganJejinicPage";
 import PetraSketPage from "./pages/ekipa/PetraSketPage";
-import PiaLinaVilarKocevarPage from "./pages/ekipa/PiaLinaVilarKocevarPage";
+import MonikaSmrkoljPage from "./pages/ekipa/MonikaSmrkoljPage";
 import MatejaSirsePage from "./pages/ekipa/MatejaSirsePage";
 import JaniPetrovicPage from "./pages/ekipa/JaniPetrovicPage";
 import NotFound from "./pages/NotFound";
@@ -161,7 +161,7 @@ const App = () => (
           <Route path="/ekipa/gregor-cadez" element={<GregorCadezPage />} />
           <Route path="/ekipa/dragan-jejinic" element={<DraganJejinicPage />} />
           <Route path="/ekipa/petra-sket" element={<PetraSketPage />} />
-          <Route path="/ekipa/pia-lina-vilar-kocevar" element={<PiaLinaVilarKocevarPage />} />
+          <Route path="/ekipa/monika-smrkolj" element={<MonikaSmrkoljPage />} />
           <Route path="/ekipa/mateja-sirse" element={<MatejaSirsePage />} />
           <Route path="/ekipa/jani-petrovic" element={<JaniPetrovicPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
