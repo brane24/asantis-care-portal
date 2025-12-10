@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { NavLink } from "react-router-dom";
 import { 
   Star, 
   Clock, 
@@ -475,7 +476,7 @@ const GinekologijaLjubljanaPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <a href="/preventivni-ginekoloski-pregled" className="group">
+            <NavLink to="/ginekologija/preventivni-pregled" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -488,9 +489,9 @@ const GinekologijaLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/ginekoloski-ultrazvok" className="group">
+            <NavLink to="/ginekologija/ginekoloski-ultrazvok" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -503,9 +504,9 @@ const GinekologijaLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/kontracepcija" className="group">
+            <NavLink to="/ginekologija/kontracepcija" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -518,9 +519,9 @@ const GinekologijaLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/manjsi-ginekoloski-posegi" className="group">
+            <NavLink to="/ginekologija/manjsi-posegi" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -533,9 +534,9 @@ const GinekologijaLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/ginekoloska-vnetja" className="group">
+            <NavLink to="/ginekologija/ginekoloska-vnetja" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -548,9 +549,9 @@ const GinekologijaLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
 
-            <a href="/uhajanje-urina" className="group">
+            <NavLink to="/ginekologija/uhajanje-urina-urinska-inkontinenca" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -563,7 +564,7 @@ const GinekologijaLjubljanaPage = () => {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </NavLink>
           </div>
         </div>
       </section>
