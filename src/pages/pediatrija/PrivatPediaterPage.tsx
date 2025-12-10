@@ -489,7 +489,7 @@ const PrivatPediaterPage = () => {
               </Card>
             </NavLink>
 
-            <NavLink to="/pediatrija/pediater-astma" className="group">
+            <NavLink to="/pediatrija/pediater-astma-pri-otroku" className="group">
               <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
