@@ -45,6 +45,13 @@ const ONas = () => {
       link: "/ekipa/ana-kotnik-pirs"
     },
     {
+      name: "Jani Petrović, dr. med.",
+      role: "Specialist dermatološke estetike",
+      description: "Specialist za posege iz dermatološke estetike – aplikacija botulinum toksina in polnil.",
+      image: "https://asantis.si/wp-content/uploads/2024/02/JANI-PETROVIC.webp",
+      link: "/ekipa/jani-petrovic"
+    },
+    {
       name: "Aleš Porčnik, dr. med.",
       role: "Specialist plastične kirurgije",
       description: "Specialist plastične, estetske in rekonstruktivne kirurgije z dodatnim znanjem rekonstrukcije živcev.",
@@ -85,13 +92,6 @@ const ONas = () => {
       description: "Specialistka ortopedske kirurgije.",
       image: "https://asantis.si/wp-content/uploads/2024/02/Mateja-Sirse-1.jpg",
       link: "/ekipa/mateja-sirse"
-    },
-    {
-      name: "Jani Petrović, dr. med.",
-      role: "Specialist dermatološke estetike",
-      description: "Specialist za posege iz dermatološke estetike – aplikacija botulinum toksina in polnil.",
-      image: "https://asantis.si/wp-content/uploads/2024/02/JANI-PETROVIC.webp",
-      link: "/ekipa/jani-petrovic"
     }
   ];
 
