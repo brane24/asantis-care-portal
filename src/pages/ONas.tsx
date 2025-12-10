@@ -29,6 +29,63 @@ const ONas = () => {
     }
   ];
 
+  const team = [
+    {
+      name: "Branko Pirš, dr. med.",
+      role: "Specialist dermatolog",
+      description: "Specialist dermatolog z dodatnim znanjem flebologije in dermatološke onkologije.",
+      image: "https://asantis.si/wp-content/uploads/2024/02/Branko-Pirs.jpg"
+    },
+    {
+      name: "dr. Ana Kotnik Pirš, dr. med.",
+      role: "Specialistka pediatrije",
+      description: "Specialistka pediatrije z dodatnim znanjem iz otroške pulmologije in alergologije.",
+      image: "https://asantis.si/wp-content/uploads/2023/12/Zdravnica-Ana-Kotnik-Pirs-pediater.webp"
+    },
+    {
+      name: "Aleš Porčnik, dr. med.",
+      role: "Specialist plastične kirurgije",
+      description: "Specialist plastične, estetske in rekonstruktivne kirurgije z dodatnim znanjem rekonstrukcije živcev.",
+      image: "https://asantis.si/wp-content/uploads/2023/12/Ales-Porcnik-kiurg-plastik.webp"
+    },
+    {
+      name: "Gregor Čadež, dipl. fizot.",
+      role: "Fizioterapevt",
+      description: "Fizioterapevt s specialnimi znanji iz manualne medicine.",
+      image: "https://asantis.si/wp-content/uploads/2023/12/Gregor-Cadez-fizioterapevt.webp"
+    },
+    {
+      name: "Dragan Jejinić, dr. med.",
+      role: "Specialist dermatolog",
+      description: "Specialist dermatolog z dodatnim znanjem iz operativne in estetske dermatologije.",
+      image: "https://asantis.si/wp-content/uploads/2024/11/slika-JD-1.webp"
+    },
+    {
+      name: "Petra Šket, dr. med.",
+      role: "Specialistka ginekologije",
+      description: "Specialistka ginekologije z dodatnim znanjem iz operativne ginekologije.",
+      image: "https://asantis.si/wp-content/uploads/2024/02/PETRA-SKET.jpg"
+    },
+    {
+      name: "Pia Lina Vilar Kočevar, dipl. fiziot.",
+      role: "Fizioterapevtka",
+      description: "Fizioterapevtka s specialnimi znanji iz manualne terapije.",
+      image: "https://asantis.si/wp-content/uploads/2024/02/PIA-LINA-VILAR-KOCEVAR-1.jpg"
+    },
+    {
+      name: "Mateja Sirše, dr. med.",
+      role: "Specialistka ortopedske kirurgije",
+      description: "Specialistka ortopedske kirurgije.",
+      image: "https://asantis.si/wp-content/uploads/2024/02/Mateja-Sirse-1.jpg"
+    },
+    {
+      name: "Jani Petrović, dr. med.",
+      role: "Specialist dermatološke estetike",
+      description: "Specialist za posege iz dermatološke estetike – aplikacija botulinum toksina in polnil.",
+      image: "https://asantis.si/wp-content/uploads/2024/02/JANI-PETROVIC.webp"
+    }
+  ];
+
   return (
     <Layout>
       <section className="bg-gradient-hero py-16 md:py-20">
@@ -37,7 +94,7 @@ const ONas = () => {
             O ASANTIS
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Medicinski center nove generacije
+            Zdravniki, terapevti in osebje, ki skrbi za vas in vaše družine
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Združujemo najboljše strokovnjake, sodobno opremo in inovativen pristop 
@@ -94,45 +151,29 @@ const ONas = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 rounded-full bg-gradient-primary mx-auto mb-4"></div>
-                <CardTitle>Dr. Ana Novak</CardTitle>
-                <CardDescription>Specialistka interne medicine</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  15+ let izkušenj na področju preventive in zdravljenja presnovnih bolezni
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 rounded-full bg-gradient-secondary mx-auto mb-4"></div>
-                <CardTitle>Dr. Maja Horvat</CardTitle>
-                <CardDescription>Specialistka ginekologije</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Strokovno znanje in sočuten pristop za žensko zdravje v vseh življenjskih obdobjih
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 rounded-full bg-gradient-primary mx-auto mb-4"></div>
-                <CardTitle>Dr. Marko Kovač</CardTitle>
-                <CardDescription>Specialist psihiatrije</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Sodoben pristop k duševnemu zdravju s poudarkom na preventivi in terapiji
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {team.map((member, index) => (
+              <Card 
+                key={member.name} 
+                className="text-center hover:shadow-soft transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader>
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top"
+                  />
+                  <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardDescription className="text-primary font-medium">{member.role}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    {member.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
