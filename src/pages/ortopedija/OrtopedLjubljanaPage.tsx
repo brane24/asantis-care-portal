@@ -388,21 +388,19 @@ const OrtopedLjubljanaPage = () => {
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
                 return (
-                  <a key={index} href="/kontakt" className="group">
-                    <Card className="h-full border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                            <IconComponent className="w-6 h-6 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-foreground mb-2">{benefit.title}</h3>
-                            <p className="text-muted-foreground">{benefit.description}</p>
-                          </div>
+                  <Card key={index} className="h-full border-border/50">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="w-6 h-6 text-primary" />
                         </div>
-                      </CardContent>
-                    </Card>
-                  </a>
+                        <div>
+                          <h3 className="font-bold text-foreground mb-2">{benefit.title}</h3>
+                          <p className="text-muted-foreground">{benefit.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 );
               })}
             </div>
