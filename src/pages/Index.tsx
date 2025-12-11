@@ -146,39 +146,42 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
+            <NavLink 
               key={service.title} 
-              className="relative hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              to={service.link}
+              className="block"
             >
-              {service.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-secondary border-0">
-                  ⭐ Najbolj izbran
-                </Badge>
-              )}
-              <CardHeader className="text-center">
-                <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 mx-auto ${service.color}`}>
-                  <service.icon className="h-6 w-6" />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-                <CardDescription className="text-base">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="flex items-baseline justify-center mb-4">
-                  <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                    {service.price}€
-                  </span>
-                  <span className="text-muted-foreground ml-2">/ mesec</span>
-                </div>
-                <Button asChild className="w-full" variant={service.popular ? "default" : "outline"}>
-                  <NavLink to={service.link}>
+              <Card 
+                className="relative hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in cursor-pointer h-full"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {service.popular && (
+                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-secondary border-0">
+                    ⭐ Najbolj izbran
+                  </Badge>
+                )}
+                <CardHeader className="text-center">
+                  <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 mx-auto ${service.color}`}>
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <div className="flex items-baseline justify-center mb-4">
+                    <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                      {service.price}€
+                    </span>
+                    <span className="text-muted-foreground ml-2">/ mesec</span>
+                  </div>
+                  <Button className="w-full" variant={service.popular ? "default" : "outline"}>
                     Več o paketu <ArrowRight className="ml-2 h-4 w-4" />
-                  </NavLink>
-                </Button>
-              </CardContent>
-            </Card>
+                  </Button>
+                </CardContent>
+              </Card>
+            </NavLink>
           ))}
         </div>
       </section>
