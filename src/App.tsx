@@ -84,6 +84,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import SrceOziljePage from "./pages/paketi/SrceOziljePage";
 import ZobniPlusPage from "./pages/paketi/ZobniPlusPage";
 import FreeMovePage from "./pages/paketi/FreeMovePage";
+import Zenska360Page from "./pages/paketi/Zenska360Page";
 
 const queryClient = new QueryClient();
 
@@ -175,6 +176,7 @@ const App = () => (
           <Route path="/paketi/srce-ozilje" element={<SrceOziljePage />} />
           <Route path="/paketi/zobni-plus" element={<ZobniPlusPage />} />
           <Route path="/paketi/freemove" element={<FreeMovePage />} />
+          <Route path="/paketi/zenska-360" element={<Zenska360Page />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
