@@ -9,10 +9,10 @@ const Index = () => {
   const services = [
     {
       icon: Heart,
-      title: "Srce & Presnova",
-      description: "Preventiva, energija in dolgoročno zdravje vašega srca in presnove.",
+      title: "Srce & Ožilje",
+      description: "Celosten program za srce, ožilje in presnovo z mesečno strokovno podporo.",
       price: "39",
-      link: "/storitve/srce-presnova",
+      link: "/paketi/srce-ozilje",
       color: "text-red-500"
     },
     {
