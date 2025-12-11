@@ -27,10 +27,10 @@ const Index = () => {
     {
       icon: Activity,
       title: "FreeMove",
-      description: "Bolečina & gibanje - življenje brez bolečin v hrbtenici in sklepih.",
-      price: "69",
-      link: "/storitve/freemove",
-      color: "text-blue-500"
+      description: "Gibanje & Regeneracija – celostna ortopedska in fizioterapevtska obravnava.",
+      price: "49",
+      link: "/paketi/freemove",
+      color: "text-emerald-500"
     },
     {
       icon: Brain,
