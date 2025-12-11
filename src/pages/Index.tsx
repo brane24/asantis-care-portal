@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan } from "lucide-react";
 
 const Index = () => {
@@ -101,14 +102,21 @@ const Index = () => {
               Medicinski center nove generacije
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Vaše zdravje,{" "}
+              Zdravstveni paketi Asantis —{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                naša prioriteta
+                vaš osebni zdravstveni načrt skozi leto
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Celostna skrb za zdravje z mesečno naročnino. Izberite paket, ki ustreza vašim potrebam, 
-              in zagotovite si preventivo ter podporo za aktivno in zdravo življenje.
+            <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+              Namesto naključnih pregledov prejmete strukturirano spremljanje vašega ključnega zdravstvenega področja: 
+              srce, žensko zdravje, gibanje, duševno zdravje, koža, otroci, hujšanje ali zobje.
+            </p>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              Izberete paket, ki vam pripada — po potrebi dodate drugega — in skozi leto poskrbimo za preglede, 
+              terapije, kontrole in strokovno vodenje, brez presenečenj pri stroških.
+            </p>
+            <p className="text-primary font-semibold text-lg mb-8">
+              Manj tveganj. Manj čakanja. Več zdravja – vse leto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="text-lg">
@@ -207,6 +215,112 @@ const Index = () => {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="container py-16 md:py-24">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Pogosta vprašanja o paketih
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Vse, kar morate vedeti o zdravstvenih paketih Asantis
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Zakaj bi izbral paket in ne posamičnih storitev?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Ker se zdravstveno stanje spreminja skozi leto. Paket vam omogoča stalno spremljanje in pravočasne kontrole, kar znižuje tveganja, pospeši napredek in je dolgoročno ceneje kot kupovanje posameznih pregledov.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Ali bom paket sploh izkoristil? Ne želim plačevati nečesa, česar ne bom potreboval.
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Paketi so oblikovani glede na realne potrebe posameznika. Večina vključuje 1–2 ključna pregleda + dodatne obravnave, ki jih večina uporabnikov potrebuje vsako leto. Ničesar ni "preveč".
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Ali lahko združim dva paketa?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Da. Večina ljudi ima težave le z 1–2 zdravstvenima področjema. Pakete lahko kombinirate (npr. Ženska 360 + Skin, FreeMove + Hujšanje), pogosto le začasno.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Kaj pa, če bom želel paket pozneje zamenjati ali prekiniti?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Paketi so fleksibilni. Brez ponovnih administracij lahko zamenjate paket, dodate začasnega, zmanjšate ali povečate intenzivnost, ali nadaljujete le z osnovnimi pregledi.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Ali lahko znotraj paketa menjam zdravnike ali terapevte?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Da, v okviru razpoložljivosti. Vedno poskrbimo za kontinuiteto obravnave.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Kaj pa dodatne preiskave? So vključene?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Osnovne storitve so vključene. Napredne ali nadstandardne preiskave so na voljo s paketnim popustom, kar je ceneje kot samostojni nakup.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Kaj če trenutno nimam večjih zdravstvenih težav?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Ravno takrat je paket najbolj smiseln. Cilj je preventiva, da težave sploh ne nastanejo — ne čakanje na poslabšanje.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Ali lahko paket koristi celotna družina?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Vsak član ima svoj paket, lahko pa združite več družinskih paketov (npr. Kids & Family + Zobni Plus).
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-9" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Koliko časa traja paket?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Paket traja 12 mesecev, storitve pa so časovno razporejene tako, da imate pregled, terapijo ali posvet v optimalnem trenutku.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10" className="border rounded-lg px-6">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Ali je paket res finančno ugodnejši?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Da. Povprečno je skupna vrednost storitev v enem letu 35–60% višja od cene paketa. Poleg tega dobite prednostno naročanje in stalno dostopnost, česar posamični pregledi ne ponujajo.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
