@@ -35,9 +35,9 @@ const Index = () => {
     {
       icon: Brain,
       title: "MindCare",
-      description: "Duševno zdravje, fokus in ravnovesje za polno življenje.",
-      price: "99",
-      link: "/storitve/mindcare",
+      description: "Osebni psihiater, stalna podpora in načrt zdravljenja — brez čakalnih vrst.",
+      price: "69",
+      link: "/paketi/mindcare",
       color: "text-purple-500"
     },
     {
