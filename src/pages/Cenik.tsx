@@ -144,14 +144,16 @@ const Cenik = () => {
     },
     {
       name: "Zobni Plus",
-      description: "Osnovna preventiva in ohranjanje ustnega zdravja",
-      price: 39,
+      description: "Celosten zobni paket z 3D skenom",
+      price: 19,
       period: "mesec",
+      activationPrice: "89–129 €",
       features: [
-        "Letni zobozdravstveni pregled",
-        "Profesionalno čiščenje zobnega kamna 1x/leto",
-        "2 brezplačni popravili (plombi) na leto",
-        "20% popust na dodatne storitve"
+        "Aktivacija: pregled + RTG/CT + 3D sken + načrt",
+        "Letni pregled in kontrolni posvet",
+        "Članski popusti do 25% na posege",
+        "Prednostno naročanje",
+        "AI sistem zgodnjega odkrivanja"
       ],
       link: "/paketi/zobni-plus"
     },
