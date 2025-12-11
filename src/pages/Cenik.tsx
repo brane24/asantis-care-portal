@@ -72,16 +72,16 @@ const Cenik = () => {
     },
     {
       name: "MindCare",
-      description: "Duševno zdravje, fokus in ravnovesje",
-      price: 99,
+      description: "Osebni psihiater, stalna podpora in načrt zdravljenja",
+      price: 69,
       period: "mesec",
-      pricePrefix: "od ",
+      activationPrice: "120 €",
       features: [
-        "Začetni psihiatrični pregled",
-        "4 kontrolni posveti",
-        "8-10 psihoterapevtskih srečanj",
-        "Možnost hitrih online posvetov",
-        "Posebne cene za TMS terapijo"
+        "Aktivacija: prvi psihiatrični pregled (60–90 min)",
+        "Mesečna kontrolna konzultacija (10–15 min)",
+        "E-mail/video sporočila 1× mesečno",
+        "TMS članska cena: –20 %",
+        "Stabilizacija in prilagajanje terapije"
       ],
       link: "/paketi/mindcare"
     },
@@ -362,11 +362,6 @@ const Cenik = () => {
                 </CardDescription>
                 <div className="pt-4">
                   <div className="flex items-baseline">
-                    {pkg.pricePrefix && (
-                      <span className="text-lg text-muted-foreground mr-1">
-                        {pkg.pricePrefix}
-                      </span>
-                    )}
                     <span className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                       {pkg.price}€
                     </span>
