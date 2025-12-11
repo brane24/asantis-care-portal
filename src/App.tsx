@@ -81,6 +81,7 @@ import MatejaSirsePage from "./pages/ekipa/MatejaSirsePage";
 import JaniPetrovicPage from "./pages/ekipa/JaniPetrovicPage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import SrceOziljePage from "./pages/paketi/SrceOziljePage";
 
 const queryClient = new QueryClient();
 
@@ -168,6 +169,8 @@ const App = () => (
           <Route path="/ekipa/monika-smrkolj" element={<MonikaSmrkoljPage />} />
           <Route path="/ekipa/mateja-sirse" element={<MatejaSirsePage />} />
           <Route path="/ekipa/jani-petrovic" element={<JaniPetrovicPage />} />
+          {/* Paketi */}
+          <Route path="/paketi/srce-ozilje" element={<SrceOziljePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
