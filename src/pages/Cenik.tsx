@@ -22,19 +22,20 @@ import {
 const Cenik = () => {
   const healthPackages = [
     {
-      name: "Srce & Presnova",
-      description: "Preventiva, energija in dolgoročno zdravje",
+      name: "Srce & Ožilje",
+      description: "Celosten program za srce, ožilje in presnovo",
       price: 39,
       period: "mesec",
+      activationPrice: "169 €",
       features: [
-        "Internistični preventivni pregled",
-        "Laboratorijske preiskave (sladkor, maščobe, jetra, ščitnica)",
-        "EKG",
-        "Kontrolni posvet",
-        "Pisni zdravstveni načrt",
+        "Internistični pregled + laboratorij + EKG",
+        "Ultrazvok žil (3 regije)",
+        "1× mesečni posvet + spremljanje",
+        "Dostop do zdravnika online",
+        "Letni laboratorij + ocena tveganja",
         "Popusti na dodatne preiskave"
       ],
-      link: "/paketi/srce-presnova"
+      link: "/paketi/srce-ozilje"
     },
     {
       name: "Ženska 360",
@@ -54,16 +55,17 @@ const Cenik = () => {
     },
     {
       name: "FreeMove",
-      description: "Bolečina & gibanje",
-      price: 69,
+      description: "Gibanje & Regeneracija",
+      price: 49,
       period: "mesec",
+      activationPrice: "99–129 €",
       features: [
-        "Ortopedski pregled",
-        "Funkcionalna fizioterapevtska ocena",
-        "6-8 fizioterapevtskih obravnav",
-        "Kontrolni pregled",
-        "Individualni program vaj",
-        "Popusti na dodatne terapije"
+        "Ortopedski pregled + funkcionalni testi",
+        "2× fizioterapija mesečno (30–45 min)",
+        "1× regeneracijska terapija mesečno",
+        "Ortopedski nadzor vsakih 3–4 mesece",
+        "Prioritetno naročanje (do 72 h)",
+        "15% popust na dodatne storitve"
       ],
       link: "/paketi/freemove"
     },
