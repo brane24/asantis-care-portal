@@ -39,17 +39,18 @@ const Cenik = () => {
     },
     {
       name: "Ženska 360",
-      description: "Celostna skrb za žensko zdravje",
-      price: 65,
+      description: "Najcelovitejši ženski zdravstveni paket",
+      price: 39,
       period: "mesec",
+      activationPrice: "159 €",
       popular: true,
       features: [
-        "Ginekološki pregled + PAP + UZ",
-        "Klinični pregled dojk",
-        "Hormonski / internistični pregled",
-        "Osnovni dermatološki pregled",
-        "Online posvet",
-        "Popusti na dodatne storitve"
+        "Aktivacija: ginekolog + PAP/HPV + UZ rodil + UZ dojk + dermato + UZ ščitnice",
+        "Nujni termini v 48h (vnetje, bolečina)",
+        "Letni UZ dojk + dermato pregled",
+        "Mesečni posveti (video/e-mail)",
+        "20% popust na posege",
+        "Prednostni termini"
       ],
       link: "/paketi/zenska-360"
     },

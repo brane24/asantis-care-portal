@@ -18,9 +18,9 @@ const Index = () => {
     {
       icon: Users,
       title: "Ženska 360",
-      description: "Celostna skrb za žensko zdravje od preventive do terapije.",
-      price: "65",
-      link: "/storitve/zenska-360",
+      description: "Najcelovitejši ženski zdravstveni paket: ginekologija, dojke, koža, hormoni, ščitnica.",
+      price: "39",
+      link: "/paketi/zenska-360",
       color: "text-pink-500",
       popular: true
     },
