@@ -47,6 +47,25 @@ const SkinCareMedicalPage = () => {
     }
   ];
 
+  const activationFaqItems = [
+    {
+      question: "Zakaj plačati aktivacijo, če že plačujem naročnino?",
+      answer: "Ker se v aktivaciji opravi največ strokovnega dela: diagnostika, plan, odločitev o terapiji. Naročnina je namenjena vzdrževanju in spremljanju, ne začetni obravnavi."
+    },
+    {
+      question: "Ali lahko brez aktivacije?",
+      answer: "Ne. Brez začetne ocene ni varnega in strokovnega spremljanja."
+    },
+    {
+      question: "Ali aktivacija nadomesti samoplačniški pregled?",
+      answer: "Da. Aktivacija vključuje celoten začetni pregled, ki bi ga sicer plačali ločeno."
+    },
+    {
+      question: "Kaj če po aktivaciji ne želim nadaljevati naročnine?",
+      answer: "To je povsem v redu. Aktivacija je samostojna storitev in ni vezana na nadaljevanje."
+    }
+  ];
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -330,42 +349,144 @@ const SkinCareMedicalPage = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Activation Section */}
       <section className="container py-16 md:py-24">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-            💶 Cena paketa
+          <Badge className="mb-4 bg-accent/10 text-accent-foreground border-accent/20">
+            🔑 Zakaj aktivacija?
           </Badge>
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            49 € / mesec
+            Aktivacija paketa SkinCare Medical
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Kožnih težav ne rešujemo z naročnino, ampak z natančno začetno diagnostiko, 
+            postavitvijo terapevtskega načrta in strokovno odločitvijo, kaj sploh potrebuje spremljanje.
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <p className="text-4xl font-bold text-primary mb-2">120 €</p>
+                <p className="text-muted-foreground">enkratna aktivacija</p>
+              </div>
+
+              <h3 className="text-xl font-bold mb-6">Kaj vključuje aktivacija:</h3>
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {[
+                  "Temeljni dermatološki pregled",
+                  "Dermatoskopijo znamenj",
+                  "Diagnostično oceno kožnega stanja",
+                  "Individualni terapevtski načrt",
+                  "Odločitev, ali je paket primeren za dolgoročno spremljanje"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Card className="bg-muted/50 border-muted">
+                <CardContent className="p-4 text-center">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Aktivacija je obvezna ob prvem vstopu v paket.</strong><br />
+                    Zagotavlja, da je paket medicinsko smiseln – za pacienta in za kliniko.
+                  </p>
+                </CardContent>
+              </Card>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Monthly Subscription Section */}
+      <section className="bg-muted/30 py-16 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
+              🔁 Po aktivaciji
+            </Badge>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              Mesečna naročnina: 49 € / mesec
+            </h2>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <Card className="border-primary/30 shadow-soft">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold mb-6 text-center">Vključeno:</h3>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span>Spremljanje po indikaciji</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span>Kontrolni pregled</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span>Osnovni medicinski tretma</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span>10 % popust na dodatne storitve</span>
+                  </div>
+                </div>
+
+                <Card className="bg-primary/5 border-primary/20 mb-8">
+                  <CardContent className="p-4 text-center">
+                    <p className="text-sm text-muted-foreground">
+                      <strong>Ni obveznih mesečnih obiskov.</strong><br />
+                      Paket je zdravstveni odnos, ne urnik obiskov.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <div className="text-center">
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Za vstop v paket je potrebna začetna dermatološka obravnava, kjer ocenimo stanje kože 
+                    in pripravimo individualni načrt zdravljenja. Šele nato je smiselno dolgoročno spremljanje.
+                  </p>
+                  <Button size="lg" asChild className="w-full text-lg">
+                    <NavLink to="/kontakt">
+                      Začni s pregledom <ArrowRight className="ml-2 h-5 w-5" />
+                    </NavLink>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Activation FAQ Section */}
+      <section className="container py-16 md:py-24">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            ❓ Pogosta vprašanja – aktivacija
           </h2>
         </div>
 
-        <div className="max-w-md mx-auto">
-          <Card className="border-primary/30 shadow-soft">
-            <CardContent className="p-8 text-center">
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>brez vezave</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>brez skritih stroškov</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>medicinsko voden program</span>
-                </div>
-              </div>
-
-              <Button size="lg" asChild className="w-full text-lg">
-                <NavLink to="/kontakt">
-                  Naroči se <ArrowRight className="ml-2 h-5 w-5" />
-                </NavLink>
-              </Button>
-            </CardContent>
-          </Card>
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {activationFaqItems.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`activation-${index}`}
+                className="bg-background rounded-lg border px-6"
+              >
+                <AccordionTrigger className="text-left hover:no-underline py-4">
+                  <span className="font-semibold">{item.question}</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-4">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
