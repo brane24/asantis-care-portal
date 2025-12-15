@@ -1,1 +1,9 @@
 project_id = "poehpivpijygnmxpwjay"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+
+[functions.send-contact-email]
+verify_jwt = false
