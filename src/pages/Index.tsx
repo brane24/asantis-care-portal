@@ -5,95 +5,74 @@ import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan } from "lucide-react";
-
 const Index = () => {
-  const services = [
-    {
-      icon: Heart,
-      title: "Srce & Ožilje",
-      description: "Celosten program za srce, ožilje in presnovo z mesečno strokovno podporo.",
-      price: "39",
-      link: "/paketi/srce-ozilje",
-      color: "text-red-500"
-    },
-    {
-      icon: Users,
-      title: "Ženska 360",
-      description: "Najcelovitejši ženski zdravstveni paket: ginekologija, dojke, koža, hormoni, ščitnica.",
-      price: "39",
-      link: "/paketi/zenska-360",
-      color: "text-pink-500",
-      popular: true
-    },
-    {
-      icon: Activity,
-      title: "FreeMove",
-      description: "Gibanje & Regeneracija – celostna ortopedska in fizioterapevtska obravnava.",
-      price: "49",
-      link: "/paketi/freemove",
-      color: "text-emerald-500"
-    },
-    {
-      icon: Brain,
-      title: "MindCare",
-      description: "Osebni psihiater, stalna podpora in načrt zdravljenja — brez čakalnih vrst.",
-      price: "69",
-      link: "/paketi/mindcare",
-      color: "text-purple-500"
-    },
-    {
-      icon: Smile,
-      title: "SkinCare Medical",
-      description: "Medicinski dermatološki paket za akne, znamenja in problematično kožo.",
-      price: "49",
-      link: "/paketi/skincare-medical",
-      color: "text-amber-500"
-    },
-    {
-      icon: Baby,
-      title: "Kids & Family",
-      description: "Privat pediater za vašo družino, ko ga najbolj potrebujete.",
-      price: "39",
-      link: "/paketi/kids-family",
-      color: "text-green-500"
-    },
-    {
-      icon: Sparkles,
-      title: "Estetika & Vitalnost",
-      description: "Estetsko pomlajevanje, kožna diagnostika in svetovanje o vitalnosti.",
-      price: "79",
-      link: "/paketi/estetika-vitalnost",
-      color: "text-rose-500"
-    },
-    {
-      icon: CircleDot,
-      title: "Zobni Plus",
-      description: "Celosten zobni paket z diagnostiko, 3D skenom in prednostnimi termini.",
-      price: "19",
-      link: "/paketi/zobni-plus",
-      color: "text-cyan-500"
-    },
-    {
-      icon: Scale,
-      title: "Slim+ Medikacija",
-      description: "Izguba teže pod zdravniškim nadzorom z GLP-1 terapijo in celostno podporo.",
-      price: "129",
-      link: "/paketi/hujsanje",
-      color: "text-orange-500"
-    },
-  ];
-
-  const benefits = [
-    "Prednostno naročanje brez čakalnih dob",
-    "Online posveti kadarkoli potrebujete",
-    "Letni preventivni pregledi vključeni",
-    "Popusti na dodatne storitve in terapije",
-    "Osebni zdravstveni načrt",
-    "Multidisciplinarna ekipa strokovnjakov"
-  ];
-
-  return (
-    <Layout>
+  const services = [{
+    icon: Heart,
+    title: "Srce & Ožilje",
+    description: "Celosten program za srce, ožilje in presnovo z mesečno strokovno podporo.",
+    price: "39",
+    link: "/paketi/srce-ozilje",
+    color: "text-red-500"
+  }, {
+    icon: Users,
+    title: "Ženska 360",
+    description: "Najcelovitejši ženski zdravstveni paket: ginekologija, dojke, koža, hormoni, ščitnica.",
+    price: "39",
+    link: "/paketi/zenska-360",
+    color: "text-pink-500",
+    popular: true
+  }, {
+    icon: Activity,
+    title: "FreeMove",
+    description: "Gibanje & Regeneracija – celostna ortopedska in fizioterapevtska obravnava.",
+    price: "49",
+    link: "/paketi/freemove",
+    color: "text-emerald-500"
+  }, {
+    icon: Brain,
+    title: "MindCare",
+    description: "Osebni psihiater, stalna podpora in načrt zdravljenja — brez čakalnih vrst.",
+    price: "69",
+    link: "/paketi/mindcare",
+    color: "text-purple-500"
+  }, {
+    icon: Smile,
+    title: "SkinCare Medical",
+    description: "Medicinski dermatološki paket za akne, znamenja in problematično kožo.",
+    price: "49",
+    link: "/paketi/skincare-medical",
+    color: "text-amber-500"
+  }, {
+    icon: Baby,
+    title: "Kids & Family",
+    description: "Privat pediater za vašo družino, ko ga najbolj potrebujete.",
+    price: "39",
+    link: "/paketi/kids-family",
+    color: "text-green-500"
+  }, {
+    icon: Sparkles,
+    title: "Estetika & Vitalnost",
+    description: "Estetsko pomlajevanje, kožna diagnostika in svetovanje o vitalnosti.",
+    price: "79",
+    link: "/paketi/estetika-vitalnost",
+    color: "text-rose-500"
+  }, {
+    icon: CircleDot,
+    title: "Zobni Plus",
+    description: "Celosten zobni paket z diagnostiko, 3D skenom in prednostnimi termini.",
+    price: "19",
+    link: "/paketi/zobni-plus",
+    color: "text-cyan-500"
+  }, {
+    icon: Scale,
+    title: "Slim+ Medikacija",
+    description: "Izguba teže pod zdravniškim nadzorom z GLP-1 terapijo in celostno podporo.",
+    price: "129",
+    link: "/paketi/hujsanje",
+    color: "text-orange-500"
+  }];
+  const benefits = ["Prednostno naročanje brez čakalnih dob", "Online posveti kadarkoli potrebujete", "Letni preventivni pregledi vključeni", "Popusti na dodatne storitve in terapije", "Osebni zdravstveni načrt", "Multidisciplinarna ekipa strokovnjakov"];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero">
         <div className="container py-20 md:py-32">
@@ -112,8 +91,7 @@ const Index = () => {
               srce, žensko zdravje, gibanje, duševno zdravje, koža, otroci, hujšanje ali zobje.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Izberete paket, ki vam pripada — po potrebi dodate drugega — in skozi leto poskrbimo za preglede, 
-              terapije, kontrole in strokovno vodenje, brez presenečenj pri stroških.
+              Izberite paket glede na vaše zdravstvene potrebe — po potrebi dodate drugega — in skozi leto poskrbimo za preglede, terapije, kontrole in strokovno vodenje, brez presenečenj pri stroških.
             </p>
             <p className="text-primary font-semibold text-lg mb-8">
               Manj tveganj. Manj čakanja. Več zdravja – vse leto.
@@ -145,21 +123,13 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <NavLink 
-              key={service.title} 
-              to={service.link}
-              className="block"
-            >
-              <Card 
-                className="relative hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in cursor-pointer h-full"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {service.popular && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-secondary border-0">
+          {services.map((service, index) => <NavLink key={service.title} to={service.link} className="block">
+              <Card className="relative hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in cursor-pointer h-full" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
+                {service.popular && <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-secondary border-0">
                     ⭐ Najbolj izbran
-                  </Badge>
-                )}
+                  </Badge>}
                 <CardHeader className="text-center">
                   <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 mx-auto ${service.color}`}>
                     <service.icon className="h-6 w-6" />
@@ -181,8 +151,7 @@ const Index = () => {
                   </Button>
                 </CardContent>
               </Card>
-            </NavLink>
-          ))}
+            </NavLink>)}
         </div>
       </section>
 
@@ -200,16 +169,12 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div 
-                  key={benefit} 
-                  className="flex items-start space-x-3 animate-slide-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              {benefits.map((benefit, index) => <div key={benefit} className="flex items-start space-x-3 animate-slide-in" style={{
+              animationDelay: `${index * 100}ms`
+            }}>
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <p className="text-lg">{benefit}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="mt-12 text-center">
@@ -349,8 +314,6 @@ const Index = () => {
           </CardContent>
         </Card>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
