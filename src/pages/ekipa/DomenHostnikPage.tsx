@@ -4,8 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { ArrowLeft, Phone, Mail } from "lucide-react";
+import domenHostnikImg from "@/assets/domen-hostnik.jpg";
 
-const DraganJejinicPage = () => {
+const DomenHostnikPage = () => {
   return (
     <Layout>
       <section className="bg-gradient-hero py-16 md:py-20">
@@ -20,21 +21,21 @@ const DraganJejinicPage = () => {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-1">
               <img 
-                src="https://asantis.si/wp-content/uploads/2024/11/slika-JD-1.webp" 
-                alt="Dragan Jejinić, dr. med."
+                src={domenHostnikImg} 
+                alt="Domen Hostnik, dr. dent. med."
                 className="w-full max-w-sm mx-auto rounded-2xl shadow-lg object-cover"
               />
             </div>
             
             <div className="md:col-span-2">
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-                Dermatologija
+                Zobozdravstvo
               </Badge>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                Dragan Jejinić, dr. med.
+                Domen Hostnik, dr. dent. med.
               </h1>
               <p className="text-xl text-primary font-medium mb-6">
-                Specialist dermatolog z dodatnim znanjem iz operativne in estetske dermatologije
+                Zobozdravnik z dodatnim znanjem iz ortodontike in implantologije
               </p>
               
               <div className="flex flex-wrap gap-4 mb-6">
@@ -63,16 +64,20 @@ const DraganJejinicPage = () => {
               <h2 className="text-2xl font-bold mb-6">O meni</h2>
               
               <p>
-                Dragan Jejinić, dr. med. je specialist dermatolog z bogatimi izkušnjami na področju operativne in estetske dermatologije. Svoje znanje in veščine je pridobival tako doma kot v tujini, kjer se je izpopolnjeval v najsodobnejših tehnikah zdravljenja kožnih bolezni in estetskih posegov.
+                Študij dentalne medicine sem zaključil na Medicinski fakulteti Univerze v Ljubljani in nato nadaljeval z izobraževanjem in delom na Stomatološki kliniki v Ljubljani.
               </p>
               
               <p>
-                Pri svojem delu združuje strokovno znanje s prijaznim in individualnim pristopom do vsakega pacienta. Posebej se posveča zdravljenju kožnih tumorjev, estetskim posegom in celostnemu zdravju kože.
+                Svoje znanje in izkušnje sem več let nadgrajeval v stomatološki ambulanti, dodatno pa sem se izpopolnjeval na področju oralne implantologije in protetike v Nemčiji ter drugod v tujini. Stalno strokovno izpopolnjevanje mi omogoča, da pri delu uporabljam sodobne pristope in tehnike, ki pacientom zagotavljajo vrhunske rezultate.
               </p>
               
-              <blockquote className="border-l-4 border-primary pl-6 italic my-8 text-muted-foreground">
-                V kliniki ASANTIS skrbimo za vaše zdravje kože z najsodobnejšimi metodami in individualnim pristopom.
-              </blockquote>
+              <p>
+                Ukvarjam se s splošnim in konzervativnim zobozdravstvom (zalivke, dograditve zob, zdravljenje koreninskih kanalov), implantologijo, zobno protetiko in estetskim zobozdravstvom. Pri delu v medicinskem centru ASANTIS imamo na voljo najsodobnejše diagnostične rentgenološke in CT naprave, instrumente in materiale, ki mi omogočajo, da pacienta na enem mestu obravnavam od diagnostike do končne rešitve.
+              </p>
+              
+              <p>
+                Pri svojem delu stremim k natančni, neboleči in prijazni obravnavi. Verjamem, da je obisk zobozdravnika lahko prijetna izkušnja, če pacient začuti strokovnost, spoštovanje in iskreno željo po najboljšem rezultatu. Pri vsakem pacientu stremim k prijazni, neboleči in natančni obravnavi. Verjamem, da je ključ do popolnega nasmeha v zaupanju, strokovnosti in občutku varnosti – zato se vsakemu pacientu posvetim tako, kot bi si želel, da bi se zobozdravnik posvetil meni.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -81,4 +86,4 @@ const DraganJejinicPage = () => {
   );
 };
 
-export default DraganJejinicPage;
+export default DomenHostnikPage;
