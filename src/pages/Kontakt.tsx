@@ -11,56 +11,42 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-
 const contactSchema = z.object({
-  name: z.string()
-    .min(2, "Ime mora vsebovati vsaj 2 znaka")
-    .max(100, "Ime je predolgo"),
-  email: z.string()
-    .email("Vnesite veljaven email naslov")
-    .max(255, "Email je predolg"),
-  phone: z.string()
-    .optional()
-    .refine((val) => !val || val.length >= 9, "Telefonska številka je prekratka"),
-  message: z.string()
-    .min(10, "Sporočilo mora vsebovati vsaj 10 znakov")
-    .max(1000, "Sporočilo je predolgo (max 1000 znakov)"),
+  name: z.string().min(2, "Ime mora vsebovati vsaj 2 znaka").max(100, "Ime je predolgo"),
+  email: z.string().email("Vnesite veljaven email naslov").max(255, "Email je predolg"),
+  phone: z.string().optional().refine(val => !val || val.length >= 9, "Telefonska številka je prekratka"),
+  message: z.string().min(10, "Sporočilo mora vsebovati vsaj 10 znakov").max(1000, "Sporočilo je predolgo (max 1000 znakov)")
 });
-
 type ContactFormData = z.infer<typeof contactSchema>;
-
 const Kontakt = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
-      message: "",
-    },
+      message: ""
+    }
   });
-
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
     try {
-      const { data: response, error } = await supabase.functions.invoke("send-contact-email", {
-        body: data,
+      const {
+        data: response,
+        error
+      } = await supabase.functions.invoke("send-contact-email", {
+        body: data
       });
-
       if (error) {
         console.error("Error sending message:", error);
         toast.error("Napaka pri pošiljanju sporočila. Prosimo, poskusite znova.");
         return;
       }
-
       if (response?.error) {
         toast.error(response.error);
         return;
       }
-
       toast.success("Sporočilo uspešno poslano! Odgovorili vam bomo v najkrajšem možnem času.");
       form.reset();
     } catch (error) {
@@ -70,9 +56,7 @@ const Kontakt = () => {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <Layout>
+  return <Layout>
       <section className="bg-gradient-hero py-16 md:py-20">
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -98,71 +82,47 @@ const Kontakt = () => {
               <CardContent>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
+                    <FormField control={form.control} name="name" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Ime in priimek</FormLabel>
                           <FormControl>
                             <Input placeholder="Janez Novak" {...field} />
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
+                        </FormItem>} />
+                    <FormField control={form.control} name="email" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>E-pošta</FormLabel>
                           <FormControl>
                             <Input type="email" placeholder="janez.novak@example.com" {...field} />
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
+                        </FormItem>} />
+                    <FormField control={form.control} name="phone" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Telefon (opcijsko)</FormLabel>
                           <FormControl>
                             <Input type="tel" placeholder="+386 40 123 456" {...field} />
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
+                        </FormItem>} />
+                    <FormField control={form.control} name="message" render={({
+                    field
+                  }) => <FormItem>
                           <FormLabel>Sporočilo</FormLabel>
                           <FormControl>
-                            <Textarea 
-                              placeholder="Zanima me paket Ženska 360..." 
-                              rows={5} 
-                              {...field} 
-                            />
+                            <Textarea rows={5} placeholder="Zanima me paket:" />
                           </FormControl>
                           <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        </FormItem>} />
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? (
-                        <>
+                      {isSubmitting ? <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                           Pošiljam...
-                        </>
-                      ) : (
-                        "Pošlji sporočilo"
-                      )}
+                        </> : "Pošlji sporočilo"}
                     </Button>
                   </form>
                 </Form>
@@ -250,23 +210,13 @@ const Kontakt = () => {
           </CardHeader>
           <CardContent>
             <div className="aspect-video w-full rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.0123456789!2d14.5172!3d46.0498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765329e8a8a8a8a%3A0x1234567890abcdef!2sPoljanski%20nasip%2044%2C%201000%20Ljubljana!5e0!3m2!1sen!2ssi!4v1702100000000"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Asantis Medical Center - Poljanski nasip 44, Ljubljana"
-                className="w-full h-full"
-              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.0123456789!2d14.5172!3d46.0498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765329e8a8a8a8a%3A0x1234567890abcdef!2sPoljanski%20nasip%2044%2C%201000%20Ljubljana!5e0!3m2!1sen!2ssi!4v1702100000000" width="100%" height="100%" style={{
+              border: 0
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Asantis Medical Center - Poljanski nasip 44, Ljubljana" className="w-full h-full" />
             </div>
           </CardContent>
         </Card>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Kontakt;
