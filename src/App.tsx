@@ -74,7 +74,7 @@ import BrankoPirsPage from "./pages/ekipa/BrankoPirsPage";
 import AnaKotnikPirsPage from "./pages/ekipa/AnaKotnikPirsPage";
 import AlesPorcnikPage from "./pages/ekipa/AlesPorcnikPage";
 import GregorCadezPage from "./pages/ekipa/GregorCadezPage";
-import DraganJejinicPage from "./pages/ekipa/DraganJejinicPage";
+import DomenHostnikPage from "./pages/ekipa/DomenHostnikPage";
 import PetraSketPage from "./pages/ekipa/PetraSketPage";
 import MonikaSmrkoljPage from "./pages/ekipa/MonikaSmrkoljPage";
 import MatejaSirsePage from "./pages/ekipa/MatejaSirsePage";
@@ -169,7 +169,7 @@ const App = () => (
           <Route path="/ekipa/ana-kotnik-pirs" element={<AnaKotnikPirsPage />} />
           <Route path="/ekipa/ales-porcnik" element={<AlesPorcnikPage />} />
           <Route path="/ekipa/gregor-cadez" element={<GregorCadezPage />} />
-          <Route path="/ekipa/dragan-jejinic" element={<DraganJejinicPage />} />
+          <Route path="/ekipa/domen-hostnik" element={<DomenHostnikPage />} />
           <Route path="/ekipa/petra-sket" element={<PetraSketPage />} />
           <Route path="/ekipa/monika-smrkolj" element={<MonikaSmrkoljPage />} />
           <Route path="/ekipa/mateja-sirse" element={<MatejaSirsePage />} />

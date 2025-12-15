@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { Heart, Users, Award, Clock } from "lucide-react";
 import monikaSmrkoljImg from "@/assets/monika-smrkolj.jpg";
+import domenHostnikImg from "@/assets/domen-hostnik.jpg";
 
 const ONas = () => {
   const values = [
@@ -67,11 +68,11 @@ const ONas = () => {
       link: "/ekipa/gregor-cadez"
     },
     {
-      name: "Dragan Jejinić, dr. med.",
-      role: "Specialist dermatolog",
-      description: "Specialist dermatolog z dodatnim znanjem iz operativne in estetske dermatologije.",
-      image: "https://asantis.si/wp-content/uploads/2024/11/slika-JD-1.webp",
-      link: "/ekipa/dragan-jejinic"
+      name: "Domen Hostnik, dr. dent. med.",
+      role: "Zobozdravnik",
+      description: "Zobozdravnik z dodatnim znanjem iz ortodontike in implantologije.",
+      image: domenHostnikImg,
+      link: "/ekipa/domen-hostnik"
     },
     {
       name: "Petra Šket, dr. med.",
