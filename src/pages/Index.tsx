@@ -54,7 +54,7 @@ const Index = () => {
       title: "Kids & Family",
       description: "Privat pediater za vašo družino, ko ga najbolj potrebujete.",
       price: "39",
-      link: "/storitve/kids-family",
+      link: "/paketi/kids-family",
       color: "text-green-500"
     },
     {
@@ -62,7 +62,7 @@ const Index = () => {
       title: "Estetika & Vitalnost",
       description: "Estetsko pomlajevanje, kožna diagnostika in svetovanje o vitalnosti.",
       price: "79",
-      link: "/storitve/estetika-vitalnost",
+      link: "/paketi/estetika-vitalnost",
       color: "text-rose-500"
     },
     {
@@ -78,7 +78,7 @@ const Index = () => {
       title: "Slim+ Medikacija",
       description: "Izguba teže pod zdravniškim nadzorom z GLP-1 terapijo in celostno podporo.",
       price: "129",
-      link: "/storitve/slim-medikacija",
+      link: "/paketi/hujsanje",
       color: "text-orange-500"
     },
   ];
