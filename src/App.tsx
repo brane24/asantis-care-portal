@@ -88,6 +88,7 @@ import Zenska360Page from "./pages/paketi/Zenska360Page";
 import MindCarePage from "./pages/paketi/MindCarePage";
 import SkinCareMedicalPage from "./pages/paketi/SkinCareMedicalPage";
 import EstetikaVitalnostPage from "./pages/paketi/EstetikaVitalnostPage";
+import KidsFamilyPage from "./pages/paketi/KidsFamilyPage";
 
 const queryClient = new QueryClient();
 
@@ -183,6 +184,7 @@ const App = () => (
           <Route path="/paketi/mindcare" element={<MindCarePage />} />
           <Route path="/paketi/skincare-medical" element={<SkinCareMedicalPage />} />
           <Route path="/paketi/estetika-vitalnost" element={<EstetikaVitalnostPage />} />
+          <Route path="/paketi/kids-family" element={<KidsFamilyPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
