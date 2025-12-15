@@ -43,10 +43,10 @@ const Index = () => {
     },
     {
       icon: Smile,
-      title: "Skin & Estetika",
-      description: "Zdrava koža, preventiva in estetske rešitve za vašo samozavest.",
+      title: "SkinCare Medical",
+      description: "Medicinski dermatološki paket za akne, znamenja in problematično kožo.",
       price: "49",
-      link: "/storitve/skin-estetika",
+      link: "/paketi/skincare-medical",
       color: "text-amber-500"
     },
     {

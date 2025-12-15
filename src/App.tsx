@@ -86,6 +86,7 @@ import ZobniPlusPage from "./pages/paketi/ZobniPlusPage";
 import FreeMovePage from "./pages/paketi/FreeMovePage";
 import Zenska360Page from "./pages/paketi/Zenska360Page";
 import MindCarePage from "./pages/paketi/MindCarePage";
+import SkinCareMedicalPage from "./pages/paketi/SkinCareMedicalPage";
 
 const queryClient = new QueryClient();
 
@@ -179,6 +180,7 @@ const App = () => (
           <Route path="/paketi/freemove" element={<FreeMovePage />} />
           <Route path="/paketi/zenska-360" element={<Zenska360Page />} />
           <Route path="/paketi/mindcare" element={<MindCarePage />} />
+          <Route path="/paketi/skincare-medical" element={<SkinCareMedicalPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
