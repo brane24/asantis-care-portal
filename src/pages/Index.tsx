@@ -81,9 +81,9 @@ const Index = () => {
               Medicinski center nove generacije
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Zdravstveni paketi Asantis —{" "}
+              Zdravje v paketu –{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                vaš osebni zdravstveni načrt skozi leto
+                preventiva, zdravljenje in medicinski posegi brez presenečenj
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
