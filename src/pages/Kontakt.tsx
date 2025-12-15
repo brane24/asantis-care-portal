@@ -63,7 +63,7 @@ const Kontakt = () => {
             Kontaktirajte nas
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tu smo za vas. Pošljite nam sporočilo ali nas pokličite za več informacij. Čakamo na vas!
+            Tu smo za vas. Pošljite nam sporočilo ali nas pokličite za več informacij. Čakamo na vaš klic ali sporočilo!
           </p>
         </div>
       </section>
