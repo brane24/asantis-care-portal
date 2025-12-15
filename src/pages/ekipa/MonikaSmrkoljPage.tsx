@@ -64,15 +64,31 @@ const MonikaSmrkoljPage = () => {
               <h2 className="text-2xl font-bold mb-6">O meni</h2>
               
               <p>
-                Monika Smrkolj je specialistka psihiatrije s posebnimi znanji iz transkranialne magnetne stimulacije (TMS). Svoje strokovno znanje je pridobivala na različnih področjih psihiatrije, s poudarkom na sodobnih metodah zdravljenja.
+                Po končanem študiju na MF in opravljenim strokovnim izpitom sem se zaposlila na Kirurški kliniki UKCLJ na oddelku za kirurške okužbe. Pridobila sem dragoceno znanje iz kirurgije in interne medicine. V tem letu sem tudi spoznala vso brutalnost, ki jo lahko povzroči bolezen človeškemu tkivu.
               </p>
               
               <p>
-                Pri svojem delu se osredotoča na individualni pristop do vsakega pacienta in celostno obravnavo duševnih težav. Kombinira tradicionalne psihiatrične metode z najsodobnejšimi tehnikami, vključno s transkranialno magnetno stimulacijo.
+                Nato sem se zaposlila na Dermatovenerološki kliniki v LJ kot sobni zdravnik. Tam sem večino časa izrezovala kožne spremembe na koži otrok in odraslih v operacijski ambulanti pod supervizijo. Spoznavala sem tudi skrivnosti dermatologije, ki na koži izriše zemljevid in te preusmeri v zanimivo in hkrati zahtevno raziskovanje obolenj.
+              </p>
+              
+              <p>
+                2012 sem dobila specializacijo iz psihiatrije, saj sem telesne bolezni in stanja želela razumeti še v povezavi s človekovo duševnostjo v vzročno posledičnem razmerju. Tekom specializacije sem se intenzivno ukvarjala s področjem motnje hranjenja pri dr. Karin Sernec, se udeleževala strokovnih srečanj in vodila svojo ambulanto v enoti za motnje hranjenja na CMZ LJ.
+              </p>
+              
+              <p>
+                Po specialističnem izpitu z izbrano specialistično nalogo <em>Nevrobiologija kompulzivnega prenajedanja</em>, sem se zaposlila v koncesionarski ambulanti dr. Anji Reljič Prinčič v LJ. Obravnavala sem mladostnike in odrasle z anoreksijo, bulimijo in kompulzivnim prenajedanjem, vodila vedenjsko kognitivne psihoterapevtske skupine iz teh področij in se srečevala z ostalimi duševnimi stanji: organske duševne motnje (demenca), odvisnost od psihoaktivnih snovi, shizofrenija in blodnjave motnje, razpoloženjske motnje, anksiozne, stresne, disociativne in somatoformne motnje, neorganske motnje spanja, spolne motnje, duševno manjrazvitost in duševne motnje v razvojnem obdobju.
+              </p>
+              
+              <p>
+                Po 3 letih sem se zaposlila v koncesionarski ambulanti dr. Dragomire Ahlin, ki je bila locirana v notranjsko primorski regiji. Tu sem se srečevala z demografsko drugačnimi težavami bolnikov po pogostnosti posameznih diagnoz.
+              </p>
+              
+              <p>
+                Decembra 2025 sem se zaposlila na zasebni multidisciplinarni kliniki Asantis, ker verjamem v nujnost holistične obravnave duševnih in telesnih bolezni, saj možgani niso izoliran organ. Hkrati mi omogoča takojšnje sodelovanje z ostalimi specialisti te klinike (vključujoč preiskave, konzilijarne posvete in morebitno nadaljno obravnavo bolnikov pri njih), za kar sem v javnem zdravstvenem sistemu porabila ogromno nepotrebnega časa za izpeljavo celotne diagnostike na škodo bolnikovega zdravja.
               </p>
               
               <blockquote className="border-l-4 border-primary pl-6 italic my-8 text-muted-foreground">
-                V kliniki ASANTIS vam nudimo kakovostno psihiatrično obravnavo z individualnim pristopom in sodobnimi metodami zdravljenja.
+                Moja strast so kužki — 17 let sem vzgajala pasmo sibirski husky, ki imajo po kinološem znanju označbo vedenjsko zahtevnih psov, saj naj bi bili težko vodljivi, za učenje pa močno trmasti. Na lastni koži pa sem izkusila še blagodejne učinke živali na duševno zdravje človeka.
               </blockquote>
             </CardContent>
           </Card>
