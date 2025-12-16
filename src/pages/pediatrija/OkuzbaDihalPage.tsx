@@ -36,7 +36,7 @@ const OkuzbaDihalPage = () => {
   const postopek = [
     {
       title: "Anamneza in klinični pregled",
-      desc: "Pogovor o simptomih, poslušanje pljuč, pregled žrela in ušes"
+      desc: "Pogovor o simptomih, celovit pregled in klinične meritve, usmerjen specialistični pulmološki pregled s poslušanjem pljuč, pregledom žrela in ušes"
     },
     {
       title: "Diagnostika po potrebi",
