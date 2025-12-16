@@ -76,7 +76,7 @@ const OkuzbaDihalPage = () => {
     },
     {
       question: "Ali je smiselno inhalirati fiziološko raztopino?",
-      answer: "Da, pri kašlju ali zamašenem nosu inhalacije olajšajo dihanje in redčijo sluz."
+      answer: "Pri prehladnih obolenjih je najpomembnejše redno čiščenje nosu s fiziološko raztopino. Zaradi nevarnosti dodatne bakterijske okužbe ali poslabšanja stanja je vse vrste inhalacij (fiziološka raztopina, salbutamol) potrebno izvesti pod zdravniškim nadzorom v ambulanti."
     },
     {
       question: "Kdaj lahko otrok spet v vrtec?",
