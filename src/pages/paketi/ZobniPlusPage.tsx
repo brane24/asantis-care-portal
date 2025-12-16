@@ -205,7 +205,7 @@ const ZobniPlusPage = () => {
               Kaj vključuje aktivacija?
             </h2>
             <p className="text-xl text-muted-foreground">
-              <span className="font-bold text-foreground">149€</span> plača se ob prvem pregledu, nato naročnina
+              <span className="font-bold text-foreground">149€</span> - plača se ob prvem pregledu, nato naročnina
             </p>
           </div>
 
