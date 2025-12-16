@@ -57,7 +57,7 @@ const KaseljPriOtrokuPage = () => {
       title: "5. Načrt zdravljenja",
       items: [
         "Terapija glede na vzrok (bronhiolitis, astma, alergija, bakterijska okužba…)",
-        "Inhalacijska terapija (salbutamol, kortikosteroid, fiziološka)",
+        "Inhalacijska terapija z dodatkom kisika (salbutamol, protivnetna zdravila, fiziološka raztopina)",
         "Kontrolni pregled po potrebi"
       ]
     }
