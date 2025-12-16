@@ -94,7 +94,7 @@ const AtopijskiDermatitisPage = () => {
     },
     {
       question: "Kako pogosto moram mazati otrokovo kožo?",
-      answer: "Priporočamo vsaj 2-krat dnevno, po kopanju pa je vlaženje nujno. Pri hujših oblikah tudi pogosteje."
+      answer: "Priporočamo vsaj 2-krat dnevno, po kopanju pa je mazanje nujno. Pri hujših oblikah tudi pogosteje."
     },
     {
       question: "Ali je prehrana povezana z atopijskim dermatitisom?",
