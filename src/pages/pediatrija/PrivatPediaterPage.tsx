@@ -81,46 +81,43 @@ const PrivatPediaterPage = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                🩺 Pediatrija
-              </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Privat pediater v Ljubljani – brez čakalne dobe, z osebnim pristopom
-              </h1>
-              <p className="text-lg text-muted-foreground mb-8">
-                Hiter dostop do izkušenega pediatra za vašega otroka. Celostni pregledi, 
-                diagnostika in zdravljenje – v varnem okolju zasebnega medicinskega centra Asantis.
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+              🩺 Pediatrija
+            </span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              Privat pediater v Ljubljani – brez čakalne dobe, z osebnim pristopom
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              Hiter dostop do izkušenega pediatra za vašega otroka. Celostni pregledi, 
+              diagnostika in zdravljenje – v varnem okolju zasebnega medicinskega centra Asantis.
+            </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" className="text-lg px-8" asChild>
-                  <NavLink to="/kontakt">Naročite pregled</NavLink>
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8" asChild>
-                  <a href="tel:+38631876104">
-                    <Phone className="mr-2 h-5 w-5" />
-                    +386 31 876 104
-                  </a>
-                </Button>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "Brez čakalnih vrst",
-                  "Prijazen pristop do otrok",
-                  "Izkušeni specialist pediater",
-                  "Sodobna oprema in laboratorij"
-                ].map((badge, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span>{badge}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+              <Button size="lg" className="text-lg px-8" asChild>
+                <NavLink to="/kontakt">Naročite pregled</NavLink>
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+                <a href="tel:+38631876104">
+                  <Phone className="mr-2 h-5 w-5" />
+                  +386 31 876 104
+                </a>
+              </Button>
             </div>
 
+            <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+              {[
+                "Brez čakalnih vrst",
+                "Prijazen pristop do otrok",
+                "Izkušeni specialist pediater",
+                "Sodobna oprema in laboratorij"
+              ].map((badge, i) => (
+                <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground justify-center">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                  <span>{badge}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
