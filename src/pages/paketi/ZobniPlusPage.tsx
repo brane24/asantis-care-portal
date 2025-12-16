@@ -339,7 +339,7 @@ const ZobniPlusPage = () => {
             Kaj vključuje mesečna naročnina?
           </h2>
           <p className="text-xl text-muted-foreground">
-            <span className="font-bold text-foreground">19–29 €</span> / mesec
+            <span className="font-bold text-foreground">29 €</span> / mesec
           </p>
         </div>
 
