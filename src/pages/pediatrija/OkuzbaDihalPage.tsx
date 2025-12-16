@@ -79,8 +79,8 @@ const OkuzbaDihalPage = () => {
       answer: "Pri prehladnih obolenjih je najpomembnejše redno čiščenje nosu s fiziološko raztopino. Zaradi nevarnosti dodatne bakterijske okužbe ali poslabšanja stanja je vse vrste inhalacij (fiziološka raztopina, salbutamol) potrebno izvesti pod zdravniškim nadzorom v ambulanti."
     },
     {
-      question: "Kdaj lahko otrok spet v vrtec?",
-      answer: "Ko vsaj 24 ur nima vročine in se počuti dobro."
+      question: "Kdaj gre otrok lahko spet v vrtec?",
+      answer: "Po prehladnem obolenju, ko vsaj 24 ur nima vročine in se počuti dobro. Po okužbi spodnjih dihal (bronhiolitis, bronhitis, pljučnica) je potrebno daljše okrevanje, saj se ob prehitrem stiku z novo okužbo stanje lahko hitro ponovi."
     }
   ];
 
