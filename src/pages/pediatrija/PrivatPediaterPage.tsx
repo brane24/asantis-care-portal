@@ -320,14 +320,14 @@ const PrivatPediaterPage = () => {
                       <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-medium text-foreground">Naslov</p>
-                        <p className="text-muted-foreground">Dunajska cesta 123, Ljubljana</p>
+                        <p className="text-muted-foreground">Poljanski nasip 44, 1000 Ljubljana</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Car className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-medium text-foreground">Parkiranje</p>
-                        <p className="text-muted-foreground">Brezplačno parkirišče za paciente</p>
+                        <p className="text-muted-foreground">Brezplačno parkirišče pred kliniko</p>
                       </div>
                     </div>
                   </div>
@@ -336,14 +336,14 @@ const PrivatPediaterPage = () => {
                       <Train className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-medium text-foreground">Javni prevoz</p>
-                        <p className="text-muted-foreground">LPP linije 6, 8, 11</p>
+                        <p className="text-muted-foreground">Klinični center, Roška, Cukrarna, Gornje poljane</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-medium text-foreground">Delovni čas</p>
-                        <p className="text-muted-foreground">Pon–pet 8:00–19:00</p>
+                        <p className="text-muted-foreground">Pon–pet 8:00–20:00</p>
                       </div>
                     </div>
                   </div>
