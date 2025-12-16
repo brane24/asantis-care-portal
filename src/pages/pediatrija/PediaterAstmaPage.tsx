@@ -25,7 +25,8 @@ const PediaterAstmaPage = () => {
     "Vzdrževalna terapija (protivnetna zdravila za redno zdravljenje in preprečevanje poslabšanj ter kroničnih zapletov bolezni)",
     "Izogibanje sprožilcem (alergeni, dim, okužbe)",
     "Redne kontrole pri pediatru vsakih 3–6 mesecev",
-    "Izobraževanje staršev o pravilni uporabi inhalatorjev"
+    "Izobraževanje staršev in otrok o pravilni uporabi zdravil",
+    "Izobraževanje o pravilnem nadzoru nad zdravljenjem astme doma"
   ];
 
   const benefits = [
