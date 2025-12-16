@@ -32,7 +32,7 @@ const PrivatPediaterPage = () => {
     { storitev: "Kontrolni pregled", cena: "od 80 €" },
     { storitev: "Preventivni pregled dojenčka", cena: "od 120 €" },
     
-    { storitev: "Izdaja potrdila za vrtec/šolo", cena: "20 €" }
+    { storitev: "Izdaja potrdila za vrtec/šolo", cena: "120 €" }
   ];
 
   const prednosti = [
