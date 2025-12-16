@@ -20,7 +20,7 @@ import { NavLink } from "@/components/NavLink";
 const PrivatPediaterPage = () => {
   const storitve = [
     { icon: Baby, title: "Preventivni pregledi", desc: "Redni pregledi dojenčkov, otrok in mladostnikov po starostnih skupinah" },
-    { icon: Syringe, title: "Cepljenja", desc: "Obvezna in priporočena cepljenja, svetovanje staršem" },
+    { icon: Syringe, title: "Svetovanje o cepljenju", desc: "Svetovanje staršem ob dilemah pred obveznimi in priporočenimi cepljenji" },
     { icon: Stethoscope, title: "Zdravljenje bolezni", desc: "Pregled in zdravljenje okužb, alergij, prebavnih težav, vročine, kašlja ipd." },
     { icon: Heart, title: "Specialistična diagnostika", desc: "Laboratorijske preiskave, UZ trebuha, EKG, napotitev k specialistom" },
     { icon: Brain, title: "Psihofizični razvoj", desc: "Svetovanje pri razvoju, vedenjskih in učnih težavah" },
