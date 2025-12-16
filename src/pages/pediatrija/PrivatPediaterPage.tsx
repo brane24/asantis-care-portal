@@ -218,7 +218,7 @@ const PrivatPediaterPage = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
-            Zakaj starši zaupajo Asantis pediatru
+            Zakaj starši zaupajo pregled otroka v našem centru?
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-4">
