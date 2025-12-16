@@ -55,7 +55,7 @@ const AtopijskiDermatitisPage = () => {
   ];
 
   const nasvetiOtroci = [
-    { icon: Droplets, text: "Vsakodnevno vlaženje kože, tudi večkrat dnevno" },
+    { icon: Droplets, text: "Redna vsakodnevna nega kože z negovalnimi kremami" },
     { icon: Shield, text: "Izogibanje agresivnim milom in vroči vodi" },
     { icon: Baby, text: "Bombažna oblačila in ne pregrevanje" },
     { icon: Stethoscope, text: "Redno spremljanje pri pediatru dermatologu ali alergologu" }
