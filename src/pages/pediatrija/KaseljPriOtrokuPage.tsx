@@ -76,12 +76,12 @@ const KaseljPriOtrokuPage = () => {
 
   const nujniZnaki = [
     { icon: Wind, text: "Težko dihanje, piskanje, povišana frekvenca dihanja" },
+    { icon: AlertTriangle, text: "Ugrezanje medrebrnih prostorov, dihanje s trebuščkom" },
     { icon: ThermometerSun, text: "Visoka temperatura > 38,5 °C več kot 3 dni" },
     { icon: Calendar, text: "Kašelj traja več kot 3 tedne" },
     { icon: AlertTriangle, text: "Otrok bruha zaradi kašlja" },
     { icon: Baby, text: "Dojenček < 6 mesecev s kašljem" },
     { icon: AlertTriangle, text: "Sum na oslovski kašelj" },
-    { icon: AlertTriangle, text: "Ugrezanje medrebrnih prostorov, dihanje s trebuščkom" },
     { icon: AlertTriangle, text: "Sum na bakterijsko okužbo" }
   ];
 
