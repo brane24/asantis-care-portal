@@ -93,7 +93,7 @@ const AtopijskiDermatitisPage = () => {
       answer: "Pri mnogih otrocih se stanje z leti izboljša ali popolnoma izzveni, pri nekaterih pa lahko vztraja tudi v odraslo dobo."
     },
     {
-      question: "Kako pogosto moram vlažiti otrokovo kožo?",
+      question: "Kako pogosto moram mazati otrokovo kožo?",
       answer: "Priporočamo vsaj 2-krat dnevno, po kopanju pa je vlaženje nujno. Pri hujših oblikah tudi pogosteje."
     },
     {
