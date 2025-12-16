@@ -15,7 +15,7 @@ const contactSchema = z.object({
   name: z.string().min(2, "Ime mora vsebovati vsaj 2 znaka").max(100, "Ime je predolgo"),
   email: z.string().email("Vnesite veljaven email naslov").max(255, "Email je predolg"),
   phone: z.string().optional().refine(val => !val || val.length >= 9, "Telefonska številka je prekratka"),
-  message: z.string().min(10, "Sporočilo mora vsebovati vsaj 10 znakov").max(1000, "Sporočilo je predolgo (max 1000 znakov)")
+  message: z.string().min(1, "Sporočilo je obvezno").max(1000, "Sporočilo je predolgo (max 1000 znakov)")
 });
 type ContactFormData = z.infer<typeof contactSchema>;
 const Kontakt = () => {
