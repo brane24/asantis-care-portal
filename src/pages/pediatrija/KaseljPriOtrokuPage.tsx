@@ -75,7 +75,7 @@ const KaseljPriOtrokuPage = () => {
   ];
 
   const nujniZnaki = [
-    { icon: Wind, text: "Težko dihanje, piskanje ali vidno vlečenje pod rebrnim lokom" },
+    { icon: Wind, text: "Težko dihanje, piskanje, povišana frekvenca dihanja" },
     { icon: ThermometerSun, text: "Visoka temperatura > 38,5 °C več kot 3 dni" },
     { icon: Calendar, text: "Kašelj traja več kot 3 tedne" },
     { icon: AlertTriangle, text: "Otrok bruha zaradi kašlja" },
