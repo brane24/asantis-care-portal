@@ -544,7 +544,7 @@ const ZobniPlusPage = () => {
               <ul className="space-y-3">
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Aktivacija</span>
-                  <span className="font-medium text-primary">89–129 €</span>
+                  <span className="font-medium text-primary">149 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Mesečno</span>
