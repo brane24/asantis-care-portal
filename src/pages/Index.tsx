@@ -60,7 +60,7 @@ const Index = () => {
     icon: CircleDot,
     title: "Zobni Plus",
     description: "Celosten zobni paket z diagnostiko, 3D skenom in prednostnimi termini.",
-    price: "19",
+    price: "29",
     link: "/paketi/zobni-plus",
     color: "text-cyan-500"
   }, {
