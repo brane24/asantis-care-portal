@@ -40,7 +40,7 @@ const OkuzbaDihalPage = () => {
     },
     {
       title: "Diagnostika po potrebi",
-      desc: "CRP, bris žrela, test za RSV, gripo ali COVID-19"
+      desc: "CRP, bris žrela, test za RSV, gripo ali COVID-19, UZ pljuč"
     },
     {
       title: "Zdravljenje",
