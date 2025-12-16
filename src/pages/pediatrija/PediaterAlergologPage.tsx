@@ -109,7 +109,7 @@ const PediaterAlergologPage = () => {
     { service: "Prvi alergološki pregled (vključuje testiranje)", price: "od 150-250€" },
     { service: "Kontrolni pregled", price: "80 €" },
     { service: "Kožni test na inhalacijske ali prehranske alergene (do 10 testov)", price: "150 €" },
-    { service: "Testiranje na prehranske alergene (krvni test)", price: "od 55 €" }
+    { service: "Kožni test na inhalacijske ali prehranske alergene (nad 10 testov)", price: "od 55 €" }
   ];
 
   const faqs = [
