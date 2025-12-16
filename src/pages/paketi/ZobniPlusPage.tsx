@@ -708,7 +708,6 @@ const ZobniPlusPage = () => {
               </h3>
               <ol className="text-sm text-muted-foreground space-y-2 list-decimal list-inside">
                 <li>Program Zobni Plus je 12-mesečni preventivni program.</li>
-                <li>Aktivacijska cena 89–129 € se plača ob prvem obisku in ni vračljiva.</li>
                 <li>Minimalno trajanje naročnine je 3 mesece.</li>
                 <li>Če uporabnik prekine pred 12 meseci, doplača razliko do rednih cen storitev.</li>
                 <li>Aktivacijska cena 149 € se plača ob prvem obisku in ni vračljiva.</li>
