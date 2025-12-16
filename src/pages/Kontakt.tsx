@@ -114,7 +114,7 @@ const Kontakt = () => {
                   }) => <FormItem>
                           <FormLabel>Sporočilo</FormLabel>
                           <FormControl>
-                            <Textarea rows={5} placeholder="Zanima me paket:" />
+                            <Textarea rows={5} placeholder="Zanima me paket ali storitev:" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>} />
