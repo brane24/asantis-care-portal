@@ -63,6 +63,7 @@ const OkuzbaDihalPage = () => {
   const prednosti = [
     "Izkušeni pediatri in specialisti pulmologije",
     "Možnost testiranja RSV, gripe in COVID-19 na mestu",
+    "Testiranje na streptokoka s takojšnim izvidom",
     "Hitro naročanje – tudi isti dan",
     "Možnost nadaljnjega spremljanja pri istem zdravniku",
     "Prijazen pristop, prilagojen otrokom"
