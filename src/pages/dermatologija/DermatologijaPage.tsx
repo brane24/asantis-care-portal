@@ -124,7 +124,7 @@ const DermatologijaPage = () => {
                 </NavLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+38612345678">
+                <a href="tel:+38631876104">
                   <Phone className="mr-2 h-5 w-5" />
                   Pokličite nas
                 </a>
