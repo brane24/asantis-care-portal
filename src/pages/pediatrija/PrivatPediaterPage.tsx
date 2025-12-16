@@ -55,7 +55,7 @@ const PrivatPediaterPage = () => {
     text: "Prijazno okolje, prilagojeno otrokom"
   }, {
     icon: Stethoscope,
-    text: "Možnost dodatnih pregledov (UZ, laboratorij, dermatolog, alergolog)"
+    text: "Možnost dodatnih pregledov (UZ, laboratorij, dermatolog, alergolog, pulmolog)"
   }, {
     icon: Calendar,
     text: "Možnost vključitve v letni naročniški program za družine"
