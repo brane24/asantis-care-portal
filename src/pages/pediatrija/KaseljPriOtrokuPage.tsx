@@ -64,13 +64,14 @@ const KaseljPriOtrokuPage = () => {
   ];
 
   const vzroki = [
-    "Viroze (najpogosteje, 7–14 dni trajanja)",
-    "Astma ali bronhoobstruktivni sindrom",
-    "Alergije",
-    "Bakterijske okužbe (pljučnica, sinusitis)",
-    "Postinfekcijski kašelj – lahko traja tudi 3–8 tednov",
-    "Oslovski kašelj (pri necepljenih ali v izbruhih)",
-    "Refluks pri dojenčkih"
+    "Viroze (najpogosteje, predvsem pri otrocih, ki hodijo v vrtec ali imajo starejše sorojence)",
+    "Postinfekcijski kašelj (kašelj lahko traja od 7 dni do 4 tedne)",
+    "Zatekanje sluzi iz nosu v žrelo (postnazalni drip)",
+    "Astma ali ponavljajoči bronhitisi in bronhiolitisi",
+    "Gastroezofagealni refluks",
+    "Okužbe z atipičnimi bakterijami (otroci in mladostniki)",
+    "Bakterijske okužbe (pljučnica, sinuzitis)",
+    "Oslovski kašelj (nevarno predvsem pri necepljenih)"
   ];
 
   const nujniZnaki = [
