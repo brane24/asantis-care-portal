@@ -212,21 +212,19 @@ const DermatologijaPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {conditions.map((condition, index) => (
-              <NavLink key={index} to="/kontakt" className="group">
-                <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-lg mb-3 text-primary">{condition.category}</h3>
-                    <ul className="space-y-2">
-                      {condition.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2">
-                          <Check className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </NavLink>
+              <Card key={index} className="h-full">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-primary">{condition.category}</h3>
+                  <ul className="space-y-2">
+                    {condition.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2">
+                        <Check className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
 
