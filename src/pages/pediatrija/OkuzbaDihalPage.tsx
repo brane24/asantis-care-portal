@@ -244,7 +244,7 @@ const OkuzbaDihalPage = () => {
                       Poseben poudarek: ponavljajoče okužbe dihal
                     </h2>
                     <p className="text-muted-foreground mb-4">
-                      Če ima otrok <strong>več kot 6 okužb letno</strong>, priporočamo dodatno diagnostiko 
+                      Če ima otrok <strong>več kot 6 okužb ali 3 epizode težkega dihanja letno</strong>, priporočamo dodatno diagnostiko 
                       pri pediatričnem pulmologu ali alergologu.
                     </p>
                     <p className="text-muted-foreground">
