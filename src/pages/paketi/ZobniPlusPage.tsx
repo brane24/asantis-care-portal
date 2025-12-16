@@ -502,19 +502,19 @@ const ZobniPlusPage = () => {
               <ul className="space-y-3">
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Pregled</span>
-                  <span className="font-medium">40–60 €</span>
+                  <span className="font-medium">60 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">RTG/CT</span>
-                  <span className="font-medium">40–120 €</span>
+                  <span className="font-medium">120 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">3D sken</span>
-                  <span className="font-medium">50–90 €</span>
+                  <span className="font-medium">90 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Posvet</span>
-                  <span className="font-medium">30–40 €</span>
+                  <span className="font-medium">40 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Prioritetni termini</span>
@@ -548,7 +548,7 @@ const ZobniPlusPage = () => {
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Mesečno</span>
-                  <span className="font-medium text-primary">19–29 €</span>
+                  <span className="font-medium text-primary">29 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Natančen načrt</span>
@@ -556,7 +556,7 @@ const ZobniPlusPage = () => {
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Popusti</span>
-                  <span className="font-medium text-primary">-10–25%</span>
+                  <span className="font-medium text-primary">15–25%</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Prioritetni termini</span>
