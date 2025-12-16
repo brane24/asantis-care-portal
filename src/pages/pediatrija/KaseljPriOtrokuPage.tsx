@@ -70,9 +70,6 @@ const KaseljPriOtrokuPage = () => {
     question: "Kako pogosto je potreben kontrolni pregled?",
     answer: "Po navadi po 3–7 dneh, odvisno od poteka bolezni."
   }, {
-    question: "Ali svetujete inhalacije?",
-    answer: "Inhalacije fiziološke so varne pri skoraj vseh otrok, zdravila dodamo samo po pregledu."
-  }, {
     question: "Kako dolgo traja obravnava?",
     answer: "Običajno 20–30 minut, pri akutnih stanjih pa se čas prilagodi potrebi."
   }];
