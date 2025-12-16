@@ -210,7 +210,7 @@ const DermatologijaPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {conditions.map((condition, index) => (
-              <Card key={index} className="h-full">
+              <Card key={index} className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-3 text-primary">{condition.category}</h3>
                   <ul className="space-y-2">
