@@ -49,7 +49,7 @@ const KaseljPriOtrokuPage = () => {
         "Izvid urina (pri dojenčkih sum na infekcijo)",
         "Bris žrela",
         "Alergološki testi",
-        "RTG pljuč (ob sumu na pljučnico)"
+        "UZ ali RTG pljuč (ob sumu na pljučnico ali zapletih okužbe)"
       ]
     },
     {
