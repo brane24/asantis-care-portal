@@ -1,11 +1,7 @@
 import { Helmet } from "react-helmet";
-import { useState } from "react";
 import Layout from "@/components/Layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import {
   Table,
   TableBody,
@@ -16,53 +12,12 @@ import {
 } from "@/components/ui/table";
 import { 
   Phone, MapPin, Clock, Car, Train, Star, Baby, Syringe, 
-  Stethoscope, Brain, TrendingUp, Heart, CheckCircle, Send,
+  Stethoscope, Brain, TrendingUp, Heart, CheckCircle,
   Calendar, Building, Users, ArrowRight, Wind, Activity, Sparkles
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { useToast } from "@/hooks/use-toast";
-import { z } from "zod";
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Ime je obvezno").max(100, "Ime je predolgo"),
-  contact: z.string().trim().min(1, "Kontakt je obvezen").max(255, "Kontakt je predolg"),
-  childAge: z.string().trim().min(1, "Starost otroka je obvezna").max(50, "Vrednost je predolga"),
-  message: z.string().trim().min(1, "Opis težave je obvezen").max(1000, "Opis je predolg")
-});
 
 const PrivatPediaterPage = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    contact: "",
-    childAge: "",
-    message: ""
-  });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const result = contactSchema.safeParse(formData);
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
-      result.error.errors.forEach((err) => {
-        if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
-        }
-      });
-      setErrors(fieldErrors);
-      return;
-    }
-
-    setErrors({});
-    toast({
-      title: "Zahtevek poslan!",
-      description: "Kontaktirali vas bomo v najkrajšem možnem času.",
-    });
-    setFormData({ name: "", contact: "", childAge: "", message: "" });
-  };
-
   const storitve = [
     { icon: Baby, title: "Preventivni pregledi", desc: "Redni pregledi dojenčkov, otrok in mladostnikov po starostnih skupinah" },
     { icon: Syringe, title: "Cepljenja", desc: "Obvezna in priporočena cepljenja, svetovanje staršem" },
@@ -141,11 +96,13 @@ const PrivatPediaterPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="text-lg px-8" asChild>
-                  <a href="#obrazec">Naročite pregled</a>
+                  <NavLink to="/kontakt">Naročite pregled</NavLink>
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
-                  <Phone className="mr-2 h-5 w-5" />
-                  01 234 56 78
+                <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+                  <a href="tel:+38631876104">
+                    <Phone className="mr-2 h-5 w-5" />
+                    +386 31 876 104
+                  </a>
                 </Button>
               </div>
 
@@ -503,91 +460,6 @@ const PrivatPediaterPage = () => {
                 </CardContent>
               </Card>
             </NavLink>
-          </div>
-        </div>
-      </section>
-
-      {/* Kontaktni obrazec Section */}
-      <section id="obrazec" className="py-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
-            Rezervirajte termin pri pediatru
-          </h2>
-          <p className="text-center text-muted-foreground mb-10">
-            Izpolnite obrazec in poklicali vas bomo v najkrajšem času
-          </p>
-
-          <div className="max-w-xl mx-auto">
-            <Card className="bg-card border-border">
-              <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="name">Ime in priimek *</Label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Vaše ime in priimek"
-                      className={errors.name ? "border-destructive" : ""}
-                    />
-                    {errors.name && <p className="text-sm text-destructive mt-1">{errors.name}</p>}
-                  </div>
-
-                  <div>
-                    <Label htmlFor="contact">E-naslov ali telefon *</Label>
-                    <Input
-                      id="contact"
-                      value={formData.contact}
-                      onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-                      placeholder="vas.email@primer.si ali 040 123 456"
-                      className={errors.contact ? "border-destructive" : ""}
-                    />
-                    {errors.contact && <p className="text-sm text-destructive mt-1">{errors.contact}</p>}
-                  </div>
-
-                  <div>
-                    <Label htmlFor="childAge">Starost otroka *</Label>
-                    <Input
-                      id="childAge"
-                      value={formData.childAge}
-                      onChange={(e) => setFormData({ ...formData, childAge: e.target.value })}
-                      placeholder="npr. 3 leta"
-                      className={errors.childAge ? "border-destructive" : ""}
-                    />
-                    {errors.childAge && <p className="text-sm text-destructive mt-1">{errors.childAge}</p>}
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message">Kratek opis težave *</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Opišite razlog za obisk..."
-                      rows={4}
-                      className={errors.message ? "border-destructive" : ""}
-                    />
-                    {errors.message && <p className="text-sm text-destructive mt-1">{errors.message}</p>}
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full">
-                    <Send className="mr-2 h-5 w-5" />
-                    Pošlji zahtevek
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>01 234 56 78</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Building className="h-4 w-4 text-primary" />
-                <span>Asantis, Ljubljana</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
