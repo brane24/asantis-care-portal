@@ -22,7 +22,7 @@ const PediaterAstmaPage = () => {
   ];
 
   const treatmentTypes = [
-    "Vzdrževalna terapija (inhalatorji, kortikosteroidi)",
+    "Vzdrževalna terapija (protivnetna zdravila za redno zdravljenje in preprečevanje poslabšanj ter kroničnih zapletov bolezni)",
     "Izogibanje sprožilcem (alergeni, dim, okužbe)",
     "Redne kontrole pri pediatru vsakih 3–6 mesecev",
     "Izobraževanje staršev o pravilni uporabi inhalatorjev"
