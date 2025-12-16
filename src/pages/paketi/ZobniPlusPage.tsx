@@ -246,10 +246,6 @@ const ZobniPlusPage = () => {
                 <ul className="space-y-2 text-left">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                    <span>149 €</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                     <span>Ocena korenin, živcev, preteklih posegov</span>
                   </li>
                   <li className="flex items-start gap-2">
