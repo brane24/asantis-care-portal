@@ -151,19 +151,17 @@ const DermatologijaPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <NavLink key={index} to="/kontakt" className="group">
-                <Card className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                      <benefit.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                      <p className="text-muted-foreground">{benefit.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </NavLink>
+              <Card key={index} className="h-full hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 hover:bg-primary/20 transition-colors">
+                    <benefit.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
+                    <p className="text-muted-foreground">{benefit.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
