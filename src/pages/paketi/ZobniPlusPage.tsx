@@ -619,8 +619,7 @@ const ZobniPlusPage = () => {
               </div>
             </div>
 
-            <p className="text-lg text-muted-foreground">
-              To je tehnologija, ki jo imajo samo <strong>redke ordinacije</strong> v Sloveniji — 
+            <p className="text-lg text-muted-foreground">To je tehnologija, ki je vključena v aktivacijo.<strong>redke ordinacije</strong> v Sloveniji — 
               in je <strong>vključena v aktivacijo</strong>.
             </p>
           </div>
@@ -662,9 +661,7 @@ const ZobniPlusPage = () => {
               3
             </div>
             <h3 className="text-xl font-semibold mb-2">Članstvo</h3>
-            <p className="text-muted-foreground">
-              Plačujete nizko mesečno naročnino (19–29 €) in koristite ugodnosti ter nižje cene posegov.
-            </p>
+            <p className="text-muted-foreground">Plačujete nizko mesečno naročnino (29 €) in koristite ugodnosti ter nižje cene posegov.</p>
           </div>
         </div>
 
