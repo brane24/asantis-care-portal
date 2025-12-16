@@ -292,9 +292,9 @@ const PediaterAstmaPage = () => {
             </Button>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-muted-foreground">
-              <a href="tel:+38612345678" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="tel:+38631876104" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="w-5 h-5" />
-                01 / xxx xx xx
+                +386 31 876 104
               </a>
               <a href="mailto:info@asantis.si" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
