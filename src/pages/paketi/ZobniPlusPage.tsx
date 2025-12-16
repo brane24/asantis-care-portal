@@ -711,7 +711,7 @@ const ZobniPlusPage = () => {
                 <li>Aktivacijska cena 89–129 € se plača ob prvem obisku in ni vračljiva.</li>
                 <li>Minimalno trajanje naročnine je 3 mesece.</li>
                 <li>Če uporabnik prekine pred 12 meseci, doplača razliko do rednih cen storitev.</li>
-                <li>Odpoved z 30-dnevnim rokom po minimalnem obdobju.</li>
+                <li>Aktivacijska cena 149 € se plača ob prvem obisku in ni vračljiva.</li>
                 <li>Preventivne storitve ne nadomeščajo urgentne medicine.</li>
               </ol>
             </CardContent>
