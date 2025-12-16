@@ -4,54 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Scan, 
-  Calendar, 
-  Shield, 
-  BadgePercent, 
-  Clock, 
-  FileText,
-  Smile,
-  Brain,
-  Target,
-  Zap,
-  Star,
-  CircleDot,
-  XCircle
-} from "lucide-react";
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle, ArrowRight, Scan, Calendar, Shield, BadgePercent, Clock, FileText, Smile, Brain, Target, Zap, Star, CircleDot, XCircle } from "lucide-react";
 const ZobniPlusPage = () => {
-  const faqItems = [
-    {
-      question: "Ali lahko po aktivaciji prekličem?",
-      answer: "Da, vendar se doplača razlika do rednih cen, če je članstvo krajše kot 12 mesecev. To zagotavlja pošteno razmerje med koristmi in stroški."
-    },
-    {
-      question: "Kaj če potrebujem več posegov?",
-      answer: "Člani imajo nižje cene in prednostne termine, zato so hitreje obravnavani in plačajo manj. Vaši posegi so načrtovani in izvedeni učinkovito."
-    },
-    {
-      question: "Kaj vključuje mesečna naročnina?",
-      answer: "Letni pregled, kontrolni posvet, popuste na posege, prioritetno naročanje in dostop do stalnega nadzora nad zdravjem vaših zob."
-    },
-    {
-      question: "Zakaj je 3D sken tako pomemben?",
-      answer: "Omogoča izjemno natančno diagnostiko in preprečuje napake ter nepotrebne posege. S 3D modelom lahko odkrijemo mikropoke, spremljamo premike zob in načrtujemo protetiko."
-    },
-    {
-      question: "Kaj če ne potrebujem nobenega posega?",
-      answer: "Čestitamo — to pomeni, da paket deluje! Članstvo skrbi, da tako tudi ostane z rednimi pregledi in zgodnjim odkrivanjem morebitnih težav."
-    }
-  ];
-
+  const faqItems = [{
+    question: "Ali lahko po aktivaciji prekličem?",
+    answer: "Da, vendar se doplača razlika do rednih cen, če je članstvo krajše kot 12 mesecev. To zagotavlja pošteno razmerje med koristmi in stroški."
+  }, {
+    question: "Kaj če potrebujem več posegov?",
+    answer: "Člani imajo nižje cene in prednostne termine, zato so hitreje obravnavani in plačajo manj. Vaši posegi so načrtovani in izvedeni učinkovito."
+  }, {
+    question: "Kaj vključuje mesečna naročnina?",
+    answer: "Letni pregled, kontrolni posvet, popuste na posege, prioritetno naročanje in dostop do stalnega nadzora nad zdravjem vaših zob."
+  }, {
+    question: "Zakaj je 3D sken tako pomemben?",
+    answer: "Omogoča izjemno natančno diagnostiko in preprečuje napake ter nepotrebne posege. S 3D modelom lahko odkrijemo mikropoke, spremljamo premike zob in načrtujemo protetiko."
+  }, {
+    question: "Kaj če ne potrebujem nobenega posega?",
+    answer: "Čestitamo — to pomeni, da paket deluje! Članstvo skrbi, da tako tudi ostane z rednimi pregledi in zgodnjim odkrivanjem morebitnih težav."
+  }];
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -64,7 +35,6 @@ const ZobniPlusPage = () => {
       }
     }))
   };
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -81,36 +51,25 @@ const ZobniPlusPage = () => {
         "addressCountry": "SI"
       }
     },
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Aktivacija",
-        "price": "89",
-        "priceCurrency": "EUR",
-        "description": "Enkratna aktivacija z pregledom, RTG/CT, 3D skenom in načrtom zdravljenja"
-      },
-      {
-        "@type": "Offer",
-        "name": "Mesečna naročnina",
-        "price": "19",
-        "priceCurrency": "EUR",
-        "description": "Mesečna naročnina z letnim pregledom, popusti in prioritetnimi termini"
-      }
-    ]
+    "offers": [{
+      "@type": "Offer",
+      "name": "Aktivacija",
+      "price": "89",
+      "priceCurrency": "EUR",
+      "description": "Enkratna aktivacija z pregledom, RTG/CT, 3D skenom in načrtom zdravljenja"
+    }, {
+      "@type": "Offer",
+      "name": "Mesečna naročnina",
+      "price": "19",
+      "priceCurrency": "EUR",
+      "description": "Mesečna naročnina z letnim pregledom, popusti in prioritetnimi termini"
+    }]
   };
-
-  return (
-    <Layout>
+  return <Layout>
       <Helmet>
         <title>Zobni Plus - Preventivni zobni paket | ASANTIS Ljubljana</title>
-        <meta 
-          name="description" 
-          content="Zobni Plus je prvi zobni paket v Sloveniji z 3D skenom, RTG/CT diagnostiko in mesečno naročnino. Aktivacija 89-129€, mesečno 19-29€. Prihranite do 600€ letno." 
-        />
-        <meta 
-          name="keywords" 
-          content="zobni paket, zobozdravstvo Ljubljana, preventivni pregled zob, 3D sken zob, zobni članstvo, poceni zobozdravnik" 
-        />
+        <meta name="description" content="Zobni Plus je prvi zobni paket v Sloveniji z 3D skenom, RTG/CT diagnostiko in mesečno naročnino. Aktivacija 89-129€, mesečno 19-29€. Prihranite do 600€ letno." />
+        <meta name="keywords" content="zobni paket, zobozdravstvo Ljubljana, preventivni pregled zob, 3D sken zob, zobni članstvo, poceni zobozdravnik" />
         <link rel="canonical" href="https://asantis.si/paketi/zobni-plus" />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
@@ -135,7 +94,7 @@ const ZobniPlusPage = () => {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
               Zobni Plus je prvi zobni paket v Sloveniji, ki združuje celostno diagnostiko (RTG/CT + 3D sken), 
-              natančen načrt zdravljenja in dostop do ugodnejših posegov — za samo <strong>19–29 €/mesec</strong>.
+              natančen načrt zdravljenja in dostop do ugodnejših posegov — za samo <strong>29 €/mesec</strong>.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -733,20 +692,14 @@ const ZobniPlusPage = () => {
             </div>
 
             <Accordion type="single" collapsible className="w-full space-y-4">
-              {faqItems.map((item, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="bg-background rounded-lg px-6 border"
-                >
+              {faqItems.map((item, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-lg px-6 border">
                   <AccordionTrigger className="text-left hover:no-underline">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     {item.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>
@@ -793,8 +746,6 @@ const ZobniPlusPage = () => {
           </CardContent>
         </Card>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default ZobniPlusPage;
