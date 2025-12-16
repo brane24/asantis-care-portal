@@ -121,14 +121,6 @@ const PrivatPediaterPage = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Baby className="h-24 w-24 text-primary/50 mx-auto mb-4" />
-                  <p className="text-muted-foreground">Slika pediatra z otrokom</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
