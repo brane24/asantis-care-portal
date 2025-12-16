@@ -120,10 +120,6 @@ const PediaterAlergologPage = () => {
     {
       question: "Ali se testiranja izvajajo tudi pri majhnih otrocih?",
       answer: "Da, izvajamo testiranja od 6. meseca starosti naprej, prilagojeno starosti in občutljivosti otroka."
-    },
-    {
-      question: "Ali lahko testirate tudi intolerance na hrano?",
-      answer: "Da, izvajamo tudi krvne teste na prehranske intolerance (IgG4)."
     }
   ];
 
