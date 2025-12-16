@@ -2,79 +2,95 @@ import { Helmet } from "react-helmet";
 import Layout from "@/components/Layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { 
-  Phone, MapPin, Clock, Car, Train, Star, Baby, Syringe, 
-  Stethoscope, Brain, TrendingUp, Heart, CheckCircle,
-  Calendar, Building, Users, ArrowRight, Wind, Activity, Sparkles
-} from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Phone, MapPin, Clock, Car, Train, Star, Baby, Syringe, Stethoscope, Brain, TrendingUp, Heart, CheckCircle, Calendar, Building, Users, ArrowRight, Wind, Activity, Sparkles } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-
 const PrivatPediaterPage = () => {
-  const storitve = [
-    { icon: Baby, title: "Preventivni pregledi", desc: "Redni pregledi dojenčkov, otrok in mladostnikov po starostnih skupinah" },
-    { icon: Syringe, title: "Svetovanje o cepljenju", desc: "Svetovanje staršem ob dilemah pred obveznimi in priporočenimi cepljenji" },
-    { icon: Stethoscope, title: "Zdravljenje bolezni", desc: "Pregled in zdravljenje okužb, alergij, prebavnih težav, vročine, kašlja ipd." },
-    { icon: Heart, title: "Specialistična diagnostika", desc: "Laboratorijske preiskave, UZ trebuha, EKG, napotitev k specialistom" },
-    { icon: Brain, title: "Psihofizični razvoj", desc: "Svetovanje pri razvoju, vedenjskih in učnih težavah" },
-    { icon: TrendingUp, title: "Spremljanje rasti", desc: "Redno merjenje in interpretacija rasti, telesne mase in razvoja otroka" }
-  ];
-
-  const cenik = [
-    { storitev: "Prvi pediatrični pregled", cena: "od 120 €" },
-    { storitev: "Kontrolni pregled", cena: "od 80 €" },
-    { storitev: "Preventivni pregled dojenčka", cena: "od 120 €" },
-    
-    { storitev: "Izdaja potrdila za vrtec/šolo", cena: "120 €" }
-  ];
-
-  const prednosti = [
-    { icon: Clock, text: "Brez čakalnih vrst in administrativnih zamud" },
-    { icon: Users, text: "Individualen pristop in več časa za vsakega otroka" },
-    { icon: Heart, text: "Prijazno okolje, prilagojeno otrokom" },
-    { icon: Stethoscope, text: "Možnost dodatnih pregledov (UZ, laboratorij, dermatolog, alergolog)" },
-    { icon: Calendar, text: "Možnost vključitve v letni naročniški program za družine" }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Končno pediater, ki si vzame čas in res posluša. Hčerka se ne boji več pregleda.",
-      author: "Maja",
-      location: "Ljubljana"
-    },
-    {
-      quote: "Super izkušnja, hitro naročanje in profesionalen pristop.",
-      author: "Andrej",
-      location: "oče dveh otrok"
-    }
-  ];
-
-  const postopek = [
-    { step: "1", title: "Kontaktirajte nas", desc: "preko obrazca ali telefona" },
-    { step: "2", title: "Izberite termin", desc: "ki vam ustreza (tudi isti dan)" },
-    { step: "3", title: "Obiščite pediatra", desc: "v prijetnem ambientu centra Asantis" },
-    { step: "4", title: "Nadaljnje preiskave", desc: "po potrebi napotitev k specialistom" }
-  ];
-
-  return (
-    <Layout>
+  const storitve = [{
+    icon: Baby,
+    title: "Preventivni pregledi",
+    desc: "Redni pregledi dojenčkov, otrok in mladostnikov po starostnih skupinah"
+  }, {
+    icon: Syringe,
+    title: "Svetovanje o cepljenju",
+    desc: "Svetovanje staršem ob dilemah pred obveznimi in priporočenimi cepljenji"
+  }, {
+    icon: Stethoscope,
+    title: "Zdravljenje bolezni",
+    desc: "Pregled in zdravljenje okužb, alergij, prebavnih težav, vročine, kašlja ipd."
+  }, {
+    icon: Heart,
+    title: "Specialistična diagnostika",
+    desc: "Laboratorijske preiskave, UZ trebuha, EKG, napotitev k specialistom"
+  }, {
+    icon: Brain,
+    title: "Psihofizični razvoj",
+    desc: "Svetovanje pri razvoju, vedenjskih in učnih težavah"
+  }, {
+    icon: TrendingUp,
+    title: "Spremljanje rasti",
+    desc: "Redno merjenje in interpretacija rasti, telesne mase in razvoja otroka"
+  }];
+  const cenik = [{
+    storitev: "Prvi pediatrični pregled",
+    cena: "od 120 €"
+  }, {
+    storitev: "Kontrolni pregled",
+    cena: "od 80 €"
+  }, {
+    storitev: "Preventivni pregled dojenčka",
+    cena: "od 120 €"
+  }, {
+    storitev: "Izdaja potrdila za vrtec/šolo",
+    cena: "120 €"
+  }];
+  const prednosti = [{
+    icon: Clock,
+    text: "Brez čakalnih vrst in administrativnih zamud"
+  }, {
+    icon: Users,
+    text: "Individualen pristop in več časa za vsakega otroka"
+  }, {
+    icon: Heart,
+    text: "Prijazno okolje, prilagojeno otrokom"
+  }, {
+    icon: Stethoscope,
+    text: "Možnost dodatnih pregledov (UZ, laboratorij, dermatolog, alergolog)"
+  }, {
+    icon: Calendar,
+    text: "Možnost vključitve v letni naročniški program za družine"
+  }];
+  const testimonials = [{
+    quote: "Končno pediater, ki si vzame čas in res posluša. Hčerka se ne boji več pregleda.",
+    author: "Maja",
+    location: "Ljubljana"
+  }, {
+    quote: "Super izkušnja, hitro naročanje in profesionalen pristop.",
+    author: "Andrej",
+    location: "oče dveh otrok"
+  }];
+  const postopek = [{
+    step: "1",
+    title: "Kontaktirajte nas",
+    desc: "preko obrazca ali telefona"
+  }, {
+    step: "2",
+    title: "Izberite termin",
+    desc: "ki vam ustreza (tudi isti dan)"
+  }, {
+    step: "3",
+    title: "Obiščite pediatra",
+    desc: "v prijetnem ambientu centra Asantis"
+  }, {
+    step: "4",
+    title: "Nadaljnje preiskave",
+    desc: "po potrebi napotitev k specialistom"
+  }];
+  return <Layout>
       <Helmet>
         <title>Privat pediater Ljubljana | Asantis zdravstveni center</title>
-        <meta
-          name="description"
-          content="Zasebni pediater v Ljubljani brez čakalne dobe. Celostni pregledi, cepljenja in diagnostika otrok v varnem okolju centra Asantis."
-        />
-        <meta
-          name="keywords"
-          content="privat pediater Ljubljana, zasebni pediater, pediatrična ambulanta Ljubljana, otroški zdravnik Ljubljana, pregled pri pediatru, pediater brez čakalne dobe, cepljenje otrok Ljubljana, preventivni pregledi otrok, zasebni pediater cena"
-        />
+        <meta name="description" content="Zasebni pediater v Ljubljani brez čakalne dobe. Celostni pregledi, cepljenja in diagnostika otrok v varnem okolju centra Asantis." />
+        <meta name="keywords" content="privat pediater Ljubljana, zasebni pediater, pediatrična ambulanta Ljubljana, otroški zdravnik Ljubljana, pregled pri pediatru, pediater brez čakalne dobe, cepljenje otrok Ljubljana, preventivni pregledi otrok, zasebni pediater cena" />
         <link rel="canonical" href="https://asantis.si/pediatrija/privat-pediater-ljubljana" />
       </Helmet>
 
@@ -106,17 +122,10 @@ const PrivatPediaterPage = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
-              {[
-                "Brez čakalnih vrst",
-                "Prijazen pristop do otrok",
-                "Izkušeni specialist pediater",
-                "Sodobna oprema in laboratorij"
-              ].map((badge, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground justify-center">
+              {["Brez čakalnih vrst", "Prijazen pristop do otrok", "Izkušeni specialist pediater", "Sodobna oprema in laboratorij"].map((badge, i) => <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground justify-center">
                   <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>{badge}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -157,8 +166,7 @@ const PrivatPediaterPage = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {storitve.map((storitev, index) => (
-              <Card key={index} className="bg-card hover:shadow-lg transition-shadow border-border">
+            {storitve.map((storitev, index) => <Card key={index} className="bg-card hover:shadow-lg transition-shadow border-border">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <storitev.icon className="h-6 w-6 text-primary" />
@@ -166,8 +174,7 @@ const PrivatPediaterPage = () => {
                   <h3 className="font-semibold text-foreground mb-2">{storitev.title}</h3>
                   <p className="text-sm text-muted-foreground">{storitev.desc}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -176,7 +183,7 @@ const PrivatPediaterPage = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
-            Cene storitev – pregled pri privat pediatru
+            Cene storitev – pregled pri pediatru
           </h2>
           <p className="text-center text-muted-foreground mb-10">
             Transparentne cene brez skritih stroškov
@@ -192,12 +199,10 @@ const PrivatPediaterPage = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {cenik.map((item, index) => (
-                    <TableRow key={index}>
+                  {cenik.map((item, index) => <TableRow key={index}>
                       <TableCell className="font-medium">{item.storitev}</TableCell>
                       <TableCell className="text-right text-primary font-semibold">{item.cena}</TableCell>
-                    </TableRow>
-                  ))}
+                    </TableRow>)}
                 </TableBody>
               </Table>
             </Card>
@@ -222,14 +227,12 @@ const PrivatPediaterPage = () => {
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            {prednosti.map((prednost, index) => (
-              <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
+            {prednosti.map((prednost, index) => <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <prednost.icon className="h-5 w-5 text-primary" />
                 </div>
                 <p className="text-foreground">{prednost.text}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -242,29 +245,23 @@ const PrivatPediaterPage = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card border-border">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-border">
                 <CardContent className="p-6">
                   <div className="flex mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <p className="text-muted-foreground italic mb-4">"{testimonial.quote}"</p>
                   <p className="text-sm font-medium text-foreground">
                     — {testimonial.author}, {testimonial.location}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="text-center mt-8">
             <div className="flex items-center justify-center gap-2">
               <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
               </div>
               <span className="font-medium text-foreground">4.9 / 5</span>
               <span className="text-muted-foreground">(Google Reviews)</span>
@@ -284,15 +281,13 @@ const PrivatPediaterPage = () => {
           </p>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {postopek.map((korak, index) => (
-              <div key={index} className="text-center">
+            {postopek.map((korak, index) => <div key={index} className="text-center">
                 <div className="w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {korak.step}
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{korak.title}</h3>
                 <p className="text-sm text-muted-foreground">{korak.desc}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <p className="text-center text-muted-foreground mt-10">
@@ -452,8 +447,6 @@ const PrivatPediaterPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default PrivatPediaterPage;
