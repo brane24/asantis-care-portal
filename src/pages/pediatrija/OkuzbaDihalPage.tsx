@@ -20,6 +20,7 @@ const OkuzbaDihalPage = () => {
     "Vnetje ušes (otitis media)",
     "Vnetje sinusov (sinusitis)",
     "Bronhitis",
+    "Bronhiolitis",
     "Pljučnica"
   ];
 
