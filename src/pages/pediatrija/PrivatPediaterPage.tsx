@@ -28,7 +28,7 @@ const PrivatPediaterPage = () => {
   ];
 
   const cenik = [
-    { storitev: "Prvi pediatrični pregled", cena: "od 60 €" },
+    { storitev: "Prvi pediatrični pregled", cena: "od 120 €" },
     { storitev: "Kontrolni pregled", cena: "od 45 €" },
     { storitev: "Preventivni pregled dojenčka", cena: "od 70 €" },
     { storitev: "Cepljenje (brez cene cepiva)", cena: "od 30 €" },
