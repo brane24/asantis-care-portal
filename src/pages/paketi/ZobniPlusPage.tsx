@@ -204,7 +204,8 @@ const ZobniPlusPage = () => {
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               Kaj vključuje aktivacija?
             </h2>
-            <p className="text-xl text-muted-foreground">149 € — plača se enkrat<span className="font-bold text-foreground">89–129 €</span> — plača se enkrat
+            <p className="text-xl text-muted-foreground">
+              <span className="font-bold text-foreground">149€</span> plača se ob prvem pregledu, nato naročnina
             </p>
           </div>
 
