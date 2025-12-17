@@ -54,13 +54,13 @@ const ZobniPlusPage = () => {
     "offers": [{
       "@type": "Offer",
       "name": "Aktivacija",
-      "price": "89",
+      "price": "149",
       "priceCurrency": "EUR",
       "description": "Enkratna aktivacija z pregledom, RTG/CT, 3D skenom in načrtom zdravljenja"
     }, {
       "@type": "Offer",
       "name": "Mesečna naročnina",
-      "price": "19",
+      "price": "29",
       "priceCurrency": "EUR",
       "description": "Mesečna naročnina z letnim pregledom, popusti in prioritetnimi termini"
     }]
@@ -68,7 +68,7 @@ const ZobniPlusPage = () => {
   return <Layout>
       <Helmet>
         <title>Zobni Plus - Preventivni zobni paket | ASANTIS Ljubljana</title>
-        <meta name="description" content="Zobni Plus je prvi zobni paket v Sloveniji z 3D skenom, RTG/CT diagnostiko in mesečno naročnino. Aktivacija 89-129€, mesečno 19-29€. Prihranite do 600€ letno." />
+        <meta name="description" content="Zobni Plus je prvi zobni paket v Sloveniji z 3D skenom, RTG/CT diagnostiko in mesečno naročnino. Aktivacija 149€, mesečno 19-29€. Prihranite do 600€ letno." />
         <meta name="keywords" content="zobni paket, zobozdravstvo Ljubljana, preventivni pregled zob, 3D sken zob, zobni članstvo, poceni zobozdravnik" />
         <link rel="canonical" href="https://asantis.si/paketi/zobni-plus" />
         <script type="application/ld+json">
@@ -137,7 +137,7 @@ const ZobniPlusPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Zmanjša možnost dragih posegov</h3>
                   <p className="text-muted-foreground">
-                    Z zgodnjim odkrivanjem skritih kariesov, parodontoze in razpok prihranite 100–1000 €.
+                    Z zgodnjim odkrivanjem skritih kariesov, parodontoze in razpok zob prihranite 100–1000 €.
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const ZobniPlusPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Prednostni termini za člane</h3>
                   <p className="text-muted-foreground">
-                    Ni več čakanja — člani so obravnavani prednostno pri vseh terminih.
+                    Ni več čakanja — člani ste obravnavani prednostno pri vseh terminih.
                   </p>
                 </div>
               </div>
@@ -185,7 +185,7 @@ const ZobniPlusPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Nižji stroški zobozdravstva</h3>
                   <p className="text-muted-foreground">
-                    Do 25 % nižje cene izbranih posegov in stalni nadzor nad zdravjem zob.
+                    Do 15 % nižje cene izbranih posegov in stalni nadzor nad zdravjem zob.
                   </p>
                 </div>
               </div>
@@ -412,10 +412,10 @@ const ZobniPlusPage = () => {
                   <h3 className="font-semibold mb-1">Članski popusti na posege</h3>
                   <ul className="text-muted-foreground text-sm space-y-1">
                     <li>• Čiščenje zobnega kamna: <strong>-15%</strong></li>
-                    <li>• Zalivke: <strong>-10%</strong></li>
-                    <li>• Protetika: <strong>-10–15%</strong></li>
-                    <li>• Ortodontija: <strong>-5–10%</strong></li>
-                    <li>• Implantati: <strong>-3–5%</strong></li>
+                    <li>• Zalivke: <strong>-15%</strong></li>
+                    <li>• Protetika: <strong>-15%</strong></li>
+                    <li>• Ortodontija: <strong>-15%</strong></li>
+                    <li>• Implantati: <strong>-15%</strong></li>
                   </ul>
                 </div>
               </div>
@@ -440,7 +440,7 @@ const ZobniPlusPage = () => {
                 </div>
                 
                 <p className="text-lg text-muted-foreground mb-6">
-                  Zato ker članstvo ni plačilo za pregled — ampak za <strong>stalno skrbništvo</strong>, 
+                  Zato ker članstvo ni plačilo za pregled — ampak za <strong>stalno skrb zob</strong>, 
                   preprečevanje dragih posegov in dostop do ugodnejših cen.
                 </p>
 
@@ -455,7 +455,7 @@ const ZobniPlusPage = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                    <span><strong>Zmanjša</strong> stroške zobozdravstva v prihodnosti</span>
+                    <span><strong>Zmanjša</strong> stroške zobozdravnika v prihodnosti</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
@@ -473,7 +473,7 @@ const ZobniPlusPage = () => {
 
                 <div className="bg-primary/10 rounded-lg p-4 text-center">
                   <p className="text-lg font-semibold text-primary">
-                    Povprečni član s paketom prihrani 120–600 € letno.
+                    Povprečni član s paketom prihrani 300–600 € letno.
                   </p>
                 </div>
               </CardContent>
