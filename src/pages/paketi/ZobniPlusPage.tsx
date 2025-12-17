@@ -22,7 +22,22 @@ const ZobniPlusPage = () => {
   }, {
     question: "Kaj če ne potrebujem nobenega posega?",
     answer: "Čestitamo — to pomeni, da paket deluje! Članstvo skrbi, da tako tudi ostane z rednimi pregledi in zgodnjim odkrivanjem morebitnih težav."
-  }];
+  }, {
+    question: "Ali je čiščenje zobnega kamna res vključeno?",
+    answer:
+      "Da. V paket je vključeno 1× letno profesionalno čiščenje zobnega kamna (po strokovni indikaciji). Dodatna čiščenja se obračunajo po ceniku z −15 % članskim popustom.",
+  },
+  {
+    question: "Ali me opomnite na pregled in čiščenje?",
+    answer:
+      "Da. Člane aktivno opominjamo in vabimo na pregled in čiščenje, ko je čas — da vam ni treba skrbeti za to.",
+  },
+  {
+    question: "Ali −15 % popust velja za vse storitve?",
+    answer:
+      "Da. Člani imajo stalni −15 % popust na vse samoplačniške zobozdravstvene storitve. Popust se ne sešteva z drugimi akcijami.",
+  }
+];
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -56,19 +71,19 @@ const ZobniPlusPage = () => {
       "name": "Aktivacija",
       "price": "149",
       "priceCurrency": "EUR",
-      "description": "Enkratna aktivacija z pregledom, diagnostiko po indikaciji, 3D skenom in načrtom zdravljenja"
+      "description": "Enkratna aktivacija z pregledom, RTG/CT, 3D skenom in načrtom zdravljenja"
     }, {
       "@type": "Offer",
       "name": "Mesečna naročnina",
       "price": "29",
       "priceCurrency": "EUR",
-      "description": "Mesečna naročnina z letnim pregledom, kontrolnim posvetom, popusti na izbrane posege in prioritetnimi termini"
+      "description": "Letni pregled, 1× letno čiščenje zobnega kamna (po indikaciji), prioritetni termini, opomniki ter stalni −15 % članski popust na vse storitve."
     }]
   };
   return <Layout>
       <Helmet>
         <title>Zobni Plus - Preventivni zobni paket | ASANTIS Ljubljana</title>
-        <meta name="description" content="Zobni Plus je preventivni zobni paket z začetno diagnostiko in mesečno naročnino. Aktivacija 149€, mesečno 29€. Predvidljivi stroški, prioritetni termini in popusti na izbrane posege." />
+        <meta name="description" content="Zobni Plus je preventivni zobni paket z začetno diagnostiko in mesečno naročnino. Aktivacija 149 €, mesečno 29 €. Vključeno 1× letno čiščenje zobnega kamna (po indikaciji), aktivno opominjanje ter stalni −15 % članski popust na vse storitve." />
         <meta name="keywords" content="zobni paket, zobozdravstvo Ljubljana, preventivni pregled zob, 3D sken zob, zobni članstvo, poceni zobozdravnik" />
         <link rel="canonical" href="https://asantis.si/paketi/zobni-plus" />
         <script type="application/ld+json">
@@ -93,7 +108,8 @@ const ZobniPlusPage = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
-              Zobni Plus združuje začetni celostni pregled, diagnostiko po indikaciji in jasen načrt zdravljenja — ter vam nato omogoča predvidljive stroške in ugodnosti — za samo <strong>29 €/mesec</strong>.
+              Zobni Plus je prvi zobni paket v Sloveniji, ki združuje celostno diagnostiko (RTG/CT + 3D sken), 
+              natančen načrt zdravljenja in dostop do ugodnejših posegov — za samo <strong>29 €/mesec</strong>.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -184,7 +200,7 @@ const ZobniPlusPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Nižji stroški zobozdravstva</h3>
                   <p className="text-muted-foreground">
-                    Do 15 % nižje cene izbranih posegov in stalni nadzor nad zdravjem zob.
+                    −15 % −15 % nižje cene storitev in stalni nadzor nad zdravjem zob.
                   </p>
                 </div>
               </div>
@@ -403,19 +419,46 @@ const ZobniPlusPage = () => {
             </CardContent>
           </Card>
 
+          <Card className="hover:shadow-soft transition-all duration-300">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold mb-1">1× letno čiščenje zobnega kamna</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Profesionalno čiščenje zobnega kamna <strong>(po indikaciji)</strong>.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-soft transition-all duration-300">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold mb-1">Opomniki in aktivno vabljenje</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Mi vas opomnimo in povabimo na pregled in čiščenje, ko je čas.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="hover:shadow-soft transition-all duration-300 border-primary/20 bg-primary/5">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
                 <BadgePercent className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">Članski popusti na posege</h3>
-                  <ul className="text-muted-foreground text-sm space-y-1">
-                    <li>• Čiščenje zobnega kamna: <strong>-15%</strong></li>
-                    <li>• Zalivke: <strong>-10%</strong></li>
-                    <li>• Protetika: <strong>-10%</strong></li>
-                    <li>• Ortodontija: <strong>-5%</strong></li>
-                    <li>• Implantati: <strong>-3%</strong></li>
-                  </ul>
+                  <h3 className="font-semibold mb-1">Članski popust na vse storitve</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Stalni <strong>−15 %</strong> popust na vse samoplačniške zobozdravstvene storitve.
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    * Popust se ne sešteva z drugimi akcijami. Zunanji stroški (npr. laboratorij) se lahko obračunajo posebej.
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -500,16 +543,16 @@ const ZobniPlusPage = () => {
             <CardContent>
               <ul className="space-y-3">
                 <li className="flex justify-between">
-                  <span className="text-muted-foreground">Pregled + posvet</span>
-                  <span className="font-medium">70 €</span>
+                  <span className="text-muted-foreground">Pregled</span>
+                  <span className="font-medium">60 €</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-muted-foreground">RTG/CBCT (po indikaciji)</span>
-                  <span className="font-medium">160 €</span>
+                  <span className="text-muted-foreground">RTG/CT</span>
+                  <span className="font-medium">120 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">3D sken</span>
-                  <span className="font-medium">70 €</span>
+                  <span className="font-medium">90 €</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Posvet</span>
@@ -554,8 +597,8 @@ const ZobniPlusPage = () => {
                   <span className="font-medium text-primary">✓ Vključeno</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-muted-foreground">Popusti</span>
-                  <span className="font-medium text-primary">do 15%</span>
+                  <span className="text-muted-foreground">Članski popust</span>
+                  <span className="font-medium text-primary">15–25%</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-muted-foreground">Prioritetni termini</span>
@@ -618,7 +661,8 @@ const ZobniPlusPage = () => {
               </div>
             </div>
 
-            <p className="text-lg text-muted-foreground">To je tehnologija, ki je pri mnogih ordinacijah doplačljiva — pri nas pa je <strong>vključena v aktivacijo</strong>.
+            <p className="text-lg text-muted-foreground">To je tehnologija, ki je vključena v aktivacijo.<strong>redke ordinacije</strong> v Sloveniji — 
+              in je <strong>vključena v aktivacijo</strong>.
             </p>
           </div>
         </div>
