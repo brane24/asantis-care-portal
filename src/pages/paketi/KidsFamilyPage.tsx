@@ -134,7 +134,7 @@ const KidsFamilyPage = () => {
   const processSteps = [
     {
       step: "1",
-      title: "Otrok je vključen v program"
+      title: "Otroka vključite v program s plačilom naročnine"
     },
     {
       step: "2",
