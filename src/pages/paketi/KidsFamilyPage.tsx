@@ -20,7 +20,8 @@ import {
   MessageCircle,
   CalendarCheck,
   Users,
-  Stethoscope
+  Stethoscope,
+  Percent
 } from "lucide-react";
 
 const KidsFamilyPage = () => {
@@ -124,7 +125,7 @@ const KidsFamilyPage = () => {
       description: "Po potrebi za vrtec, šolo ali delodajalca"
     },
     {
-      icon: Heart,
+      icon: Percent,
       title: "Popusti na alergološko in pulmološko testiranje",
       description: "Ugodnejše cene za specialistična testiranja"
     }
