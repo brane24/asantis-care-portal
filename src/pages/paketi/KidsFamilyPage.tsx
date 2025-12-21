@@ -122,6 +122,11 @@ const KidsFamilyPage = () => {
       icon: FileText,
       title: "Zdravniška dokumentacija in opravičila",
       description: "Po potrebi za vrtec, šolo ali delodajalca"
+    },
+    {
+      icon: Heart,
+      title: "Popusti na alergološko in pulmološko testiranje",
+      description: "Ugodnejše cene za specialistična testiranja"
     }
   ];
 
