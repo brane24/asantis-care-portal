@@ -146,7 +146,7 @@ const KidsFamilyPage = () => {
     },
     {
       step: "4",
-      title: "Starši dobite jasna navodila in občutek nadzora"
+      title: "Starši dobite jasna navodila za nadzor nad zdravljenjem"
     }
   ];
 
