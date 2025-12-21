@@ -2,185 +2,137 @@ import { Helmet } from 'react-helmet';
 import Layout from '@/components/Layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { NavLink } from 'react-router-dom';
-import {
-  Heart,
-  Activity,
-  Clock,
-  UserCheck,
-  CheckCircle,
-  ArrowRight,
-  Stethoscope,
-  TestTube,
-  Zap,
-  FileText,
-  Calendar,
-  Shield,
-  Star,
-  Users,
-  Target,
-  TrendingUp,
-  Phone,
-  AlertTriangle,
-  Sparkles,
-  BadgeCheck,
-  CircleDollarSign,
-  Scale,
-  HeartPulse,
-  Droplets,
-  Syringe,
-  ClipboardList,
-  Timer,
-  MessageCircle,
-  Award,
-  ChevronRight,
-} from 'lucide-react';
-
+import { Heart, Activity, Clock, UserCheck, CheckCircle, ArrowRight, Stethoscope, TestTube, Zap, FileText, Calendar, Shield, Star, Users, Target, TrendingUp, Phone, AlertTriangle, Sparkles, BadgeCheck, CircleDollarSign, Scale, HeartPulse, Droplets, Syringe, ClipboardList, Timer, MessageCircle, Award, ChevronRight } from 'lucide-react';
 const SrceOziljePage = () => {
-  const programFeatures = [
-    {
-      icon: Stethoscope,
-      title: "Internistični pregled",
-      description: "Celovit pregled pri specialistu interne medicine"
-    },
-    {
-      icon: TestTube,
-      title: "Razširjeni laboratorij",
-      description: "Glukoza, inzulin, lipidogram, TSH, CRP, jetra, ledvice..."
-    },
-    {
-      icon: Activity,
-      title: "EKG",
-      description: "Elektrokardiogram za oceno srčnega ritma"
-    },
-    {
-      icon: HeartPulse,
-      title: "UZ vratnih žil",
-      description: "Ultrazvok karotidnih arterij"
-    },
-    {
-      icon: Droplets,
-      title: "UZ arterij nog",
-      description: "Ultrazvok arterij spodnjih okončin"
-    },
-    {
-      icon: Syringe,
-      title: "UZ ven nog",
-      description: "Ultrazvok venskega sistema nog"
-    },
-  ];
-
-  const monthlyBenefits = [
-    "1× mesečni posvet ali kontrola (prehrana, krvni tlak, napredek, simptomi)",
-    "Dostop do zdravnika (online)",
-    "Popusti na UZ srca, razširjene laboratorije, specialiste",
-    "Letni laboratorij + ocena tveganja",
-    "Personaliziran coaching za presnovo in energijo"
-  ];
-
-  const priceComparison = [
-    { service: "Internist", individual: "90–120 €", package: "vključeno" },
-    { service: "Laboratorij", individual: "60–140 €", package: "vključeno" },
-    { service: "EKG", individual: "25–35 €", package: "vključeno" },
-    { service: "UZ vratnih arterij", individual: "80–120 €", package: "vključeno" },
-    { service: "UZ arterij nog", individual: "80–120 €", package: "vključeno" },
-    { service: "UZ ven nog", individual: "80–120 €", package: "vključeno" },
-    { service: "Osebni načrt", individual: "50–100 €", package: "vključeno" },
-    { service: "Mesečni posvet (12×)", individual: "600–840 €", package: "vključeno" },
-  ];
-
-  const timeline = [
-    {
-      week: "1. teden",
-      title: "Aktivacijski pregled",
-      description: "Internist + laboratorij + EKG + ultrazvok žil"
-    },
-    {
-      week: "2. teden",
-      title: "Pregled rezultatov",
-      description: "Osebni zdravstveni načrt in priporočila"
-    },
-    {
-      week: "Vsak mesec",
-      title: "Kontrolni posvet",
-      description: "V živo ali online – spremljanje napredka"
-    },
-    {
-      week: "3.–12. mesec",
-      title: "Spremljanje napredka",
-      description: "Prilagoditve prehrane, gibanja in zdravljenja"
-    },
-    {
-      week: "12. mesec",
-      title: "Letni pregled",
-      description: "Laboratorij + ocena tveganja + zaključni plan"
-    },
-  ];
-
-  const targetAudience = [
-    { icon: Users, text: "Starost 30–75 let" },
-    { icon: HeartPulse, text: "Osebe s povišanim krvnim tlakom, sladkorjem, holesterolom" },
-    { icon: Shield, text: "Ljudje z družinsko obremenjenostjo (infarkt, kap)" },
-    { icon: Activity, text: "Osebe s težkimi nogami, mravljinci, oteklinami" },
-    { icon: Scale, text: "Posamezniki z odvečnimi kilogrami, utrujenostjo, slabo energijo" },
-    { icon: Target, text: "Vsi, ki želijo preprečiti, ne le zdraviti" },
-  ];
-
-  const testimonials = [
-    {
-      text: "Končno program, ki ni zahtevan samo enkrat letno, ampak me vodi vsak mesec.",
-      author: "Marko, 52 let"
-    },
-    {
-      text: "UZ žil in laboratorij bi drugje plačal 400 €. Tukaj je vse vključeno.",
-      author: "Jana, 45 let"
-    },
-    {
-      text: "Prvič imam občutek, da nekdo spremlja moje zdravje, ne le zdravi posledic.",
-      author: "Peter, 61 let"
-    },
-  ];
-
-  const faqs = [
-    {
-      question: "Ali lahko opravim aktivacijo brez nakupa naročnine?",
-      answer: "Ne, aktivacija je prvi korak 12-mesečnega programa. Program je zasnovan kot celota – začetna diagnostika in mesečno vodenje delujeta skupaj za najboljše rezultate."
-    },
-    {
-      question: "Zakaj naročnina traja vsaj 3 mesece?",
-      answer: "Preventiva potrebuje čas. Minimalni commitment zagotavlja, da program deluje in da lahko spremljamo vaš napredek ter prilagodimo pristop."
-    },
-    {
-      question: "Kaj če zamudim mesečni posvet?",
-      answer: "Prenese se 1 mesec, največ 2× letno. Poskrbimo, da ne izgubite koristi programa."
-    },
-    {
-      question: "Ali lahko opravim UZ srca?",
-      answer: "Da, ultrazvok srca (ehokardiografija) je na voljo s popustom za člane programa."
-    },
-    {
-      question: "Kaj če imam simptome med meseci?",
-      answer: "Člani imajo dostop do zdravnika preko online kanala za vsa vprašanja in dodatno svetovanje."
-    },
-  ];
-
-  const legalTerms = [
-    "Program Srce & Ožilje je 12-mesečni preventivni program.",
-    "Aktivacijska cena 169 € se plača ob prvem obisku in ni vračljiva.",
-    "Minimalno trajanje naročnine je 3 mesece.",
-    "Odpoved z 30-dnevnim rokom po minimalnem obdobju.",
-    "Preventivne storitve ne nadomeščajo urgentne medicine.",
-    "Storitve se črpajo skozi leto po presoji zdravnika."
-  ];
-
-  return (
-    <Layout>
+  const programFeatures = [{
+    icon: Stethoscope,
+    title: "Internistični pregled",
+    description: "Celovit pregled pri specialistu interne medicine"
+  }, {
+    icon: TestTube,
+    title: "Razširjeni laboratorij",
+    description: "Glukoza, inzulin, lipidogram, TSH, CRP, jetra, ledvice..."
+  }, {
+    icon: Activity,
+    title: "EKG",
+    description: "Elektrokardiogram za oceno srčnega ritma"
+  }, {
+    icon: HeartPulse,
+    title: "UZ vratnih žil",
+    description: "Ultrazvok karotidnih arterij"
+  }, {
+    icon: Droplets,
+    title: "UZ arterij nog",
+    description: "Ultrazvok arterij spodnjih okončin"
+  }, {
+    icon: Syringe,
+    title: "UZ ven nog",
+    description: "Ultrazvok venskega sistema nog"
+  }];
+  const monthlyBenefits = ["1× mesečni posvet ali kontrola (prehrana, krvni tlak, napredek, simptomi)", "Dostop do zdravnika (online)", "Popusti na UZ srca, razširjene laboratorije, specialiste", "Letni laboratorij + ocena tveganja", "Personaliziran coaching za presnovo in energijo"];
+  const priceComparison = [{
+    service: "Internist",
+    individual: "90–120 €",
+    package: "vključeno"
+  }, {
+    service: "Laboratorij",
+    individual: "60–140 €",
+    package: "vključeno"
+  }, {
+    service: "EKG",
+    individual: "25–35 €",
+    package: "vključeno"
+  }, {
+    service: "UZ vratnih arterij",
+    individual: "80–120 €",
+    package: "vključeno"
+  }, {
+    service: "UZ arterij nog",
+    individual: "80–120 €",
+    package: "vključeno"
+  }, {
+    service: "UZ ven nog",
+    individual: "80–120 €",
+    package: "vključeno"
+  }, {
+    service: "Osebni načrt",
+    individual: "50–100 €",
+    package: "vključeno"
+  }, {
+    service: "Mesečni posvet (12×)",
+    individual: "600–840 €",
+    package: "vključeno"
+  }];
+  const timeline = [{
+    week: "1. teden",
+    title: "Aktivacijski pregled",
+    description: "Internist + laboratorij + EKG + ultrazvok žil"
+  }, {
+    week: "2. teden",
+    title: "Pregled rezultatov",
+    description: "Osebni zdravstveni načrt in priporočila"
+  }, {
+    week: "Vsak mesec",
+    title: "Kontrolni posvet",
+    description: "V živo ali online – spremljanje napredka"
+  }, {
+    week: "3.–12. mesec",
+    title: "Spremljanje napredka",
+    description: "Prilagoditve prehrane, gibanja in zdravljenja"
+  }, {
+    week: "12. mesec",
+    title: "Letni pregled",
+    description: "Laboratorij + ocena tveganja + zaključni plan"
+  }];
+  const targetAudience = [{
+    icon: Users,
+    text: "Starost 30–75 let"
+  }, {
+    icon: HeartPulse,
+    text: "Osebe s povišanim krvnim tlakom, sladkorjem, holesterolom"
+  }, {
+    icon: Shield,
+    text: "Ljudje z družinsko obremenjenostjo (infarkt, kap)"
+  }, {
+    icon: Activity,
+    text: "Osebe s težkimi nogami, mravljinci, oteklinami"
+  }, {
+    icon: Scale,
+    text: "Posamezniki z odvečnimi kilogrami, utrujenostjo, slabo energijo"
+  }, {
+    icon: Target,
+    text: "Vsi, ki želijo preprečiti, ne le zdraviti"
+  }];
+  const testimonials = [{
+    text: "Končno program, ki ni zahtevan samo enkrat letno, ampak me vodi vsak mesec.",
+    author: "Marko, 52 let"
+  }, {
+    text: "UZ žil in laboratorij bi drugje plačal 400 €. Tukaj je vse vključeno.",
+    author: "Jana, 45 let"
+  }, {
+    text: "Prvič imam občutek, da nekdo spremlja moje zdravje, ne le zdravi posledic.",
+    author: "Peter, 61 let"
+  }];
+  const faqs = [{
+    question: "Ali lahko opravim aktivacijo brez nakupa naročnine?",
+    answer: "Ne, aktivacija je prvi korak 12-mesečnega programa. Program je zasnovan kot celota – začetna diagnostika in mesečno vodenje delujeta skupaj za najboljše rezultate."
+  }, {
+    question: "Zakaj naročnina traja vsaj 3 mesece?",
+    answer: "Preventiva potrebuje čas. Minimalni commitment zagotavlja, da program deluje in da lahko spremljamo vaš napredek ter prilagodimo pristop."
+  }, {
+    question: "Kaj če zamudim mesečni posvet?",
+    answer: "Prenese se 1 mesec, največ 2× letno. Poskrbimo, da ne izgubite koristi programa."
+  }, {
+    question: "Ali lahko opravim UZ srca?",
+    answer: "Da, ultrazvok srca (ehokardiografija) je na voljo s popustom za člane programa."
+  }, {
+    question: "Kaj če imam simptome med meseci?",
+    answer: "Člani imajo dostop do zdravnika preko online kanala za vsa vprašanja in dodatno svetovanje."
+  }];
+  const legalTerms = ["Program Srce & Ožilje je 12-mesečni preventivni program.", "Aktivacijska cena 169 € se plača ob prvem obisku in ni vračljiva.", "Minimalno trajanje naročnine je 3 mesece.", "Odpoved z 30-dnevnim rokom po minimalnem obdobju.", "Preventivne storitve ne nadomeščajo urgentne medicine.", "Storitve se črpajo skozi leto po presoji zdravnika."];
+  return <Layout>
       <Helmet>
         <title>Srce & Ožilje – Preventivni program za srce in presnovo | ASANTIS</title>
         <meta name="description" content="Celosten 12-mesečni preventivni program za srce in ožilje. Aktivacijski pregled z internistom, laboratorijem, EKG in ultrazvoki žil + mesečna strokovna podpora." />
@@ -335,8 +287,7 @@ const SrceOziljePage = () => {
                   <h3 className="text-xl font-bold text-foreground mb-6">A) Aktivacijski pregled</h3>
                   
                   <div className="space-y-3">
-                    {programFeatures.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+                    {programFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
                         <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
                           <feature.icon className="w-5 h-5 text-red-600" />
                         </div>
@@ -344,8 +295,7 @@ const SrceOziljePage = () => {
                           <h4 className="font-medium text-foreground">{feature.title}</h4>
                           <p className="text-sm text-muted-foreground">{feature.description}</p>
                         </div>
-                      </div>
-                    ))}
+                      </div>)}
                     
                     <div className="flex items-start gap-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
                       <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -377,12 +327,10 @@ const SrceOziljePage = () => {
                   <h3 className="text-xl font-bold text-foreground mb-6">B) Mesečna naročnina</h3>
                   
                   <div className="space-y-3">
-                    {monthlyBenefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+                    {monthlyBenefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
                         <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <p className="text-foreground">{benefit}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <div className="mt-6 p-4 bg-primary/10 rounded-xl border border-primary/20">
@@ -424,18 +372,16 @@ const SrceOziljePage = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground"><strong>Aktivacijski pregled</strong> je edini strošek, ki pokrije dejansko izvedbo.</p>
+                    <p className="text-foreground"><strong>Aktivacijski pregled</strong>Aktivacijski pregled je začetni strošek, s katerim opravimo celovito oceno zdravstvenega stanja.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground">Mesečna naročnina ni za diagnostiko, ampak za <strong>strokovno vodenje in spremljanje</strong>, kar je bistvo preventive.</p>
+                    <p className="text-foreground">Mesečna naročnina je za strokovno vodenje in spremljanje zdravstvenega stanja, kar je bistvo preventive.<strong>strokovno vodenje in spremljanje</strong>, kar je bistvo preventive.</p>
                   </div>
                 </div>
 
                 <div className="mt-6 p-4 bg-white rounded-xl">
-                  <p className="text-muted-foreground text-center">
-                    Pacient tako dobi izjemen začetni paket diagnostike za nizko ceno aktivacije, vi pa dobite celovito strokovno spremljanje.
-                  </p>
+                  <p className="text-muted-foreground text-center">Z naročilom dobite izjemen začetni paket diagnostike za nizko ceno aktivacije, nato pa dobite celovito strokovno spremljanje skozi celo leto.</p>
                 </div>
               </CardContent>
             </Card>
@@ -467,8 +413,7 @@ const SrceOziljePage = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {priceComparison.map((row, index) => (
-                      <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-muted/20'}>
+                    {priceComparison.map((row, index) => <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-muted/20'}>
                         <td className="p-4 text-foreground">{row.service}</td>
                         <td className="p-4 text-center text-muted-foreground">{row.individual}</td>
                         <td className="p-4 text-center">
@@ -477,8 +422,7 @@ const SrceOziljePage = () => {
                             {row.package}
                           </span>
                         </td>
-                      </tr>
-                    ))}
+                      </tr>)}
                   </tbody>
                 </table>
               </div>
@@ -522,8 +466,7 @@ const SrceOziljePage = () => {
               <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 transform md:-translate-x-1/2" />
               
               <div className="space-y-8">
-                {timeline.map((item, index) => (
-                  <div key={index} className={`relative flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                {timeline.map((item, index) => <div key={index} className={`relative flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} hidden md:block`}>
                       <Card className="inline-block">
                         <CardContent className="p-4">
@@ -546,8 +489,7 @@ const SrceOziljePage = () => {
                         </CardContent>
                       </Card>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -565,16 +507,14 @@ const SrceOziljePage = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {targetAudience.map((item, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
+              {targetAudience.map((item, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-4 flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
                     <p className="text-foreground">{item.text}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -586,9 +526,7 @@ const SrceOziljePage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />)}
                 <span className="ml-2 text-lg font-semibold text-foreground">4.9 / 5</span>
               </div>
               <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
@@ -597,19 +535,15 @@ const SrceOziljePage = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-gradient-to-br from-white to-primary/5">
+              {testimonials.map((testimonial, index) => <Card key={index} className="bg-gradient-to-br from-white to-primary/5">
                   <CardContent className="pt-6">
                     <div className="flex gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-foreground mb-4 italic">"{testimonial.text}"</p>
                     <p className="text-sm text-muted-foreground font-medium">– {testimonial.author}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -626,16 +560,14 @@ const SrceOziljePage = () => {
             </div>
 
             <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border shadow-sm">
+              {faqs.map((faq, index) => <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border shadow-sm">
                   <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
                     <span className="font-medium text-foreground">{faq.question}</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-muted-foreground">
                     {faq.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>
@@ -652,9 +584,7 @@ const SrceOziljePage = () => {
                   Pravne osnove
                 </h3>
                 <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
-                  {legalTerms.map((term, index) => (
-                    <li key={index}>{term}</li>
-                  ))}
+                  {legalTerms.map((term, index) => <li key={index}>{term}</li>)}
                 </ol>
               </CardContent>
             </Card>
@@ -693,8 +623,6 @@ const SrceOziljePage = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default SrceOziljePage;
