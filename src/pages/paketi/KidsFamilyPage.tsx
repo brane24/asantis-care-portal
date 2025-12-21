@@ -275,7 +275,7 @@ const KidsFamilyPage = () => {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              Za koga je paket primeren?
+              Za koga je paket še posebej primeren?
             </h2>
           </div>
 
