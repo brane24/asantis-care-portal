@@ -107,17 +107,17 @@ const KidsFamilyPage = () => {
     title: "Starši dobite jasna navodila za nadzor nad zdravljenjem"
   }];
   const targetAudience = [{
-    icon: "👶",
-    text: "Dojenčki in malčki"
+    icon: "🌬️",
+    text: "Za otroke z astmo, ki potrebujejo redno spremljanje in prilagajanje terapije"
   }, {
-    icon: "🧒",
-    text: "Predšolski in šolski otroci"
+    icon: "🤧",
+    text: "Za otroke z alergijami, ki jih zdravimo z imunoterapijo"
   }, {
-    icon: "👨‍👩‍👧",
-    text: "Starši, ki želijo hitro odločitev in mirno glavo"
+    icon: "🩹",
+    text: "Za otroke z atopijskim dermatitisom za redno prilagajanje terapije"
   }, {
-    icon: "👨‍👩‍👧‍👦",
-    text: "Družine, ki želijo zasebnega pediatra brez vsakega pregleda posebej"
+    icon: "📈",
+    text: "Za otroke, za katere želite nadzor nad razvojem in zdravjem"
   }];
   return <Layout>
       <Helmet>
