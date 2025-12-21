@@ -74,7 +74,7 @@ const KidsFamilyPage = () => {
     description: "Celostna ocena rasti, razvoja in zdravja otroka"
   }, {
     icon: Heart,
-    title: "2 akutna pregleda letno",
+    title: "1 pregled mesečno",
     description: "Za bolezni, okužbe, vročino, kašelj, izpuščaje, bolečine …"
   }, {
     icon: MessageCircle,
