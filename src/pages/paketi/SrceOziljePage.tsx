@@ -120,7 +120,7 @@ const SrceOziljePage = () => {
     answer: "Ne, aktivacija je prvi korak 12-mesečnega programa. Program je zasnovan kot celota – začetna diagnostika in mesečno vodenje delujeta skupaj za najboljše rezultate."
   }, {
     question: "Zakaj naročnina traja vsaj 3 mesece?",
-    answer: "Preventiva potrebuje čas. Minimalni commitment zagotavlja, da program deluje in da lahko spremljamo vaš napredek ter prilagodimo pristop."
+    answer: "Preventiva potrebuje čas. Minimalni čas naročnine zagotavlja, da program deluje in da lahko spremljamo vaš napredek ter prilagodimo pristop."
   }, {
     question: "Kaj če zamudim mesečni posvet?",
     answer: "Prenese se 1 mesec, največ 2× letno. Poskrbimo, da ne izgubite koristi programa."
