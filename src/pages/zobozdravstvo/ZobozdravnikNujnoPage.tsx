@@ -248,26 +248,12 @@ const ZobozdravnikNujnoPage = () => {
                 </CardContent>
               </Card>
               <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-6 flex items-center justify-center">
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-semibold">Pokličite</p>
                       <a href="tel:+38631876104" className="text-primary hover:underline">+386 31 876 104</a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <MessageCircle className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-semibold">WhatsApp ali spletni obrazec</p>
-                      <p className="text-sm text-muted-foreground">za nujni termin</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Video className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-semibold">Videoposvet</p>
-                      <p className="text-sm text-muted-foreground">kadar ne morete takoj priti osebno</p>
                     </div>
                   </div>
                 </CardContent>
