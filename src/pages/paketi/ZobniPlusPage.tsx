@@ -24,20 +24,14 @@ const ZobniPlusPage = () => {
     answer: "Čestitamo — to pomeni, da paket deluje! Članstvo skrbi, da tako tudi ostane z rednimi pregledi in zgodnjim odkrivanjem morebitnih težav."
   }, {
     question: "Ali je čiščenje zobnega kamna res vključeno?",
-    answer:
-      "Da. V paket je vključeno 1× letno profesionalno čiščenje zobnega kamna (po strokovni indikaciji). Dodatna čiščenja se obračunajo po ceniku z −15 % članskim popustom.",
-  },
-  {
+    answer: "Da. V paket je vključeno 1× letno profesionalno čiščenje zobnega kamna (po strokovni indikaciji). Dodatna čiščenja se obračunajo po ceniku z −15 % članskim popustom."
+  }, {
     question: "Ali me opomnite na pregled in čiščenje?",
-    answer:
-      "Da. Člane aktivno opominjamo in vabimo na pregled in čiščenje, ko je čas — da vam ni treba skrbeti za to.",
-  },
-  {
+    answer: "Da. Člane aktivno opominjamo in vabimo na pregled in čiščenje, ko je čas — da vam ni treba skrbeti za to."
+  }, {
     question: "Ali −15 % popust velja za vse storitve?",
-    answer:
-      "Da. Člani imajo stalni −15 % popust na vse samoplačniške zobozdravstvene storitve. Popust se ne sešteva z drugimi akcijami.",
-  }
-];
+    answer: "Da. Člani imajo stalni −15 % popust na vse samoplačniške zobozdravstvene storitve. Popust se ne sešteva z drugimi akcijami."
+  }];
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -482,7 +476,7 @@ const ZobniPlusPage = () => {
                 </div>
                 
                 <p className="text-lg text-muted-foreground mb-6">
-                  Zato ker članstvo ni plačilo za pregled — ampak za <strong>stalno skrbništvo</strong>, 
+                  Zato ker članstvo ni plačilo za pregled — ampak za <strong>stalno skrb zdravja </strong>, 
                   preprečevanje dragih posegov in dostop do ugodnejših cen.
                 </p>
 
