@@ -194,7 +194,7 @@ const ZobniPlusPage = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Nižji stroški zobozdravstva</h3>
                   <p className="text-muted-foreground">
-                    −15 % nižje cene storitev in stalni nadzor nad zdravjem zob.
+                    −15 % −15 % nižje cene storitev in stalni nadzor nad zdravjem zob.
                   </p>
                 </div>
               </div>
