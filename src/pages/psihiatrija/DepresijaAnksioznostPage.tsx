@@ -89,7 +89,7 @@ const DepresijaAnksioznostPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-primary">Depresija</h3>
+                  <h3 className="text-xl font-bold mb-4 text-primary text-center">Depresija</h3>
                   <ul className="space-y-3">
                     {depressionSymptoms.map((symptom, index) => <li key={index} className="flex items-start gap-3">
                         <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -100,7 +100,7 @@ const DepresijaAnksioznostPage = () => {
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-primary">Anksioznost</h3>
+                  <h3 className="text-xl font-bold mb-4 text-primary text-center">Anksioznost</h3>
                   <ul className="space-y-3">
                     {anxietySymptoms.map((symptom, index) => <li key={index} className="flex items-start gap-3">
                         <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
