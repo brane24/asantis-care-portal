@@ -13,13 +13,10 @@ const DepresijaAnksioznostPage = () => {
   const treatmentMethods = ["individualna obravnava", "pogovorna terapija + po potrebi farmakoterapija", "učenje tehnik za zmanjšanje anksioznosti", "TMS kot inovativna možnost za depresijo"];
   const services = [{
     name: "Pregled za depresijo/anksioznost",
-    price: "120–150 €"
+    price: "100 €"
   }, {
     name: "Kontrola",
-    price: "80–90 €"
-  }, {
-    name: "TMS terapija",
-    price: "po dogovoru"
+    price: "80 €"
   }];
   const faqItems = [{
     question: "Kako vem, ali imam depresijo ali anksioznost?",
