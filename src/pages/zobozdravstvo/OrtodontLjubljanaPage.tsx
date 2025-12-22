@@ -160,7 +160,7 @@ const OrtodontLjubljanaPage = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Zakaj izbrati naš ortodontski center</h2>
-            <p className="text-muted-foreground">Zakaj nam zaupa več kot 500 pacientov:</p>
+            <p className="text-muted-foreground">Zakaj nam redno zaupa več kot 500 pacientov letno:</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((item, index) => <Card key={index} className="hover:shadow-soft transition-all duration-300 text-center">
