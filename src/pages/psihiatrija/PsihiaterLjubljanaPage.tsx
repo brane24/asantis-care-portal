@@ -51,10 +51,11 @@ const PsihiaterLjubljanaPage = () => {
   ];
 
   const services = [
-    { name: "Prvi psihiatrični pregled", description: "anamneza, diagnostika, načrt", price: "100 €" },
-    { name: "Kontrolni pregled", description: "prilagoditev terapije", price: "80 €" },
-    { name: "Ocena za bolniški stalež", description: "mnenje, dokumentacija", price: "120 €" },
-    { name: "TMS terapija (po potrebi)", description: "protokoli za depresijo/anksioznost", price: "po dogovoru" }
+    { name: "Prvi psihiatrični pregled", description: "anamneza, diagnostika, načrt", price: "100 €", link: null },
+    { name: "Kontrolni pregled", description: "prilagoditev terapije", price: "80 €", link: null },
+    { name: "Ocena za bolniški stalež", description: "mnenje, dokumentacija", price: "120 €", link: null },
+    { name: "TMS terapija (po potrebi)", description: "protokoli za depresijo/anksioznost", price: "po dogovoru", link: null },
+    { name: "Paket MindCare", description: "mesečni paket za duševno zdravje", price: "69 €/mesec", link: "/paketi/mind-care" }
   ];
 
   const faqItems = [
@@ -201,7 +202,15 @@ const PsihiaterLjubljanaPage = () => {
                   <TableBody>
                     {services.map((service, index) => (
                       <TableRow key={index}>
-                        <TableCell className="font-medium">{service.name}</TableCell>
+                        <TableCell className="font-medium">
+                          {service.link ? (
+                            <NavLink to={service.link} className="text-primary hover:underline">
+                              {service.name}
+                            </NavLink>
+                          ) : (
+                            service.name
+                          )}
+                        </TableCell>
                         <TableCell className="text-muted-foreground">{service.description}</TableCell>
                         <TableCell className="text-right font-semibold">{service.price}</TableCell>
                       </TableRow>
