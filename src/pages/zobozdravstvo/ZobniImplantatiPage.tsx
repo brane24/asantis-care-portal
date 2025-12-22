@@ -169,7 +169,7 @@ const ZobniImplantatiPage = () => {
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8">
                 <Phone className="mr-2 h-5 w-5" />
-                01 234 56 78
+                01 600 15 60
               </Button>
             </div>
 
@@ -489,7 +489,7 @@ const ZobniImplantatiPage = () => {
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8">
                 <Phone className="mr-2 h-5 w-5" />
-                01 234 56 78
+                01 600 15 60
               </Button>
             </div>
 
