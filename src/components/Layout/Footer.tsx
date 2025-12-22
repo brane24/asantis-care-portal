@@ -63,6 +63,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">Kontakt</h4>
+            <p className="text-sm text-muted-foreground mb-3">Asantis d.o.o.</p>
             <div className="flex flex-col space-y-3">
               <a href="mailto:info@asantis.si" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" />
