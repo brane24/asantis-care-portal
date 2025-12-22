@@ -51,7 +51,7 @@ const PsihiaterLjubljanaPage = () => {
   ];
 
   const services = [
-    { name: "Prvi psihiatrični pregled", description: "anamneza, diagnostika, načrt", price: "120 €" },
+    { name: "Prvi psihiatrični pregled", description: "anamneza, diagnostika, načrt", price: "100 €" },
     { name: "Kontrolni pregled", description: "prilagoditev terapije", price: "80–90 €" },
     { name: "Ocena za bolniški stalež", description: "mnenje, dokumentacija", price: "40–60 €" },
     { name: "TMS terapija (po potrebi)", description: "protokoli za depresijo/anksioznost", price: "po dogovoru" }
