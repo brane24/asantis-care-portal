@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 const ZobozdravnikLjubljanaPage = () => {
-  const targetAudience = ["Vsem, ki želijo zanesljivega osebnega zobozdravnika v Ljubljani.", "Tistim, ki potrebujejo hitro odpravo bolečin ali nujno zdravljenje.", "Posameznikom, ki želijo lep, bel in poravnan nasmeh.", "Družinam, ki želijo redno preventivo brez čakalnih vrst."];
+  const targetAudience = ["Vsem, ki želite zanesljivega osebnega zobozdravnika v Ljubljani.", "Tisti, ki potrebujete hitro odpravo bolečin ali nujno zdravljenje.", "Posamezniki, ki želite lep, bel in poravnan nasmeh.", "Družine, ki želite redno preventivo brez čakalnih vrst."];
   const problems = ["Zobobol in vnetja", "Karies, poškodbe zob, zlomljeni zobje", "Estetske težave: barva, oblika, manjkajoči zobje", "Nepravilni ugriz, krivi zobje", "Zobni kamen, krvavenje dlesni, parodontoza", "Izguba zob in potreba po implantatih", "Strah pred zobozdravnikom – nežne, neboleče metode"];
   const services = [{
     title: "Preventiva in diagnostika",
@@ -72,7 +72,7 @@ const ZobozdravnikLjubljanaPage = () => {
     service: "Nevidni zobni aparat",
     price: "1.600–3.200 €"
   }];
-  const packageBenefits = ["2× letni pregled", "2× čiščenje zobnega kamna", "1× RTG diagnostika", "15 % popust na vse posege", "15 % popust na estetske posege", "Prednostno naročanje"];
+  const packageBenefits = ["2× letni pregled", "1× čiščenje zobnega kamna", "1× RTG diagnostika", "15 % popust na vse posege", "15 % popust na estetske posege", "Prednostno naročanje"];
   const faqItems = [{
     question: "Ali je zdravljenje boleče?",
     answer: "Ne – uporabljamo sodobne anestetike in neboleče tehnike."
@@ -153,7 +153,7 @@ const ZobozdravnikLjubljanaPage = () => {
       <section className="container py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Komu je stran namenjena?</h2>
+            <h2 className="text-3xl font-bold mb-4">Prednosti, da izberete zobozdravnika pri nas:</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {targetAudience.map((item, index) => <Card key={index} className="hover:shadow-soft transition-all duration-300">
