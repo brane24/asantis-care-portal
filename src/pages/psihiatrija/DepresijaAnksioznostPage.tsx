@@ -90,9 +90,9 @@ const DepresijaAnksioznostPage = () => {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-primary text-center">Depresija</h3>
-                  <ul className="space-y-3">
-                    {depressionSymptoms.map((symptom, index) => <li key={index} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <ul className="space-y-3 flex flex-col items-center">
+                    {depressionSymptoms.map((symptom, index) => <li key={index} className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-primary flex-shrink-0" />
                         <span>{symptom}</span>
                       </li>)}
                   </ul>
@@ -101,9 +101,9 @@ const DepresijaAnksioznostPage = () => {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-primary text-center">Anksioznost</h3>
-                  <ul className="space-y-3">
-                    {anxietySymptoms.map((symptom, index) => <li key={index} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <ul className="space-y-3 flex flex-col items-center">
+                    {anxietySymptoms.map((symptom, index) => <li key={index} className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-primary flex-shrink-0" />
                         <span>{symptom}</span>
                       </li>)}
                   </ul>
