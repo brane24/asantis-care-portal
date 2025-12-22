@@ -4,63 +4,31 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
 import { Check, Brain, Calendar, AlertCircle } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Helmet } from "react-helmet";
-
 const DepresijaAnksioznostPage = () => {
-  const depressionSymptoms = [
-    "izguba energije, volje, veselja",
-    "motnje spanja",
-    "negativne misli",
-    "težave s koncentracijo"
-  ];
-
-  const anxietySymptoms = [
-    "stalna napetost",
-    "panični napadi",
-    "hitri srčni utrip",
-    "nemir, strahovi"
-  ];
-
-  const treatmentMethods = [
-    "individualna obravnava",
-    "pogovorna terapija + po potrebi farmakoterapija",
-    "učenje tehnik za zmanjšanje anksioznosti",
-    "TMS kot inovativna možnost za depresijo"
-  ];
-
-  const services = [
-    { name: "Pregled za depresijo/anksioznost", price: "120–150 €" },
-    { name: "Kontrola", price: "80–90 €" },
-    { name: "TMS terapija", price: "po dogovoru" }
-  ];
-
-  const faqItems = [
-    {
-      question: "Kako vem, ali imam depresijo ali anksioznost?",
-      answer: "Psihiater opravi poglobljeno diagnostiko."
-    },
-    {
-      question: "Ali je zdravljenje varno?",
-      answer: "Da, poteka po sodobnih smernicah."
-    }
-  ];
-
-  return (
-    <Layout>
+  const depressionSymptoms = ["izguba energije, volje, veselja", "motnje spanja", "negativne misli", "težave s koncentracijo"];
+  const anxietySymptoms = ["stalna napetost", "panični napadi", "hitri srčni utrip", "nemir, strahovi"];
+  const treatmentMethods = ["individualna obravnava", "pogovorna terapija + po potrebi farmakoterapija", "učenje tehnik za zmanjšanje anksioznosti", "TMS kot inovativna možnost za depresijo"];
+  const services = [{
+    name: "Pregled za depresijo/anksioznost",
+    price: "120–150 €"
+  }, {
+    name: "Kontrola",
+    price: "80–90 €"
+  }, {
+    name: "TMS terapija",
+    price: "po dogovoru"
+  }];
+  const faqItems = [{
+    question: "Kako vem, ali imam depresijo ali anksioznost?",
+    answer: "Psihiater opravi poglobljeno diagnostiko."
+  }, {
+    question: "Ali je zdravljenje varno?",
+    answer: "Da, poteka po sodobnih smernicah."
+  }];
+  return <Layout>
       <Helmet>
         <title>Depresija in anksioznost – zdravljenje Ljubljana | Asantis</title>
         <meta name="description" content="Učinkovito zdravljenje depresije in anksioznosti v Ljubljani. Dokazano učinkoviti pristopi, prvi pregled v nekaj dneh. Panični napadi, tesnoba, strahovi." />
@@ -84,7 +52,7 @@ const DepresijaAnksioznostPage = () => {
               Dokazano učinkoviti pristopi. Prvi pregled v nekaj dneh.
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Depresija in anksioznost sta najpogostejši duševni motnji v Sloveniji – in hkrati zelo dobro zdravljivi, kadar se pristopi pravočasno.
+              Depresija in anksioznost sta najpogostejši duševni motnji v Sloveniji – in hkrati zelo dobro  odzivni na zdravljenje, sploh če se k zdravljenju pristopi pravočasno.
             </p>
             <Button size="lg" asChild>
               <NavLink to="/kontakt">
@@ -123,12 +91,10 @@ const DepresijaAnksioznostPage = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-primary">Depresija</h3>
                   <ul className="space-y-3">
-                    {depressionSymptoms.map((symptom, index) => (
-                      <li key={index} className="flex items-start gap-3">
+                    {depressionSymptoms.map((symptom, index) => <li key={index} className="flex items-start gap-3">
                         <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <span>{symptom}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
               </Card>
@@ -136,12 +102,10 @@ const DepresijaAnksioznostPage = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-primary">Anksioznost</h3>
                   <ul className="space-y-3">
-                    {anxietySymptoms.map((symptom, index) => (
-                      <li key={index} className="flex items-start gap-3">
+                    {anxietySymptoms.map((symptom, index) => <li key={index} className="flex items-start gap-3">
                         <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <span>{symptom}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
               </Card>
@@ -157,12 +121,10 @@ const DepresijaAnksioznostPage = () => {
           <Card>
             <CardContent className="p-8">
               <ul className="space-y-4">
-                {treatmentMethods.map((method, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                {treatmentMethods.map((method, index) => <li key={index} className="flex items-start gap-3">
                     <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-lg">{method}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </CardContent>
           </Card>
@@ -184,12 +146,10 @@ const DepresijaAnksioznostPage = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {services.map((service, index) => (
-                      <TableRow key={index}>
+                    {services.map((service, index) => <TableRow key={index}>
                         <TableCell className="font-medium">{service.name}</TableCell>
                         <TableCell className="text-right font-semibold">{service.price}</TableCell>
-                      </TableRow>
-                    ))}
+                      </TableRow>)}
                   </TableBody>
                 </Table>
               </CardContent>
@@ -218,22 +178,18 @@ const DepresijaAnksioznostPage = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Pogosta vprašanja</h2>
             <Accordion type="single" collapsible className="space-y-4">
-              {faqItems.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6 bg-background">
+              {faqItems.map((item, index) => <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6 bg-background">
                   <AccordionTrigger className="text-left hover:no-underline">
                     <span className="font-semibold">{item.question}</span>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     {item.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default DepresijaAnksioznostPage;
