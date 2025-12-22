@@ -74,7 +74,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5" />
-                <span>Ljubljana, Slovenija</span>
+                <span>Poljanski nasip 44, Ljubljana, Slovenija</span>
               </div>
             </div>
           </div>
