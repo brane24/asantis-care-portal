@@ -210,24 +210,42 @@ const OrtodontLjubljanaPage = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Vrste zobnih aparatov</h2>
+            <p className="text-muted-foreground">Izberite rešitev, ki ustreza vašemu življenjskemu slogu</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
-            {bracesTypes.map((brace, index) => <Card key={index} className="hover:shadow-soft transition-all duration-300">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-primary">{brace.type}</h3>
-                  <p className="text-muted-foreground mb-4">{brace.description}</p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium">Idealno za:</span>
-                      <span className="text-muted-foreground">{brace.idealFor}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {bracesTypes.map((brace, index) => (
+              <Card 
+                key={index} 
+                className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardContent className="relative p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
+                      <Smile className="h-6 w-6 text-primary" />
                     </div>
-                    <div className="flex items-start gap-2">
-                      <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{brace.advantages}</span>
+                    <div>
+                      <h3 className="font-bold text-xl mb-1 group-hover:text-primary transition-colors duration-300">{brace.type}</h3>
+                      <p className="text-muted-foreground">{brace.description}</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3 mt-6 pt-6 border-t border-border/50">
+                    <div className="flex items-center gap-3">
+                      <Badge variant="secondary" className="bg-muted text-muted-foreground font-normal">
+                        Idealno za
+                      </Badge>
+                      <span className="text-sm font-medium">{brace.idealFor}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Check className="h-3.5 w-3.5 text-primary" />
+                      </div>
+                      <span className="text-sm text-muted-foreground">{brace.advantages}</span>
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
