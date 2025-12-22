@@ -158,7 +158,7 @@ const ZobozdravnikLjubljanaPage = () => {
 
   const packageBenefits = [
     "2× letni pregled",
-    "2× čiščenje zobnega kamna",
+    "15 % popust na estetske posege",
     "1× RTG diagnostika",
     "15 % popust na vse posege",
     "10 % popust na estetske posege",
