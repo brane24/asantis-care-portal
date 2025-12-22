@@ -240,12 +240,12 @@ const PsihiaterLjubljanaPage = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Depresija in anksioznost", description: "Strokovna obravnava depresije, tesnobe in paničnih napadov.", icon: Brain, href: "/depresija-anksioznost" },
-              { title: "Izgorelost", description: "Pomoč pri poklicni izgorelosti, kroničnem stresu in izgubi motivacije.", icon: Flame, href: "/izgorelost" },
-              { title: "Nespečnost", description: "Diagnostika in zdravljenje motenj spanja.", icon: Moon, href: "/nespecnost" },
-              { title: "Motnje hranjenja", description: "Celostna obravnava anoreksije, bulimije in kompulzivnega prenajedanja.", icon: Utensils, href: "/motnje-hranjenja" },
-              { title: "Post COVID sindrom", description: "Pomoč pri psihičnih posledicah po prebolelem COVID-19.", icon: Activity, href: "/post-covid-sindrom" },
-              { title: "OKM (obsesivno-kompulzivna motnja)", description: "Zdravljenje vsiljenih misli in ponavljajočih se vedenj.", icon: Repeat, href: "/okm" },
+              { title: "Depresija in anksioznost", description: "Strokovna obravnava depresije, tesnobe in paničnih napadov.", icon: Brain, href: "/psihiatrija/depresija-anksioznost" },
+              { title: "Izgorelost", description: "Pomoč pri poklicni izgorelosti, kroničnem stresu in izgubi motivacije.", icon: Flame, href: "/psihiatrija/izgorelost" },
+              { title: "Nespečnost", description: "Diagnostika in zdravljenje motenj spanja.", icon: Moon, href: "/psihiatrija/nespecnost" },
+              { title: "Motnje hranjenja", description: "Celostna obravnava anoreksije, bulimije in kompulzivnega prenajedanja.", icon: Utensils, href: "/psihiatrija/motnje-hranjenja" },
+              { title: "Post COVID sindrom", description: "Pomoč pri psihičnih posledicah po prebolelem COVID-19.", icon: Activity, href: "/psihiatrija/post-covid-sindrom" },
+              { title: "OKM (obsesivno-kompulzivna motnja)", description: "Zdravljenje vsiljenih misli in ponavljajočih se vedenj.", icon: Repeat, href: "/psihiatrija/okm" },
             ].map((service, index) => (
               <NavLink key={index} to={service.href} className="group">
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
