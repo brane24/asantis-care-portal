@@ -72,7 +72,7 @@ const ZobozdravnikLjubljanaPage = () => {
     service: "Nevidni zobni aparat",
     price: "1.600–3.200 €"
   }];
-  const packageBenefits = ["2× letni pregled", "2× čiščenje zobnega kamna", "1× RTG diagnostika", "15 % popust na vse posege", "15 % popust na estetske posege", "Prednostno naročanje"];
+  const packageBenefits = ["2× letni pregled", "1× čiščenje zobnega kamna", "1× RTG diagnostika", "15 % popust na vse posege", "15 % popust na estetske posege", "Prednostno naročanje"];
   const faqItems = [{
     question: "Ali je zdravljenje boleče?",
     answer: "Ne – uporabljamo sodobne anestetike in neboleče tehnike."
