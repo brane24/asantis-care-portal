@@ -244,7 +244,7 @@ const OrtodontLjubljanaPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Vrste zobnih aparatov</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
             {bracesTypes.map((brace, index) => (
               <Card key={index} className="hover:shadow-soft transition-all duration-300">
                 <CardContent className="p-6">
