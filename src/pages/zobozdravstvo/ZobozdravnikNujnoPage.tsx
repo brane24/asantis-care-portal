@@ -71,9 +71,7 @@ const ZobozdravnikNujnoPage = () => {
   ];
 
   const workingHours = [
-    { day: "Ponedeljek – Petek", hours: "8:00 – 20:00" },
-    { day: "Sobota", hours: "po dogovoru" },
-    { day: "Nedelja in prazniki", hours: "dežurstvo po razporedu" }
+    { day: "Ponedeljek – Petek", hours: "8:00 – 20:00" }
   ];
 
   const testimonials = [
