@@ -40,7 +40,7 @@ const PsihiaterLjubljanaPage = () => {
     },
     {
       step: "2",
-      title: "Terapijski načrt",
+      title: "Načrt terapije",
       description: "Kombinacija pogovorne terapije, farmakoterapije, TMS (po potrebi) in integriranega pristopa."
     },
     {
