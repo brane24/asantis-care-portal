@@ -122,9 +122,9 @@ const ZobozdravnikNujnoPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button size="lg" asChild className="bg-destructive hover:bg-destructive/90">
-                <a href="tel:+38610000000">
+                <a href="tel:+38631876104">
                   <Phone className="mr-2 h-5 w-5" />
-                  Pokličite zdaj: 01 000 00 00
+                  Pokličite zdaj: +386 31 876 104
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
@@ -255,7 +255,7 @@ const ZobozdravnikNujnoPage = () => {
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-semibold">Pokličite</p>
-                      <a href="tel:+38610000000" className="text-primary hover:underline">01 000 00 00</a>
+                      <a href="tel:+38631876104" className="text-primary hover:underline">+386 31 876 104</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -348,9 +348,9 @@ const ZobozdravnikNujnoPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-destructive hover:bg-destructive/90">
-                <a href="tel:+38610000000">
+                <a href="tel:+38631876104">
                   <Phone className="mr-2 h-5 w-5" />
-                  Pokličite: 01 000 00 00
+                  Pokličite: +386 31 876 104
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
