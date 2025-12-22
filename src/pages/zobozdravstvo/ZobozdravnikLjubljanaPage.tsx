@@ -160,7 +160,7 @@ const ZobozdravnikLjubljanaPage = () => {
     "2× letni pregled",
     "2× čiščenje zobnega kamna",
     "1× RTG diagnostika",
-    "15 % popust na vse posege",
+    "15 % popust na ortodonstke storitve",
     "15 % popust na estetske posege",
     "Prednostno naročanje"
   ];
