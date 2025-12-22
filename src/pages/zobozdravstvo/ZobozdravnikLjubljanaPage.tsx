@@ -153,7 +153,7 @@ const ZobozdravnikLjubljanaPage = () => {
       <section className="container py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Komu je stran namenjena?</h2>
+            <h2 className="text-3xl font-bold mb-4">Prednosti, da izberete zobozdravnika pri nas:</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {targetAudience.map((item, index) => <Card key={index} className="hover:shadow-soft transition-all duration-300">
