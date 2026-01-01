@@ -158,9 +158,7 @@ const SrceOziljePage = () => {
               🫀 Srce & Ožilje – Celosten program za srce, ožilje in presnovo
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Preventivni pregled + ultrazvok žil + mesečna strokovna podpora. Za varno, stabilno in dolgoročno zdravo srce.
-            </p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">Preventivni pregled + ultrazvok žil + mesečna strokovna podpora. Za varno, stabilno in dolgoročno zdravo srce in ožilje.</p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
               <div className="flex items-center gap-2 text-foreground">
