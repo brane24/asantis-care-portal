@@ -14,7 +14,7 @@ const Index = () => {
     link: "/paketi/srce-ozilje",
     color: "text-red-500"
   }, {
-    icon: Users,
+    icon: Sparkles,
     title: "Ženska 360",
     description: "Najcelovitejši ženski zdravstveni paket: ginekologija, dojke, koža, hormoni, ščitnica.",
     price: "39",
@@ -50,7 +50,7 @@ const Index = () => {
     link: "/paketi/kids-family",
     color: "text-green-500"
   }, {
-    icon: Sparkles,
+    icon: Scan,
     title: "Estetika & Vitalnost",
     description: "Estetsko pomlajevanje, kožna diagnostika in svetovanje o vitalnosti.",
     price: "79",
