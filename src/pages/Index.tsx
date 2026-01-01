@@ -81,25 +81,18 @@ const Index = () => {
               Medicinski center nove generacije
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Zdravje v paketu –{" "}
+              Celostna zdravstvena oskrba.{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                preventiva, zdravljenje in medicinski posegi brez presenečenj
+                En mesečni znesek. Brez skrbi.
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Namesto naključnih pregledov prejmete strukturirano spremljanje vašega ključnega zdravstvenega področja: 
-              srce, žensko zdravje, gibanje, duševno zdravje, koža, otroci, hujšanje ali zobje.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Izberite paket glede na vaše zdravstvene potrebe — po potrebi dodate drugega — in skozi leto poskrbimo za preglede, terapije, kontrole in strokovno vodenje, brez presenečenj pri stroških.
-            </p>
-            <p className="text-primary font-semibold text-lg mb-8">
-              Manj tveganj. Manj čakanja. Več zdravja – vse leto.
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Preventiva, specialisti in terapije – organizirano, pregledno in dolgoročno.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="text-lg">
                 <NavLink to="/cenik">
-                  Izberite paket <ArrowRight className="ml-2 h-5 w-5" />
+                  Izberi svoj paket <ArrowRight className="ml-2 h-5 w-5" />
                 </NavLink>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-lg">
