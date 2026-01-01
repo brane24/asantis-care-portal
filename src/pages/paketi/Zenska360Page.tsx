@@ -3,7 +3,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
-import { Check, Heart, Shield, Clock, Phone, Star, Stethoscope, Sparkles, Activity, ThermometerSun, ArrowRight } from "lucide-react";
+import {
+  Check,
+  Shield,
+  Phone,
+  Star,
+  Sparkles,
+  Activity,
+  ThermometerSun,
+  ArrowRight,
+  CalendarClock,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -21,24 +31,17 @@ import {
 import { Helmet } from "react-helmet";
 
 const Zenska360Page = () => {
+  // --- ACTIVATION (1×) ---
   const activationServices = [
     {
       title: "Ginekologija",
-      icon: Heart,
-      items: [
-        "Ginekološki pregled",
-        "PAP + HPV test",
-        "UZ rodil (maternica + jajčniki)"
-      ]
+      icon: Shield,
+      items: ["Ginekološki pregled", "PAP + HPV test", "UZ rodil (maternica + jajčniki)"],
     },
     {
       title: "Dojke",
       icon: Shield,
-      items: [
-        "UZ dojk",
-        "Klinični pregled dojk",
-        "Ocena osebnega tveganja za rak dojke"
-      ]
+      items: ["UZ dojk", "Klinični pregled dojk", "Ocena osebnega tveganja za rak dojke"],
     },
     {
       title: "Dermatologija",
@@ -46,78 +49,73 @@ const Zenska360Page = () => {
       items: [
         "Osnovni dermatološki pregled",
         "Pregled znamenj + pigmentacij",
-        "Identifikacija tveganih sprememb"
-      ]
+        "Identifikacija tveganih sprememb",
+      ],
     },
     {
       title: "Hormoni & Ščitnica",
       icon: Activity,
       items: [
-        "Klinična hormonska ocena (perimenopavza, PMS, neredni cikli)",
+        "Klinična hormonska ocena (PMS, neredni cikli, perimenopavza/menopavza)",
         "UZ ščitnice",
-        "Ocena tveganja za Hashimoto, hipo/hipertiroidizem"
-      ]
+        "Ocena tveganja za Hashimoto, hipo/hipertiroidizem",
+      ],
     },
     {
       title: "Načrtovanje",
       icon: ThermometerSun,
-      items: [
-        "Osebni letni preventivni načrt",
-        "Digitalni karton + opozorila",
-        "Intervalli HPV, PAP, UZ dojk, ščitnica"
-      ]
-    }
+      items: ["Osebni letni preventivni načrt", "Digitalni karton + opozorila", "Smiselni intervali pregledov"],
+    },
   ];
 
+  // --- SUBSCRIPTION (monthly) ---
   const subscriptionBenefits = [
     {
       category: "Ginekologija",
       items: [
         "Nujni termin v 48h (vnetje, bolečina, dvom)",
-        "Letni ginekološki UZ",
-        "Mesečni posvet (e-posvet ali video)"
-      ]
+        "Letni ginekološki UZ (po planu)",
+        "Mesečni posvet (e-posvet ali video) za simptome, izvide, vprašanja",
+      ],
     },
     {
       category: "Dojke",
-      items: [
-        "Letni ultrazvok dojk",
-        "Klinični pregled po potrebi"
-      ]
+      items: ["Letni ultrazvok dojk (po planu)", "Klinični pregled po potrebi"],
     },
     {
       category: "Dermatologija",
       items: [
-        "Letni dermato pregled",
-        "Kontrola nevarnih znamenj",
-        "Posveti ob spremembah (slika → ocena → odločitev)"
-      ]
+        "Letni dermatološki pregled",
+        "Kontrola sumljivih sprememb",
+        "Posvet ob spremembah (slika → ocena → odločitev)",
+      ],
     },
     {
       category: "Hormoni",
       items: [
         "Letna hormonska ocena",
-        "Vodenje simptomov (PMS, cikel, perimenopavza, menopavza)",
-        "Mesečni check-in"
-      ]
+        "Vodenje simptomov (PMS, cikel, perimenopavza/menopavza)",
+        "Mesečni check-in (kratko, praktično)",
+      ],
     },
     {
       category: "Ščitnica",
+      items: ["Letni UZ ščitnice (po planu)", "Klinična ocena + spremljanje po potrebi"],
+    },
+    {
+      category: "Članski popusti – posegi",
       items: [
-        "Letni UZ ščitnice",
-        "Klinična ocena delovanja",
-        "Vključitev v hormonski načrt, če je potrebno"
-      ]
+        "–20 % na kolposkopijo",
+        "–20 % na odstranjevanje znamenj",
+        "–20 % na manjše ginekološke posege",
+        "–20 % na dermatološke posege",
+        "Prednostna obravnava pri posegih",
+      ],
     },
     {
       category: "Dodatne ugodnosti",
-      items: [
-        "20% popusta: kolposkopija, odstranitve znamenj, ginekološki posegi",
-        "Prednostni termini",
-        "Koordinacija zdravljenja in napotitve",
-        "Digitalni nadzor nad intervali preventivnih pregledov"
-      ]
-    }
+      items: ["Prednostni termini", "Koordinacija obravnave (v istem centru)", "Digitalni nadzor nad intervali preventive"],
+    },
   ];
 
   const comparisonData = [
@@ -130,87 +128,147 @@ const Zenska360Page = () => {
     { service: "UZ ščitnice", regular: "60–80 €", included: true },
     { service: "Hormonska ocena", regular: "50–80 €", included: true },
     { service: "Nujni termin", regular: "40–60 €", included: true },
-    { service: "Mesečni posveti", regular: "40–60 €", included: true }
+    { service: "Mesečni posveti", regular: "40–60 €", included: true },
   ];
 
   const timeline = [
+    { step: 1, title: "Rezerviraš termin aktivacije", description: "Takoj prejmeš datum in dostop do kartona." },
+    { step: 2, title: "Aktivacija = ključni pregledi + ocena tveganj", description: "V enem obisku pokrijemo glavne ženske rizike in postavimo plan." },
+    { step: 3, title: "Prejmeš osebni letni načrt", description: "Kaj spremljamo, kdaj in zakaj — prilagojeno starosti, anamnezi in simptomom." },
+    { step: 4, title: "Od drugega meseca naprej", description: "39 € / mesec — posveti, nujni termini, letne kontrole, opomniki in koordinacija." },
+  ];
+
+  // Yearly flow (Men360 logika: baseline → spremljanje)
+  const yearlyFlow = [
     {
-      step: 1,
-      title: "Rezerviraš termin aktivacije",
-      description: "Takoj prejmeš datum in dostop do kartona."
+      period: "1. mesec (aktivacija)",
+      focus: "Baseline + tveganja + plan",
+      items: [
+        "Ginekološki pregled + PAP/HPV + UZ rodil",
+        "UZ dojk + klinični pregled",
+        "Dermatološki pregled (znamenja)",
+        "UZ ščitnice + hormonska ocena",
+        "Osebni letni plan + opomniki",
+      ],
+      note: "Največ vrednosti dobiš takoj: baseline + tveganja + jasen plan.",
     },
     {
-      step: 2,
-      title: "V 30–40 min opravimo 6 ključnih pregledov",
-      description: "Ginekologija, dojke, koža, hormoni, ščitnica."
+      period: "2.–12. mesec (naročnina)",
+      focus: "Spremljanje + hiter dostop",
+      items: [
+        "Mesečni check-in (e-posvet/video) za simptome, izvide, vprašanja",
+        "Nujni termin v 48h, če se pojavi težava",
+        "Letni kontrolni UZ (ginekološki / dojke / ščitnica) po planu",
+        "Dermato kontrola sumljivih sprememb in dokumentacija",
+        "–20 % na posege + prednostna obravnava pri posegih",
+      ],
+      note: "Naročnina ni 'neomejeno vseh pregledov vsak mesec', ampak urejen sistem preventive + hitra pot, ko jo rabiš.",
     },
-    {
-      step: 3,
-      title: "Prejmeš osebni letni načrt",
-      description: "Kaj spremljamo, kdaj, zakaj."
-    },
-    {
-      step: 4,
-      title: "Od drugega meseca naprej",
-      description: "39 € / mesec — mesečni posveti, nujni termini, pregledi, spremljanje."
-    }
   ];
 
   const trustPoints = [
     "Brez čakanja",
-    "Rezultati PAP/HPV razloženi isti teden",
-    "UZ dojk isti dan v centru",
-    "Dermatolog in ginekolog komunicirata med seboj",
-    "Dostopne cene za celoten sklop preventiv",
-    "Koordinacija vsega na enem mestu"
+    "PAP/HPV razložimo hitro in jasno",
+    "UZ dojk v istem centru",
+    "Dermatolog in ginekolog delujeta usklajeno",
+    "Sistem opomnikov (da plan res izvedeš)",
+    "Brez vezave — prekineš kadarkoli",
+    "–20 % na posege za članice",
   ];
 
   const faqItems = [
-    { question: "Ali so VSI pregledi v aktivaciji dejansko vključeni v ceni 159 €?", answer: "Da. Vse: ginekolog, PAP/HPV, UZ rodil, UZ dojk, klinični pregled dojk, osnovni dermatološki pregled, UZ ščitnice in hormonska ocena." },
-    { question: "Ali je dermatolog res vključen v naročnino?", answer: "Da, paket vključuje letni pregled in kontrole kožnih sprememb po potrebi." },
-    { question: "Kako hitro dobim termin?", answer: "Za nujne ginekološke težave v 48 urah. Za aktivacijo običajno v 3–7 dneh." },
-    { question: "Kako delujejo mesečni posveti?", answer: "Gre za kratek video ali e-posvet za vprašanja, spremembe, interpretacijo izvidov ali simptome." },
-    { question: "Ali lahko opravim vse preglede ob prvem obisku?", answer: "Da — to je namen aktivacije. Vse naredimo v enem terminu." },
-    { question: "Kaj če kateri pregled ni potreben pri meni?", answer: "Zdravnik vseeno opravi oceno tveganja in po potrebi prilagodi plan." },
-    { question: "Ali lahko koristim dermatologa več kot enkrat na leto?", answer: "Kontrole nevarnih znamenj in sprememb so vključene. Celotni pregled pa 1× letno." },
-    { question: "Kaj če imam neredne cikle ali sum na hormonsko neravnovesje?", answer: "To je ravno namen paketa — hormoni so vključeni v naročnino brez doplačila." },
-    { question: "Kaj pa ščitnica?", answer: "Letni UZ + ocena simptomov + spremljanje, če so znaki Hashimota ali hipo/hipertiroidizma." },
-    { question: "Ali paket zamenja klasičnega osebnega ginekologa?", answer: "Ne, gre za nadstandardno, specialistično preventivo." },
-    { question: "Ali lahko paket prekličem kadarkoli?", answer: "Da. Nima vezave." },
-    { question: "Ali lahko ponovno aktiviram paket?", answer: "Da. Vendar se ponovno obračuna aktivacija 159 €." },
-    { question: "Ali lahko koristim paket med nosečnostjo?", answer: "Da, vendar nosečniški UZ ni vključen." },
-    { question: "Koliko časa traja aktivacijski pregled?", answer: "30–40 minut." },
-    { question: "Kako pogosto se delajo PAP in HPV testi?", answer: "Najpogosteje 1× na 3 leta, vendar odvisno od rezultatov. Sistem vas opozori na čas." },
-    { question: "Koliko plačam dodatno?", answer: "Vse vključeno razen posegov (kolposkopija, odstranitve sprememb) – a dobite 20% popusta." },
-    { question: "Ali lahko združim ta paket z drugimi?", answer: "Da — vse Asantis naročnine so kompatibilne." },
-    { question: "Imam družinsko anamnezo raka dojk. Je paket primeren?", answer: "Da. Letni UZ + klinični pregled sta prva linija presejanja." },
-    { question: "Kaj pa kožna znamenja, ki so sumljiva?", answer: "Dermatolog jih dokumentira, spremlja in po potrebi predlaga odstranitev." },
-    { question: "Ali so vključen laboratorij, hormoni in krvni testi?", answer: "Laboratorij ni vključen, a imate dostop do znižanih cen." }
+    {
+      question: "Ali so VSI pregledi v aktivaciji res vključeni v ceno 159 €?",
+      answer:
+        "Da. Aktivacija vključuje: ginekološki pregled + PAP/HPV + UZ rodil, UZ dojk + klinični pregled dojk, osnovni dermatološki pregled ter UZ ščitnice in hormonsko oceno.",
+    },
+    {
+      question: "Ali naročnina pomeni, da lahko vsak mesec opravim vse preglede?",
+      answer:
+        "Ne. Naročnina je namenjena spremljanju, mesečnim posvetom, nujnim terminom in letnim kontrolam po osebnem planu. To ohranja kakovost, termine in vzdržnost sistema za vse članice.",
+    },
+    {
+      question: "Kako hitro dobim termin?",
+      answer:
+        "Za nujne ginekološke težave v 48 urah. Za aktivacijo običajno v 3–7 dneh (odvisno od zasedenosti).",
+    },
+    {
+      question: "Kako delujejo mesečni posveti?",
+      answer:
+        "Gre za kratek video ali e-posvet za vprašanja, spremembe simptomov, interpretacijo izvidov ali odločitev o nadaljnjih korakih.",
+    },
+    {
+      question: "Ali lahko opravim vse preglede ob prvem obisku?",
+      answer:
+        "Da — to je namen aktivacije: v enem obisku postavimo baseline in tvoj letni preventivni plan.",
+    },
+    {
+      question: "Kaj, če kak pregled pri meni ni potreben?",
+      answer:
+        "Zdravnik opravi oceno tveganja in plan prilagodi. Cilj je smiselna preventiva, ne 'več storitev'.",
+    },
+    {
+      question: "Ali je dermatolog res vključen?",
+      answer:
+        "Da, paket vključuje letni dermatološki pregled in kontrole kožnih sprememb po potrebi.",
+    },
+    {
+      question: "Kaj pa ščitnica in hormoni?",
+      answer:
+        "Vključena sta UZ ščitnice + hormonska klinična ocena ob aktivaciji ter letno spremljanje po planu in potrebi.",
+    },
+    {
+      question: "Ali lahko paket prekličem kadarkoli?",
+      answer: "Da. Paket nima vezave.",
+    },
+    {
+      question: "Ali lahko ponovno aktiviram paket?",
+      answer:
+        "Da. Če se ponovno vključiš po prekinitvi, se aktivacija ponovno obračuna (ker ponovno postavimo baseline).",
+    },
+    {
+      question: "Kaj ni vključeno in kako je s popusti?",
+      answer:
+        "Posegi (npr. kolposkopija, odstranitve sprememb) niso 'vključeni', vendar imajo članice stalni –20 % popust in prednostno obravnavo.",
+    },
   ];
 
   return (
     <Layout>
       <Helmet>
-        <title>Ženska Preventiva 360 | Ginekologija, dojke, koža, hormoni | Asantis</title>
-        <meta name="description" content="Najcelovitejši ženski zdravstveni paket v Sloveniji. Ginekologija, UZ dojk, dermatologija, hormoni, ščitnica. Aktivacija 159 € + 39 €/mesec. Brez čakanja." />
+        <title>Ženska360 | Ginekologija, dojke, koža, hormoni | Asantis</title>
+        <meta
+          name="description"
+          content="Celostni ženski preventivni paket: ginekologija, dojke, koža, hormoni, ščitnica. Aktivacija 159 € + 39 €/mesec. Brez vezave. –20 % na posege za članice."
+        />
       </Helmet>
 
       {/* Hero */}
       <section className="bg-gradient-hero py-16 md:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-pink-100 text-pink-700 border-pink-200">
-              🎀 Ženska Preventiva 360
-            </Badge>
+            <div className="flex flex-wrap gap-2 justify-center mb-6">
+              <Badge className="bg-pink-100 text-pink-700 border-pink-200">🎀 Ženska360</Badge>
+              <Badge className="bg-primary/10 text-primary border-primary/20">Brez vezave</Badge>
+              <Badge className="bg-muted text-foreground border-muted-foreground/20">Aktivacija + naročnina</Badge>
+              <Badge className="bg-background border-primary/20">–20 % na posege</Badge>
+            </div>
+
             <p className="text-lg text-muted-foreground mb-4">
               Ginekologija • Dojke • Koža • Hormoni • Ščitnica
             </p>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Najcelovitejši ženski zdravstveni paket v Sloveniji
+              Preventiva, ki ni "en pregled na leto" — ampak sistem
             </h1>
+
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Takojšnja aktivacija vseh preventivnih pregledov + celoletna specialistična naročnina za samo <span className="font-semibold text-foreground">39 €/mesec</span>.
+              Najprej naredimo <span className="font-semibold text-foreground">aktivacijo (baseline + tveganja)</span>, nato pa
+              mesečno skrbimo za <span className="font-semibold text-foreground">spremljanje, nujne termine in letne kontrole</span>{" "}
+              za <span className="font-semibold text-foreground">39 €/mesec</span>. Članice imajo{" "}
+              <span className="font-semibold text-foreground">–20 % na posege</span>.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Button size="lg" className="text-lg px-8" asChild>
                 <NavLink to="/kontakt">
@@ -221,32 +279,35 @@ const Zenska360Page = () => {
               <Button size="lg" variant="outline" className="text-lg px-8" asChild>
                 <a href="tel:+38631876104">
                   <Phone className="mr-2 h-5 w-5" />
-                  Pokliči nas za vprašanja
+                  Pokliči nas
                 </a>
               </Button>
             </div>
+
             <p className="text-sm text-muted-foreground">
-              ➡️ Aktivacija vključuje: pregled, PAP/HPV, UZ rodil, UZ dojk, dermato pregled, UZ ščitnice
+              Aktivacija vključuje: ginekolog + PAP/HPV + UZ rodil + UZ dojk + dermato pregled + UZ ščitnice + hormonska ocena
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why This Package */}
+      {/* Why */}
       <section className="container py-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Zakaj ta paket?</h2>
-          <p className="text-center text-muted-foreground mb-12">Za ženske 25–65, ki želijo:</p>
-          
+          <p className="text-center text-muted-foreground mb-12">
+            Za ženske 25–65, ki želijo urejeno preventivo + hitro pot, ko se pojavi težava.
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
             {[
-              "odkriti raka materničnega vratu na najzgodnejši stopnji",
-              "redno spremljanje dojk z UZ + kliniko",
+              "odkriti raka materničnega vratu na najzgodnejši stopnji (PAP/HPV)",
+              "redno spremljanje dojk z UZ + kliničnim pregledom",
               "varno spremljanje kožnih sprememb (melanom)",
-              "urejene hormone, ciklus, menopavzo",
+              "urejene hormone, ciklus, perimenopavzo/menopavzo",
               "pregled ščitnice",
               "hitre rešitve ob vnetjih, bolečinah ali dvomih",
-              "zdravstveni sistem, ki deluje brez čakanja"
+              "sistem brez čakanja, z opomniki in jasnim planom",
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -257,28 +318,131 @@ const Zenska360Page = () => {
 
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-6 text-center">
-              <p className="text-lg italic">
-                "Preventiva ni dogodek. Je mesečni proces."
-              </p>
+              <p className="text-lg italic">"Preventiva ni dogodek. Je proces."</p>
               <p className="text-muted-foreground mt-2">
-                Zato paket združuje vse ključne ženske specialnosti v eno članstvo.
+                Aktivacija postavi baseline, naročnina pa skrbi, da se plan res izvede (in da imaš hitro pot, ko jo rabiš).
               </p>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Activation Section */}
+      {/* Annual flow */}
       <section className="bg-muted/30 py-16">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-                Plača se 1×
+                <CalendarClock className="inline-block h-4 w-4 mr-2" />
+                Časovna porazdelitev
               </Badge>
+              <h2 className="text-3xl font-bold mb-4">Kako razporedimo storitve skozi leto</h2>
+              <p className="text-muted-foreground">
+                Najprej baseline, potem spremljanje + planirane kontrole (ne "vse vsak mesec").
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {yearlyFlow.map((block) => (
+                <Card key={block.period} className="h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between gap-4 mb-4">
+                      <div>
+                        <p className="text-sm text-muted-foreground">{block.focus}</p>
+                        <h3 className="font-semibold text-lg">{block.period}</h3>
+                      </div>
+                      <Badge className="bg-background border-muted-foreground/20">
+                        {block.period.includes("aktivacija") ? "1×" : "mesečno"}
+                      </Badge>
+                    </div>
+
+                    <ul className="space-y-2">
+                      {block.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm">
+                          <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p className="text-sm text-muted-foreground mt-4">{block.note}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-sm text-muted-foreground">
+                * Če imaš višje tveganje (npr. družinska anamneza), plan prilagodimo — dodatni posegi pa so na voljo z –20 %.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What it is NOT */}
+      <section className="container py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Kaj paket NI (in zakaj je to dobro zate)</h2>
+            <p className="text-muted-foreground">
+              Ženska360 ni "neomejen buffet pregledov" — je pametno zasnovan preventivni sistem.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold mb-3">❌ NI neomejenih pregledov vsak mesec</h3>
+                <p className="text-sm text-muted-foreground">
+                  To bi vodilo v nepotrebne preiskave, čakalne vrste in slabšo obravnavo.
+                  Namesto tega imaš jasen letni plan in hiter dostop, ko je res potrebno.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold mb-3">❌ NI "prodaje storitev"</h3>
+                <p className="text-sm text-muted-foreground">
+                  Naš cilj ni več posegov, ampak pravočasna preventiva.
+                  Preglede prilagodimo tvojemu tveganju, ne ceniku.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold mb-3">❌ NI vezave ali drobnega tiska</h3>
+                <p className="text-sm text-muted-foreground">
+                  Paket lahko kadarkoli prekineš. Če se odločiš za ponovno vključitev,
+                  se aktivacija ponovno izvede — brez kazni, brez pasti.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-6">
+                <h3 className="font-semibold mb-3">✅ JE sistem, ki dela</h3>
+                <p className="text-sm text-muted-foreground">
+                  Aktivacija → osebni plan → spremljanje → hitra pot, ko jo rabiš.
+                  Zato lahko ohranimo visoko kakovost, kratke roke in dostopno ceno.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Activation */}
+      <section className="py-16">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Plača se 1×</Badge>
               <h2 className="text-3xl font-bold mb-4">Kaj vključuje AKTIVACIJA — 159 €</h2>
               <p className="text-muted-foreground">
-                Ob aktivaciji (1. obisk) opravimo celoten "full body screening" ženskih tveganj
+                Ob aktivaciji opravimo ključne preglede + postavimo tvoj letni preventivni plan.
               </p>
             </div>
 
@@ -293,8 +457,8 @@ const Zenska360Page = () => {
                       <h3 className="font-semibold text-lg">{service.title}</h3>
                     </div>
                     <ul className="space-y-2">
-                      {service.items.map((item, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm">
+                      {service.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm">
                           <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
@@ -317,14 +481,12 @@ const Zenska360Page = () => {
         </div>
       </section>
 
-      {/* Subscription Section */}
+      {/* Subscription */}
       <section className="container py-16">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Mesečna naročnina — 39 € / mesec</h2>
-            <p className="text-muted-foreground">
-              Vse, kar potrebujete za celoletno preventivo in podporo
-            </p>
+            <p className="text-muted-foreground">Dostop, spremljanje, nujni termini in letne kontrole po planu.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -333,8 +495,8 @@ const Zenska360Page = () => {
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-4 text-primary">{benefit.category}</h3>
                   <ul className="space-y-2">
-                    {benefit.items.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
+                    {benefit.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm">
                         <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
@@ -347,7 +509,46 @@ const Zenska360Page = () => {
         </div>
       </section>
 
-      {/* Comparison Table */}
+      {/* -20% section */}
+      <section className="bg-primary/5 py-16">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Članice Ženska360 imajo –20 % na posege</h2>
+            <p className="text-muted-foreground mb-8">
+              Ko si v sistemu, nisi "nova stranka", ampak članica — zato imaš stalno ugodnejše pogoje in prednost pri obravnavi.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <Card>
+                <CardContent className="p-6">
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex gap-2 items-start"><Check className="h-4 w-4 text-primary mt-0.5" />Kolposkopija</li>
+                    <li className="flex gap-2 items-start"><Check className="h-4 w-4 text-primary mt-0.5" />Odstranitev znamenj</li>
+                    <li className="flex gap-2 items-start"><Check className="h-4 w-4 text-primary mt-0.5" />Manjši ginekološki posegi</li>
+                    <li className="flex gap-2 items-start"><Check className="h-4 w-4 text-primary mt-0.5" />Dermatološki posegi</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-background border-primary/20">
+                <CardContent className="p-6">
+                  <p className="font-semibold mb-2">Zakaj to delamo?</p>
+                  <p className="text-sm text-muted-foreground">
+                    Ker redne članice že poznamo, imamo dokumentacijo, izvide in kontekst.
+                    To pomeni hitrejšo, varnejšo in učinkovitejšo obravnavo.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <p className="text-xs text-muted-foreground mt-6">
+              * Popust velja za samoplačniške posege in se ne sešteva z drugimi akcijami.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison */}
       <section className="bg-muted/30 py-16">
         <div className="container">
           <div className="max-w-4xl mx-auto">
@@ -365,8 +566,8 @@ const Zenska360Page = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {comparisonData.map((row, index) => (
-                      <TableRow key={index}>
+                    {comparisonData.map((row) => (
+                      <TableRow key={row.service}>
                         <TableCell className="font-medium">{row.service}</TableCell>
                         <TableCell className="text-muted-foreground">{row.regular}</TableCell>
                         <TableCell className="text-center">
@@ -390,7 +591,7 @@ const Zenska360Page = () => {
       {/* Timeline */}
       <section className="container py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Kako poteka 1. mesec</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Kako poteka</h2>
 
           <div className="space-y-6">
             {timeline.map((item) => (
@@ -407,18 +608,29 @@ const Zenska360Page = () => {
               </div>
             ))}
           </div>
+
+          <Card className="mt-10 bg-background border-muted-foreground/20">
+            <CardContent className="p-6">
+              <p className="font-semibold mb-1">Pomembno:</p>
+              <p className="text-sm text-muted-foreground">
+                Naročnina ni "neomejeno vseh pregledov", ampak membership model:{" "}
+                <span className="font-medium">dostop + spremljanje + planirane kontrole + nujna pot</span>.
+                Zato lahko držimo kakovost, kratke roke in ceno fer za vse članice.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Trust Section */}
+      {/* Trust */}
       <section className="bg-muted/30 py-16">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Zakaj ženske izberejo nas</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {trustPoints.map((point, index) => (
-                <div key={index} className="flex items-center gap-3 p-4 bg-background rounded-lg">
+              {trustPoints.map((point) => (
+                <div key={point} className="flex items-center gap-3 p-4 bg-background rounded-lg">
                   <Star className="h-5 w-5 text-primary flex-shrink-0" />
                   <span>{point}</span>
                 </div>
@@ -432,16 +644,14 @@ const Zenska360Page = () => {
       <section className="container py-16">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Pogosta vprašanja</h2>
-          
+
           <Accordion type="single" collapsible className="space-y-4">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6 bg-background">
                 <AccordionTrigger className="text-left hover:no-underline">
                   <span className="font-medium">{item.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {item.answer}
-                </AccordionContent>
+                <AccordionContent className="text-muted-foreground">{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -452,11 +662,10 @@ const Zenska360Page = () => {
       <section className="container py-16">
         <Card className="bg-gradient-hero border-primary/20 max-w-4xl mx-auto">
           <CardContent className="p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Začni z aktivacijo — 159 €
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">Začni z aktivacijo — 159 €</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Z enim obiskom opravite celotno letno preventivo dojk, materničnega vratu, kože, hormonov in ščitnice.
+              V enem obisku postavimo baseline (dojke, maternični vrat, koža, hormoni, ščitnica) in nato skozi leto izvajamo planirano spremljanje.
+              Članice imajo tudi –20 % na posege.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
@@ -466,9 +675,7 @@ const Zenska360Page = () => {
                 </NavLink>
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8" asChild>
-                <NavLink to="/kontakt">
-                  Postani članica — 39 €/mesec
-                </NavLink>
+                <NavLink to="/kontakt">Postani članica — 39 €/mesec</NavLink>
               </Button>
             </div>
           </CardContent>
