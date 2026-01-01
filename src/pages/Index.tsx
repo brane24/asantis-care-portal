@@ -103,6 +103,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why Health Packages Section */}
+      <section className="container py-16 md:py-24">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Zakaj paketi zdravja?
+            </h2>
+          </div>
+          
+          <div className="space-y-6">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              S paketi zdravstvenih storitev namesto naključnih pregledov prejmete{" "}
+              <span className="text-foreground font-medium">strukturirano spremljanje vašega ključnega zdravstvenega področja</span>:{" "}
+              ožilje, žensko zdravje, gibanje, duševno zdravje, koža, otroci, hujšanje ali zobje.
+            </p>
+            
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Večina od nas ne potrebuje vseh specialistov ves čas.{" "}
+              <span className="text-foreground font-semibold">Potrebujete pa pravega specialista ob pravem času.</span>
+            </p>
+            
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Zato so paketi zdravja strukturirani tako, da skozi celo leto poskrbimo za preglede, terapije, kontrole in strokovno vodenje vašega zdravja,{" "}
+              <span className="text-foreground font-medium">brez presenečenj pri stroških</span>.
+            </p>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Manj tveganj. Manj čakanja. Več zdravja – skozi vse leto.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="container py-16 md:py-24">
         <div className="text-center mb-12">
