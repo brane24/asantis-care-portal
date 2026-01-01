@@ -317,7 +317,6 @@ const SrceOziljePage = () => {
                       <span>Mesečno</span>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm text-muted-foreground">vrednost 50–70 €</p>
                       <p className="text-2xl font-bold text-primary">39 € / mesec</p>
                     </div>
                   </div>
