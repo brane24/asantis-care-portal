@@ -244,7 +244,7 @@ const SrceOziljePage = () => {
                   </p>
                   <div className="bg-white/80 rounded-xl p-6 inline-block">
                     <p className="text-lg md:text-xl font-medium text-foreground">
-                      "Ne čakajte na simptome. Zdaj lahko svoje tveganje za srčni infarkt in možgansko kap <span className="text-red-600 font-bold">znižate za 30–60 %</span>."
+                      "Ne čakajte na znake bolezni. Zdaj lahko svoje tveganje za srčni infarkt in možgansko kap <span className="text-red-600 font-bold">znižate za 30–60 %</span>."
                     </p>
                   </div>
                 </div>
