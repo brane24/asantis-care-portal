@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan } from "lucide-react";
+import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan, User } from "lucide-react";
 const Index = () => {
   const services = [{
     icon: Heart,
@@ -56,6 +56,13 @@ const Index = () => {
     price: "79",
     link: "/paketi/estetika-vitalnost",
     color: "text-rose-500"
+  }, {
+    icon: User,
+    title: "MenCare 360",
+    description: "Preventivni zdravstveni program za moške: urologija, hormoni, srce-ožilje.",
+    price: "39",
+    link: "/paketi/mencare-360",
+    color: "text-blue-500"
   }, {
     icon: CircleDot,
     title: "Zobni Plus",
