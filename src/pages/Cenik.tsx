@@ -332,65 +332,6 @@ const Cenik = () => {
         </div>
       </section>
 
-      {/* Health Packages */}
-      <section className="container py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Preventivni zdravstveni paketi</h2>
-          <p className="text-lg text-muted-foreground">
-            Celostna skrb za vaše zdravje z možnostjo spremljanja z naročnino
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {healthPackages.map((pkg, index) => (
-            <Card 
-              key={pkg.name}
-              className={`relative flex flex-col hover:shadow-soft transition-all duration-300 ${
-                pkg.popular ? 'border-primary shadow-soft' : ''
-              }`}
-            >
-              {pkg.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-secondary border-0">
-                  ⭐ Najbolj izbran
-                </Badge>
-              )}
-              <CardHeader>
-                <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                <CardDescription className="text-base">
-                  {pkg.description}
-                </CardDescription>
-                <div className="pt-4">
-                  <div className="flex items-baseline">
-                    <span className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                      {pkg.price}€
-                    </span>
-                    <span className="text-muted-foreground ml-2">/ {pkg.period}</span>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <ul className="space-y-3 mb-6 flex-1">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  asChild 
-                  className="w-full"
-                  variant={pkg.popular ? "default" : "outline"}
-                >
-                  <NavLink to={pkg.link}>Izberi paket</NavLink>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-
       {/* Service Pricing */}
       <section className="container py-16">
         <div className="text-center mb-12">
@@ -432,6 +373,66 @@ const Cenik = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+
+      {/* Health Packages */}
+      <section className="bg-muted/30 py-16">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Preventivni zdravstveni paketi</h2>
+            <p className="text-lg text-muted-foreground">
+              Celostna skrb za vaše zdravje z možnostjo spremljanja z naročnino
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {healthPackages.map((pkg, index) => (
+              <Card 
+                key={pkg.name}
+                className={`relative flex flex-col hover:shadow-soft transition-all duration-300 ${
+                  pkg.popular ? 'border-primary shadow-soft' : ''
+                }`}
+              >
+                {pkg.popular && (
+                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-secondary border-0">
+                    ⭐ Najbolj izbran
+                  </Badge>
+                )}
+                <CardHeader>
+                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
+                  <CardDescription className="text-base">
+                    {pkg.description}
+                  </CardDescription>
+                  <div className="pt-4">
+                    <div className="flex items-baseline">
+                      <span className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                        {pkg.price}€
+                      </span>
+                      <span className="text-muted-foreground ml-2">/ {pkg.period}</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <ul className="space-y-3 mb-6 flex-1">
+                    {pkg.features.map((feature) => (
+                      <li key={feature} className="flex items-start">
+                        <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button 
+                    asChild 
+                    className="w-full"
+                    variant={pkg.popular ? "default" : "outline"}
+                  >
+                    <NavLink to={pkg.link}>Izberi paket</NavLink>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
