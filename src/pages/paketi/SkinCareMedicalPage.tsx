@@ -457,7 +457,7 @@ const SkinCareMedicalPage = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span>10 % popust na dodatne storitve</span>
+                    <span>20 % popust na dodatne storitve</span>
                   </div>
                 </div>
 
