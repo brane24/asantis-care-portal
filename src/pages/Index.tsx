@@ -25,7 +25,7 @@ const Index = () => {
     icon: Activity,
     title: "FreeMove",
     description: "Gibanje & Regeneracija – celostna ortopedska in fizioterapevtska obravnava.",
-    price: "49",
+    price: "69",
     link: "/paketi/freemove",
     color: "text-emerald-500"
   }, {
