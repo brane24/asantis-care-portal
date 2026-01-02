@@ -287,44 +287,6 @@ const MindCarePage = () => {
           </div>
         </section>
 
-        {/* Section 3: Comparison table */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-                Primerjava stroškov
-              </h2>
-              <p className="text-center text-muted-foreground mb-8">
-                Zakaj ljudje izberejo to verzijo? → Ker loči "konkreten prvi pregled" od "nizkega mesečnega commitmenta" (po želji).
-              </p>
-
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-primary/10">
-                      <th className="text-left p-4 font-semibold text-foreground">Storitev</th>
-                      <th className="text-left p-4 font-semibold text-foreground">Posamično</th>
-                      <th className="text-left p-4 font-semibold text-primary">Pregled + (po želji) naročnina</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {comparisonData.map((row, index) => (
-                      <tr
-                        key={index}
-                        className={index % 2 === 0 ? "bg-secondary/20" : "bg-background"}
-                      >
-                        <td className="p-4 text-foreground">{row.service}</td>
-                        <td className="p-4 text-muted-foreground">{row.individual}</td>
-                        <td className="p-4 text-primary font-medium">{row.package}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Section 4: How it works */}
         <section className="py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
