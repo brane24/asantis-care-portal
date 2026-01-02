@@ -25,7 +25,7 @@ const Index = () => {
       icon: Baby,
       title: "Pediatrija",
       description: "Privatni pediater, alergologija, pulmologija, okužbe dihal in preventivni pregledi.",
-      link: "/pediatrija",
+      link: "/pediatrija/privat-pediater-ljubljana",
       color: "text-green-500"
     },
     {
