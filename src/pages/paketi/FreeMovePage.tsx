@@ -77,7 +77,7 @@ const FreeMovePage = () => {
     { icon: Zap, text: "1× regeneracijska terapija (manualna / laser / tecar / udarni val)" },
     { icon: Stethoscope, text: "Ortopedski nadzor vsakih 3–4 mesece" },
     { icon: Clock, text: "Prioritetno naročanje (do 72 h)" },
-    { icon: Percent, text: "15% popust na dodatne storitve" },
+    { icon: Percent, text: "20% popust na dodatne storitve" },
     { icon: RefreshCcw, text: "Prilagajanje programa glede na napredek" },
   ];
 
@@ -90,8 +90,8 @@ const FreeMovePage = () => {
   const timeline = [
     {
       step: "Korak 1",
-      title: "Aktivacija",
-      description: "Ortoped + fizioterapevt + diagnostični plan"
+      title: "Celostni preventivni pregled",
+      description: "Ortoped + fizioterapevt + ocena tveganj + osebni načrt"
     },
     {
       step: "Korak 2",
@@ -134,37 +134,37 @@ const FreeMovePage = () => {
       answer: "Preventiva je razlog, da težav ne bo — to je glavni cilj programa. Redne terapije vzdržujejo gibljivost in preprečujejo ponovitev težav."
     },
     {
-      question: "Zakaj mesečna naročnina?",
-      answer: "Ker se težave sklepov ne rešujejo v enem obisku, ampak skozi rednost. Konsistentna obravnava daje najboljše dolgoročne rezultate."
+      question: "Zakaj naročnina, če je prvi pregled enkraten?",
+      answer: "Ker je pregled diagnoza in načrt, napredek pa se gradi z rednim izvajanjem terapij in kontrol. Naročnina vam zagotovi kontinuiteto, hitrejši dostop in ugodnosti — brez obveznosti."
     },
     {
       question: "Ali lahko prenesem storitve v naslednji mesec?",
       answer: "Ne — terapije morajo biti izvedene sproti zaradi medicinskih razlogov. Kontinuirana obravnava je ključna za uspeh programa."
     },
     {
-      question: "Kaj pridobim z aktivacijo?",
-      answer: "Celotno diagnostiko + ortopeda + fizioterapevta + rehabilitacijski plan. To je temelj za učinkovito in varno rehabilitacijo."
+      question: "Kaj dobim v celostnem preventivnem pregledu?",
+      answer: "Pregled pri ortopedu in fizioterapevtu, oceno tveganj, razlago možnosti zdravljenja ter osebni načrt terapij. To je temelj za varno in učinkovito rehabilitacijo ali preventivo."
     },
     {
       question: "Ali lahko prekinem naročnino?",
-      answer: "Da, vendar se doplača razlika do rednih cen (standardno za zdravstvene naročnine). Minimalna vezava je 12 mesecev."
+      answer: "Da. Naročnino lahko odpoveste z odpovednim rokom 30 dni. Pregled ostane samostojna storitev."
     },
   ];
 
   const legalTerms = [
-    "Minimalna vezava: 12 mesecev (ali 6 mesecev z doplačilom 59 €/mesec).",
-    "Neizkoriščene storitve: se ne prenašajo v naslednji mesec.",
+    "Pregled (150 €) je samostojna storitev in ni pogoj za naročnino.",
+    "Naročnina: brez minimalne vezave; odpoved z odpovednim rokom 30 dni.",
+    "Storitve se izvajajo po strokovni indikaciji in osebnem načrtu (časovno razporejeno).",
+    "Neizkoriščene storitve: se ne prenašajo v naslednji mesec, razen če je drugače dogovorjeno iz medicinskih razlogov.",
     "Neprenosljivo: članstvo ni prenosljivo na druge osebe.",
-    "Predčasna prekinitev: zaračuna se razlika do cen iz cenika.",
-    "Plačila: avtomatska mesečna bremenitev.",
-    "Odpoved: 30 dni pred iztekom obračunskega obdobja."
+    "Plačila: avtomatska mesečna bremenitev."
   ];
 
   return (
     <Layout>
       <Helmet>
         <title>Gibanje & Regeneracija | Ortoped in fizioterapija | ASANTIS</title>
-        <meta name="description" content="Celosten program za odpravo bolečin in stabilnost sklepov. Ortoped, fizioterapevt, regeneracija, brez čakalnih vrst. Aktivacija + mesečna naročnina. Ljubljana." />
+        <meta name="description" content="Celosten program za odpravo bolečin in stabilnost sklepov. Ortoped, fizioterapevt, regeneracija, brez čakalnih vrst. Celostni preventivni pregled + možnost naročnine. Ljubljana." />
         <meta name="keywords" content="ortopedija, fizioterapija, rehabilitacija, bolečina v hrbtenici, koleno, rama, športne poškodbe, Ljubljana" />
         <link rel="canonical" href="https://asantis.si/paketi/freemove" />
       </Helmet>
@@ -194,7 +194,7 @@ const FreeMovePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Button size="lg" className="text-lg px-8 py-6 bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <Sparkles className="w-5 h-5 mr-2" />
-                Začni z aktivacijo
+                Začni s preventivnim pregledom
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/5">
                 <ChevronRight className="w-5 h-5 mr-2" />
@@ -203,7 +203,7 @@ const FreeMovePage = () => {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              Aktivacija vključuje ortopeda + fizioterapevta + diagnostični protokol.
+              Pregled vključuje ortopeda + fizioterapevta + jasno diagnostično in terapevtsko usmeritev.
             </p>
           </div>
         </div>
@@ -255,11 +255,11 @@ const FreeMovePage = () => {
                       <span>Diagnostični start</span>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-emerald-600">99–129 €</p>
+                      <p className="text-2xl font-bold text-emerald-600">150 €</p>
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-6">Aktivacija – celovit diagnostični start</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">Celostni gibalni preventivni menedžerski pregled</h3>
                   
                   <div className="space-y-3">
                     {activationFeatures.map((feature, index) => (
@@ -277,7 +277,7 @@ const FreeMovePage = () => {
 
                   <div className="mt-6 p-4 bg-emerald-100/50 rounded-xl border border-emerald-200">
                     <p className="text-sm text-foreground font-medium">
-                      ⚠️ Aktivacija NI uvodni posvet — je medicinska osnova za varno in učinkovito rehabilitacijo.
+                      ⚠️ Ta pregled NI uvodni posvet — je medicinska osnova za varno in učinkovito rehabilitacijo.
                     </p>
                   </div>
                 </CardContent>
@@ -292,12 +292,12 @@ const FreeMovePage = () => {
                       <span>Mesečno</span>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-primary">49 € / mesec</p>
-                      <p className="text-sm text-muted-foreground">ali 59 € pri 6-mesečni vezavi</p>
+                      <p className="text-2xl font-bold text-primary">69 € / mesec</p>
+                      <p className="text-sm text-muted-foreground">brez obvezne vezave</p>
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-6">Mesečna naročnina – vse za stabilno gibanje</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">Naročnina – podpora za stabilno gibanje</h3>
                   
                   <div className="space-y-3">
                     {monthlyBenefits.map((benefit, index) => (
@@ -313,10 +313,10 @@ const FreeMovePage = () => {
                   <div className="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200">
                     <h4 className="font-medium text-foreground mb-2">Pogoji:</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Minimalna vezava 12 mesecev</li>
+                      <li>• Brez minimalne vezave</li>
                       <li>• Neprenosljivo</li>
                       <li>• Ne prenaša se mesečnih terapij</li>
-                      <li>• Predčasna prekinitev → razlika do rednih cen</li>
+                      <li>• Odpoved z odpovednim rokom 30 dni</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -419,7 +419,7 @@ const FreeMovePage = () => {
                     <tr className="bg-emerald-100 border-t-2 border-emerald-300">
                       <td className="px-6 py-4 font-bold text-foreground">Skupni mesečni strošek</td>
                       <td className="px-6 py-4 text-center font-bold text-foreground">150–180 €</td>
-                      <td className="px-6 py-4 text-center font-bold text-emerald-700 bg-emerald-200">49 €</td>
+                      <td className="px-6 py-4 text-center font-bold text-emerald-700 bg-emerald-200">69 €</td>
                     </tr>
                   </tbody>
                 </table>
@@ -496,7 +496,7 @@ const FreeMovePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-white text-emerald-700 hover:bg-emerald-50 shadow-lg">
                 <Sparkles className="w-5 h-5 mr-2" />
-                Začni z aktivacijo
+                Začni s preventivnim pregledom
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-emerald-500">
                 <Calendar className="w-5 h-5 mr-2" />
