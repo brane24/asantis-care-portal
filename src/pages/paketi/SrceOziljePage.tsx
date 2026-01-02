@@ -365,15 +365,15 @@ const SrceOziljePage = () => {
                 <div className="space-y-4 pl-4 border-l-4 border-primary/30">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground">Ker program vključuje celoletno spremljanje zdravja z diagnostiko (UZ + laboratorij + internist).<strong>drago diagnostiko</strong> (UZ + laboratorij + internist), ki skupaj vreden 300–420 €.</p>
+                    <p className="text-foreground">Ker program vključuje celoletno spremljanje zdravja z diagnostiko (UZ + laboratorij + internist).<strong>drago diagnostiko</strong> (UZ + laboratorij + internist), ki skupaj vreden 300–420 €.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground"><strong>Aktivacijski pregled</strong>Aktivacijski pregled. Aktivacijski pregled je začetni strošek, s katerim opravimo celovito oceno zdravstvenega stanja.</p>
+                    <p className="text-foreground"><strong>Aktivacijski pregled</strong>Aktivacijski pregled. Aktivacijski pregled je začetni strošek, s katerim opravimo celovito oceno zdravstvenega stanja.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground">Mesečna naročnina je za strokovno vodenje in spremljanje zdravstvenega stanja, kar je bistvo preventive za strokovno vodenje in spremljanje vašega zdravstvenega stanja.<strong>strokovno vodenje in spremljanje</strong>, kar je bistvo preventive.</p>
+                    <p className="text-foreground">Mesečna naročnina je za strokovno vodenje in spremljanje zdravstvenega stanja, kar je bistvo preventive za strokovno vodenje in spremljanje vašega zdravstvenega stanja.<strong>strokovno vodenje in spremljanje</strong>, kar je bistvo preventive.</p>
                   </div>
                 </div>
 
