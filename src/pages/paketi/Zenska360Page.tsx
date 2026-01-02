@@ -1,64 +1,31 @@
-
 import Layout from "@/components/Layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
 import { Check, Phone, Star, ArrowRight } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
-
 const Zenska360Page = () => {
-  const stepOneServices = [
-    "Celostni ginekološki pregled",
-    "Ginekološki ultrazvok",
-    "Klinični pregled dojk",
-    "Ultrazvok dojk",
-    "Preventivna ocena tveganj",
-    "Osebni zdravstveni načrt (kaj, kdaj, zakaj)",
-  ];
-
-  const subscriptionBenefits = [
-    "Redno spremljanje in kratki posveti",
-    "Hitrejši in prednostni termini",
-    "Preventivni opomniki (PAP, UZ, kontrole)",
-    "Koordinacija obravnave v centru",
-    "–20 % na ginekološke in dermatološke posege",
-    "Brez vezave – prekineš kadarkoli",
-  ];
-
-  const faqItems = [
-    {
-      q: "Ali je pregled obvezen za naročnino?",
-      a: "Da. Naročnina je možna šele po opravljenem celostnem preventivnem pregledu, saj ta postavi osnovo za varno in smiselno spremljanje.",
-    },
-    {
-      q: "Ali lahko opravim samo pregled brez naročnine?",
-      a: "Da. Pregled je samostojna storitev in popolnoma uporaben tudi brez nadaljevanja v naročniškem modelu.",
-    },
-    {
-      q: "Kaj pomeni –20 % na posege?",
-      a: "Članice imajo trajni popust na samoplačniške ginekološke in dermatološke posege ter prednostno obravnavo.",
-    },
-    {
-      q: "Ali je naročnina obvezna ali vezana?",
-      a: "Ne. Naročnina ni obvezna in nima vezave.",
-    },
-  ];
-
-  return (
-    <Layout>
+  const stepOneServices = ["Celostni ginekološki pregled", "Ginekološki ultrazvok", "Klinični pregled dojk", "Ultrazvok dojk", "Preventivna ocena tveganj", "Osebni zdravstveni načrt (kaj, kdaj, zakaj)"];
+  const subscriptionBenefits = ["Redno spremljanje in kratki posveti", "Hitrejši in prednostni termini", "Preventivni opomniki (PAP, UZ, kontrole)", "Koordinacija obravnave v centru", "–20 % na ginekološke in dermatološke posege", "Brez vezave – prekineš kadarkoli"];
+  const faqItems = [{
+    q: "Ali je pregled obvezen za naročnino?",
+    a: "Da. Naročnina je možna šele po opravljenem celostnem preventivnem pregledu, saj ta postavi osnovo za varno in smiselno spremljanje."
+  }, {
+    q: "Ali lahko opravim samo pregled brez naročnine?",
+    a: "Da. Pregled je samostojna storitev in popolnoma uporaben tudi brez nadaljevanja v naročniškem modelu."
+  }, {
+    q: "Kaj pomeni –20 % na posege?",
+    a: "Članice imajo trajni popust na samoplačniške ginekološke in dermatološke posege ter prednostno obravnavo."
+  }, {
+    q: "Ali je naročnina obvezna ali vezana?",
+    a: "Ne. Naročnina ni obvezna in nima vezave."
+  }];
+  return <Layout>
       <Helmet>
         <title>Ženska 360 | Celostni preventivni ginekološki pregled | Asantis</title>
-        <meta
-          name="description"
-          content="Celostni preventivni ginekološki pregled z UZ dojk in jasnim zdravstvenim načrtom. Samostojen pregled 220 €. Opcijska naročnina 39 €/mesec z –20 % na posege."
-        />
+        <meta name="description" content="Celostni preventivni ginekološki pregled z UZ dojk in jasnim zdravstvenim načrtom. Samostojen pregled 220 €. Opcijska naročnina 39 €/mesec z –20 % na posege." />
       </Helmet>
 
       <section className="bg-gradient-hero py-20">
@@ -73,10 +40,7 @@ const Zenska360Page = () => {
             Celostni preventivni ginekološki pregled z načrtom
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-8">
-            To ni klasičen pregled. To je sistematična ocena vašega zdravja in tveganj –
-            z jasnim načrtom naprej.
-          </p>
+          <p className="text-xl text-muted-foreground mb-8">To ni klasičen pregled. To je sistematična ocena vašega zdravja in tveganj – z jasnim načrtom za naprej.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
@@ -97,18 +61,16 @@ const Zenska360Page = () => {
 
       <section className="container py-16 max-w-4xl">
         <h2 className="text-3xl font-bold mb-6 text-center">
-          KORAK 1 · Celostni preventivni pregled
+          KORAK 1 · Celostni preventivni menedžerski pregled
         </h2>
 
         <Card>
           <CardContent className="p-6">
             <ul className="grid md:grid-cols-2 gap-3">
-              {stepOneServices.map((item) => (
-                <li key={item} className="flex gap-2">
+              {stepOneServices.map(item => <li key={item} className="flex gap-2">
                   <Check className="h-5 w-5 text-primary" />
                   <span>{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
 
             <p className="text-sm text-muted-foreground mt-6">
@@ -136,12 +98,10 @@ const Zenska360Page = () => {
               </h3>
 
               <ul className="space-y-3 text-left">
-                {subscriptionBenefits.map((item) => (
-                  <li key={item} className="flex gap-2">
+                {subscriptionBenefits.map(item => <li key={item} className="flex gap-2">
                     <Check className="h-5 w-5 text-primary" />
                     <span>{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </CardContent>
           </Card>
@@ -154,16 +114,10 @@ const Zenska360Page = () => {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-4">
-          {[
-            "Najprej jasna slika, potem odločitev",
-            "Brez vezave in brez pritiska",
-            "–20 % na posege za članice",
-          ].map((item) => (
-            <div key={item} className="flex gap-2 items-center">
+          {["Najprej jasna slika, potem odločitev", "Brez vezave in brez pritiska", "–20 % na posege za članice"].map(item => <div key={item} className="flex gap-2 items-center">
               <Star className="h-5 w-5 text-primary" />
               <span>{item}</span>
-            </div>
-          ))}
+            </div>)}
         </div>
       </section>
 
@@ -173,16 +127,12 @@ const Zenska360Page = () => {
         </h2>
 
         <Accordion type="single" collapsible>
-          {faqItems.map((item, i) => (
-            <AccordionItem key={i} value={`faq-${i}`}>
+          {faqItems.map((item, i) => <AccordionItem key={i} value={`faq-${i}`}>
               <AccordionTrigger>{item.q}</AccordionTrigger>
               <AccordionContent>{item.a}</AccordionContent>
-            </AccordionItem>
-          ))}
+            </AccordionItem>)}
         </Accordion>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Zenska360Page;
