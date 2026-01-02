@@ -86,7 +86,7 @@ const Cenik = () => {
       link: "/paketi/mindcare"
     },
     {
-      name: "Skin & Estetika",
+      name: "SkinCare",
       description: "Zdrava koža, preventiva in estetske rešitve",
       price: 49,
       period: "mesec",
@@ -97,7 +97,7 @@ const Cenik = () => {
         "Popusti na odstranjevanje sprememb",
         "Popusti na laser in pomlajevanje"
       ],
-      link: "/paketi/skin-estetika"
+      link: "/paketi/skincare-medical"
     },
     {
       name: "Kids & Family",
