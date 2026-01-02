@@ -125,6 +125,35 @@ const Cenik = () => {
         "Popusti na botoks, filerje, laser"
       ],
       link: "/paketi/estetika-vitalnost"
+    },
+    {
+      name: "Zobni Plus",
+      description: "Celosten zobni paket s preventivo",
+      price: 29,
+      period: "mesec",
+      activationPrice: "149 €",
+      features: [
+        "Celostni pregled z RTG/CT + 3D sken",
+        "1× letno čiščenje zobnega kamna",
+        "Prednostno naročanje",
+        "15% popust na vse zobozdravstvene storitve"
+      ],
+      link: "/paketi/zobni-plus"
+    },
+    {
+      name: "Hujšanje",
+      description: "Medicinski program hujšanja z GLP-1 terapijo",
+      price: 149,
+      period: "mesec",
+      activationPrice: "249–349 €",
+      features: [
+        "Internistična ocena + ocena primernosti za GLP-1",
+        "Mesečne konzultacije za prilagajanje odmerkov",
+        "Psihološka podpora za vedenjske spremembe",
+        "Fizioterapevtski program za ohranjanje mišic",
+        "Prehranska navodila in spremljanje napredka"
+      ],
+      link: "/paketi/hujsanje"
     }
   ];
 
