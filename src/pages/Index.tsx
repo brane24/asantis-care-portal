@@ -4,8 +4,66 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan, User } from "lucide-react";
+import { Heart, Activity, Brain, Smile, Baby, Users, CheckCircle, ArrowRight, Sparkles, CircleDot, Scale, Scan, User, Stethoscope, Eye, Bone, HeartPulse, ScanLine } from "lucide-react";
 const Index = () => {
+  const individualServices = [
+    {
+      icon: Eye,
+      title: "Dermatologija",
+      description: "Pregledi znamenj, laserski posegi, estetska dermatologija in zdravljenje kožnih bolezni.",
+      link: "/dermatologija",
+      color: "text-amber-500"
+    },
+    {
+      icon: Smile,
+      title: "Zobozdravstvo",
+      description: "Splošno zobozdravstvo, ortodontija, implantati, protetika in nujna pomoč.",
+      link: "/zobozdravstvo",
+      color: "text-cyan-500"
+    },
+    {
+      icon: Baby,
+      title: "Pediatrija",
+      description: "Privatni pediater, alergologija, pulmologija, okužbe dihal in preventivni pregledi.",
+      link: "/pediatrija",
+      color: "text-green-500"
+    },
+    {
+      icon: Activity,
+      title: "Fizioterapija",
+      description: "Manualna terapija, rehabilitacija, športne poškodbe, bolečine v hrbtenici.",
+      link: "/fizioterapija",
+      color: "text-emerald-500"
+    },
+    {
+      icon: Bone,
+      title: "Ortopedija",
+      description: "Artroza, bolečine v sklepih, injekcijske terapije, športne poškodbe.",
+      link: "/ortopedija",
+      color: "text-orange-500"
+    },
+    {
+      icon: HeartPulse,
+      title: "Ginekologija",
+      description: "Preventivni pregledi, ultrazvok, kontracepcija, manjši posegi, vnetja.",
+      link: "/ginekologija",
+      color: "text-pink-500"
+    },
+    {
+      icon: ScanLine,
+      title: "Ultrazvok",
+      description: "Ultrazvok trebuha, ščitnice, dojk, mod, ven, arterij in mehkih tkiv.",
+      link: "/ultrazvok",
+      color: "text-blue-500"
+    },
+    {
+      icon: Brain,
+      title: "Psihiatrija",
+      description: "Depresija, anksioznost, izgorelost, nespečnost, motnje hranjenja.",
+      link: "/psihiatrija",
+      color: "text-purple-500"
+    }
+  ];
   const services = [{
     icon: Heart,
     title: "Srce & Ožilje",
@@ -183,8 +241,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Individual Services Section */}
       <section className="bg-muted/30 py-16 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Posamezne storitve
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Potrebujete le enkratni pregled ali poseg? Izberite storitev brez mesečne naročnine.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {individualServices.map((service, index) => (
+              <NavLink key={service.title} to={service.link} className="block">
+                <Card className="hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in cursor-pointer h-full" style={{
+                  animationDelay: `${index * 50}ms`
+                }}>
+                  <CardHeader className="text-center pb-4">
+                    <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 mx-auto ${service.color}`}>
+                      <service.icon className="h-6 w-6" />
+                    </div>
+                    <CardTitle className="text-lg">{service.title}</CardTitle>
+                    <CardDescription className="text-sm">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="pt-0 text-center">
+                    <Button variant="outline" size="sm" className="w-full">
+                      Več <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-4xl">
             <div className="text-center mb-12">
