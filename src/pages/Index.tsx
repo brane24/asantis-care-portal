@@ -57,13 +57,6 @@ const Index = () => {
     link: "/paketi/estetika-vitalnost",
     color: "text-rose-500"
   }, {
-    icon: User,
-    title: "MenCare 360",
-    description: "Preventivni zdravstveni program za moške: urologija, hormoni, srce-ožilje.",
-    price: "39",
-    link: "/paketi/mencare-360",
-    color: "text-blue-500"
-  }, {
     icon: CircleDot,
     title: "Zobni Plus",
     description: "Celosten zobni paket z diagnostiko, 3D skenom in prednostnimi termini.",
