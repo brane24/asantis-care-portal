@@ -18,7 +18,7 @@ const Index = () => {
       icon: Smile,
       title: "Zobozdravstvo",
       description: "Splošno zobozdravstvo, ortodontija, implantati, protetika in nujna pomoč.",
-      link: "/zobozdravstvo",
+      link: "/zobozdravstvo/zobozdravnik-ljubljana",
       color: "text-cyan-500"
     },
     {
