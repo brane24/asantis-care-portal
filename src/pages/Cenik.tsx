@@ -324,11 +324,10 @@ const Cenik = () => {
             Pregledni paketi
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Naročniški paketi
+            Cenik posameznih storitev in paketov
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Mesečna naročnina za celovito zdravstveno oskrbo. 
-            Ena članarina, jasne ugodnosti, brez presenečenj.
+            Cene za posamezne preglede in posege, cenik preventivnih paketov in cene naročnin za celostno zdravstveno oskrbo, brez presenečenj.
           </p>
         </div>
       </section>
