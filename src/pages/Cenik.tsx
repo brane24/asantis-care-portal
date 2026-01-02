@@ -335,7 +335,7 @@ const Cenik = () => {
       {/* Health Packages */}
       <section className="container py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Osnovni zdravstveni paketi</h2>
+          <h2 className="text-3xl font-bold mb-4">Preventivni zdravstveni paketi</h2>
           <p className="text-lg text-muted-foreground">
             Celostna skrb za vse vidike vašega zdravja
           </p>
