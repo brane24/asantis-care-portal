@@ -32,35 +32,35 @@ const Index = () => {
       icon: Activity,
       title: "Fizioterapija",
       description: "Manualna terapija, rehabilitacija, športne poškodbe, bolečine v hrbtenici.",
-      link: "/fizioterapija",
+      link: "/fizioterapija/fizioterapija-ljubljana",
       color: "text-emerald-500"
     },
     {
       icon: Bone,
       title: "Ortopedija",
       description: "Artroza, bolečine v sklepih, injekcijske terapije, športne poškodbe.",
-      link: "/ortopedija",
+      link: "/ortopedija/ortoped-ljubljana",
       color: "text-orange-500"
     },
     {
       icon: HeartPulse,
       title: "Ginekologija",
       description: "Preventivni pregledi, ultrazvok, kontracepcija, manjši posegi, vnetja.",
-      link: "/ginekologija",
+      link: "/ginekologija/ginekologija-ljubljana",
       color: "text-pink-500"
     },
     {
       icon: ScanLine,
       title: "Ultrazvok",
       description: "Ultrazvok trebuha, ščitnice, dojk, mod, ven, arterij in mehkih tkiv.",
-      link: "/ultrazvok",
+      link: "/ultrazvok/ultrazvok-ljubljana",
       color: "text-blue-500"
     },
     {
       icon: Brain,
       title: "Psihiatrija",
       description: "Depresija, anksioznost, izgorelost, nespečnost, motnje hranjenja.",
-      link: "/psihiatrija",
+      link: "/psihiatrija/psihiater-ljubljana",
       color: "text-purple-500"
     }
   ];
