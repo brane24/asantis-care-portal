@@ -57,7 +57,7 @@ const Cenik = () => {
     {
       name: "FreeMove",
       description: "Gibanje & Regeneracija",
-      price: 49,
+      price: 69,
       period: "mesec",
       activationPrice: "99–129 €",
       features: [
