@@ -322,7 +322,7 @@ const ZobozdravnikLjubljanaPage = () => {
       <section className="container py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Naše zobozdravstvene storitve</h2>
+            <h2 className="text-3xl font-bold mb-4">Preberite več o zobozdravstvenih storitvah pri nas</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Izberite storitev in izveste več o naših specializiranih zobozdravstvenih obravnavah.
             </p>
