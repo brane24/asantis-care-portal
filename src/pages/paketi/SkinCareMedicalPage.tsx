@@ -49,20 +49,24 @@ const SkinCareMedicalPage = () => {
 
   const activationFaqItems = [
     {
-      question: "Zakaj plačati aktivacijo, če že plačujem naročnino?",
-      answer: "Ker se v aktivaciji opravi največ strokovnega dela: diagnostika, plan, odločitev o terapiji. Naročnina je namenjena vzdrževanju in spremljanju, ne začetni obravnavi."
+      question: "Zakaj je potreben začetni preventivni pregled, če obstaja naročnina?",
+      answer: "Ker se pri začetnem preventivnem pregledu opravi največ strokovnega dela: diagnostika, ocena tveganj, plan in odločitev o terapiji. Naročnina je namenjena spremljanju in prilagajanju obravnave skozi čas, ne začetni oceni."
     },
     {
-      question: "Ali lahko brez aktivacije?",
-      answer: "Ne. Brez začetne ocene ni varnega in strokovnega spremljanja."
+      question: "Ali lahko opravim pregled brez naročnine?",
+      answer: "Da. Pregled je samostojna storitev in ni vezan na nadaljevanje."
     },
     {
-      question: "Ali aktivacija nadomesti samoplačniški pregled?",
-      answer: "Da. Aktivacija vključuje celoten začetni pregled, ki bi ga sicer plačali ločeno."
+      question: "Ali moram po pregledu skleniti naročnino?",
+      answer: "Ne. Po opravljenem pregledu se odločite, ali vam naročniško spremljanje prinaša vrednost."
     },
     {
-      question: "Kaj če po aktivaciji ne želim nadaljevati naročnine?",
-      answer: "To je povsem v redu. Aktivacija je samostojna storitev in ni vezana na nadaljevanje."
+      question: "Ali začetni preventivni pregled nadomesti samoplačniški dermatološki pregled?",
+      answer: "Da. Vključuje poglobljen dermatološki pregled in strokovno oceno stanja, ki bi jo sicer plačali ločeno."
+    },
+    {
+      question: "Kdaj je naročnina posebej priporočljiva?",
+      answer: "Pri stanjih ali posegih, ki zahtevajo stalno spremljanje in prilagajanje: zdravljenje aken, rozaceje, zdravljenje brazgotin in estetski posegi."
     }
   ];
 
@@ -353,14 +357,12 @@ const SkinCareMedicalPage = () => {
       <section className="container py-16 md:py-24">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-accent/10 text-accent-foreground border-accent/20">
-            🔑 Zakaj aktivacija?
+            🧠 Prvi korak
           </Badge>
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            Aktivacija paketa SkinCare Medical
-          </h2>
+            Celostni preventivni pregled kože</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Kožnih težav ne rešujemo z naročnino, ampak z natančno začetno diagnostiko, 
-            postavitvijo terapevtskega načrta in strokovno odločitvijo, kaj sploh potrebuje spremljanje.
+            To ni aktivacija in ni naročnina. To je poglobljen dermatološki pregled z analizo stanja, prepoznavo tveganj in jasnim načrtom nadaljnje obravnave. Pregled je samostojna zdravstvena storitev.
           </p>
         </div>
 
@@ -369,17 +371,18 @@ const SkinCareMedicalPage = () => {
             <CardContent className="p-8">
               <div className="text-center mb-8">
                 <p className="text-4xl font-bold text-primary mb-2">120 €</p>
-                <p className="text-muted-foreground">enkratna aktivacija</p>
+                <p className="text-muted-foreground">enkratni preventivni pregled</p>
+                <p className="text-sm text-muted-foreground mt-2">Samostojna storitev. Brez obveznega nadaljevanja.</p>
               </div>
 
-              <h3 className="text-xl font-bold mb-6">Kaj vključuje aktivacija:</h3>
+              <h3 className="text-xl font-bold mb-6">Kaj obsega preventivni pregled:</h3>
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 {[
                   "Temeljni dermatološki pregled",
                   "Dermatoskopijo znamenj",
                   "Diagnostično oceno kožnega stanja",
                   "Individualni terapevtski načrt",
-                  "Odločitev, ali je paket primeren za dolgoročno spremljanje"
+                  "Skupna odločitev, ali je dolgoročno spremljanje smiselno"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -391,8 +394,7 @@ const SkinCareMedicalPage = () => {
               <Card className="bg-muted/50 border-muted">
                 <CardContent className="p-4 text-center">
                   <p className="text-sm text-muted-foreground">
-                    <strong>Aktivacija je obvezna ob prvem vstopu v paket.</strong><br />
-                    Zagotavlja, da je paket medicinsko smiseln – za pacienta in za kliniko.
+                    <strong>To je začetna strokovna ocena.</strong><br />Po opravljenem pregledu se odločite, ali želite nadaljevati z naročniškim spremljanjem – ali ne.
                   </p>
                 </CardContent>
               </Card>
@@ -406,7 +408,7 @@ const SkinCareMedicalPage = () => {
         <div className="container">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              🔁 Po aktivaciji
+              🔁 Po opravljenem pregledu
             </Badge>
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               Mesečna naročnina: 49 € / mesec
@@ -416,6 +418,29 @@ const SkinCareMedicalPage = () => {
           <div className="max-w-2xl mx-auto">
             <Card className="border-primary/30 shadow-soft">
               <CardContent className="p-8">
+                <div className="mb-8">
+                  <Card className="bg-muted/50 border-muted">
+                    <CardContent className="p-4">
+                      <p className="text-sm text-muted-foreground mb-3">
+                        <strong>Naročnina je posebej priporočljiva</strong> pri stanjih ali posegih, ki zahtevajo stalno spremljanje in prilagajanje obravnave:
+                      </p>
+                      <div className="grid sm:grid-cols-2 gap-2">
+                        {[
+                          "zdravljenje aken",
+                          "zdravljenje rozaceje",
+                          "zdravljenje brazgotin",
+                          "estetski posegi"
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
                 <h3 className="text-xl font-bold mb-6 text-center">Vključeno:</h3>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-3">
@@ -466,7 +491,7 @@ const SkinCareMedicalPage = () => {
       <section className="container py-16 md:py-24">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            ❓ Pogosta vprašanja – aktivacija
+            ❓ Pogosta vprašanja – začetni pregled
           </h2>
         </div>
 
