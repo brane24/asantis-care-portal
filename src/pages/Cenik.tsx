@@ -390,51 +390,6 @@ const Cenik = () => {
         </div>
       </section>
 
-      {/* Dental Packages */}
-      <section className="bg-muted/30 py-16">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Zobozdravstvo</h2>
-            <p className="text-lg text-muted-foreground">
-              Ločeno, a povezano – za vaš zdrav nasmeh
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {dentalPackages.map((pkg) => (
-              <Card key={pkg.name} className="hover:shadow-soft transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                  <CardDescription className="text-base">
-                    {pkg.description}
-                  </CardDescription>
-                  <div className="pt-4">
-                    <div className="flex items-baseline">
-                      <span className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                        {pkg.price}€
-                      </span>
-                      <span className="text-muted-foreground ml-2">/ {pkg.period}</span>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {pkg.features.map((feature) => (
-                      <li key={feature} className="flex items-start">
-                        <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild className="w-full" variant="outline">
-                    <NavLink to={pkg.link}>Izberi paket</NavLink>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Service Pricing */}
       <section className="container py-16">
