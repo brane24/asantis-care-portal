@@ -216,7 +216,7 @@ const MindCarePage = () => {
                       <h3 className="text-2xl font-bold text-foreground">
                         Celostni preventivni menedžerski pregled
                       </h3>
-                      <span className="text-3xl font-bold text-primary">150 €</span>
+                      <span className="text-3xl font-bold text-primary">€150</span>
                     </div>
                     <p className="text-sm text-muted-foreground mb-6">(enkratno plačilo)</p>
 
@@ -235,9 +235,6 @@ const MindCarePage = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="text-sm text-muted-foreground mt-6 pt-4 border-t">
-                      Realna vrednost: 150–180 €
-                    </p>
                   </CardContent>
                 </Card>
 
@@ -246,7 +243,7 @@ const MindCarePage = () => {
                   <CardContent className="p-8">
                     <div className="flex items-center justify-between mb-6">
                       <h3 className="text-2xl font-bold text-foreground">Mesečna naročnina</h3>
-                      <span className="text-3xl font-bold text-primary">69 €</span>
+                      <span className="text-3xl font-bold text-primary">€69</span>
                     </div>
                     <p className="text-sm text-muted-foreground mb-6">/ mesec (po želji, brez obveznosti)</p>
 
