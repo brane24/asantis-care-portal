@@ -61,7 +61,7 @@ const Zenska360Page = () => {
 
       <section className="container py-16 max-w-4xl">
         <h2 className="text-3xl font-bold mb-6 text-center">
-          KORAK 1 · Celostni preventivni menedžerski pregled
+          KORAK 1 · Celostni preventivni pregled
         </h2>
 
         <Card>
