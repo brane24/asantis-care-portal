@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { NavLink } from "@/components/NavLink";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, ArrowRight, Baby, Heart, Clock, FileText, MessageCircle, CalendarCheck, Users, Stethoscope, Percent } from "lucide-react";
+
 const KidsFamilyPage = () => {
   const faqItems = [{
     question: "Ali paket vključuje cepljenja?",
@@ -32,6 +33,7 @@ const KidsFamilyPage = () => {
     question: "Ali je vezava?",
     answer: "Priporočamo vsaj 6 mesecev, da ima program dejanski učinek. Podrobnosti so navedene ob naročilu."
   }];
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -44,6 +46,7 @@ const KidsFamilyPage = () => {
       }
     }))
   };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -68,6 +71,7 @@ const KidsFamilyPage = () => {
       "description": "Mesečna naročnina za pediatrični paket na otroka"
     }
   };
+
   const packageIncludes = [{
     icon: Stethoscope,
     title: "Letni preventivni pediatrični pregled",
@@ -93,6 +97,7 @@ const KidsFamilyPage = () => {
     title: "Popusti na alergološko in pulmološko testiranje",
     description: "Ugodnejše cene za specialistična testiranja"
   }];
+
   const processSteps = [{
     step: "1",
     title: "Otroka vključite v program s plačilom naročnine"
@@ -106,6 +111,7 @@ const KidsFamilyPage = () => {
     step: "4",
     title: "Starši dobite jasna navodila za nadzor nad zdravljenjem"
   }];
+
   const targetAudience = [{
     icon: "🌬️",
     text: "Za otroke z astmo, ki potrebujejo redno spremljanje in prilagajanje terapije"
@@ -119,7 +125,9 @@ const KidsFamilyPage = () => {
     icon: "📈",
     text: "Za otroke, za katere želite nadzor nad razvojem in zdravjem"
   }];
-  return <Layout>
+
+  return (
+    <Layout>
       <Helmet>
         <title>Kids & Family – zasebni pediatrični program | Asantis Ljubljana</title>
         <meta name="description" content="Hiter dostop do pediatra. Manj stresa za starše. Boljše zdravje otrok. Preventivni in akutni pregledi z online podporo za 39 €/mesec." />
@@ -218,7 +226,8 @@ const KidsFamilyPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {packageIncludes.map((item, index) => <Card key={index} className="hover:shadow-soft transition-all duration-300">
+            {packageIncludes.map((item, index) => (
+              <Card key={index} className="hover:shadow-soft transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex flex-col gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -233,7 +242,8 @@ const KidsFamilyPage = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -248,7 +258,8 @@ const KidsFamilyPage = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="space-y-4 mb-8">
-            {processSteps.map((step, index) => <Card key={index} className="hover:shadow-soft transition-all duration-300">
+            {processSteps.map((step, index) => (
+              <Card key={index} className="hover:shadow-soft transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -257,7 +268,8 @@ const KidsFamilyPage = () => {
                     <p className="text-lg pt-1">{step.title}</p>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
 
           <Card className="bg-primary/5 border-primary/20">
@@ -280,14 +292,16 @@ const KidsFamilyPage = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            {targetAudience.map((item, index) => <Card key={index}>
+            {targetAudience.map((item, index) => (
+              <Card key={index}>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">{item.icon}</span>
                     <span className="font-medium">{item.text}</span>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -298,7 +312,19 @@ const KidsFamilyPage = () => {
           <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
             💶 Cena
           </Badge>
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+          <div className="mt-6">
+            <Badge className="mb-3 bg-primary/10 text-primary border-primary/20">
+              🧒 Prvi pregled
+            </Badge>
+            <p className="text-lg font-medium">
+              Celostni preventivni pediatrični pregled
+            </p>
+            <p className="text-muted-foreground mt-1">
+              120 € <span className="text-sm">(enkratno)</span>
+            </p>
+          </div>
+
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 mt-6">
             39 € / mesec / otrok
           </h2>
         </div>
@@ -346,14 +372,16 @@ const KidsFamilyPage = () => {
 
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full space-y-4">
-              {faqItems.map((item, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-lg border px-6">
+              {faqItems.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-lg border px-6">
                   <AccordionTrigger className="text-left hover:no-underline py-4">
                     <span className="font-semibold">{item.question}</span>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-4">
                     {item.answer}
                   </AccordionContent>
-                </AccordionItem>)}
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>
@@ -375,6 +403,8 @@ const KidsFamilyPage = () => {
           </Button>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default KidsFamilyPage;
