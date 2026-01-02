@@ -12,8 +12,8 @@ const SrceOziljePage = () => {
     description: "Celovit pregled pri specialistu interne medicine"
   }, {
     icon: TestTube,
-    title: "Razširjeni laboratorij",
-    description: "Glukoza, inzulin, lipidogram, TSH, CRP, jetra, ledvice..."
+    title: "Lipidni profil (vključno z Lp(a))",
+    description: "Osnovne meritve za oceno tveganja (lipidni profil + lipoprotein(a))"
   }, {
     icon: Activity,
     title: "EKG",
@@ -31,80 +31,52 @@ const SrceOziljePage = () => {
     title: "UZ ven nog",
     description: "Ultrazvok venskega sistema nog"
   }];
-  const monthlyBenefits = ["1× mesečni posvet ali kontrola (prehrana, krvni tlak, napredek, simptomi)", "Dostop do zdravnika (online)", "Popusti na UZ srca, razširjene laboratorije, specialiste", "Letni laboratorij + ocena tveganja", "Personaliziran coaching za presnovo in energijo"];
-  const priceComparison = [{
-    service: "Internist",
-    individual: "90–120 €",
-    package: "vključeno"
-  }, {
-    service: "Laboratorij",
-    individual: "60–140 €",
-    package: "vključeno"
-  }, {
-    service: "EKG",
-    individual: "25–35 €",
-    package: "vključeno"
-  }, {
-    service: "UZ vratnih arterij",
-    individual: "80–120 €",
-    package: "vključeno"
-  }, {
-    service: "UZ arterij nog",
-    individual: "80–120 €",
-    package: "vključeno"
-  }, {
-    service: "UZ ven nog",
-    individual: "80–120 €",
-    package: "vključeno"
-  }, {
-    service: "Osebni načrt",
-    individual: "50–100 €",
-    package: "vključeno"
-  }, {
-    service: "Mesečni posvet (12×)",
-    individual: "600–840 €",
-    package: "vključeno"
-  }];
+  const monthlyBenefits = [
+    "1× mesečni posvet ali kontrola (krvni tlak, simptomi, napredek, priporočila)",
+    "Dostop do zdravnika (online) za vprašanja in usmeritve",
+    "Prioritetno naročanje (hitrejši dostop)",
+    "Članski popusti: -20% na medicinske posege in dodatne preiskave",
+    "Koordinacija ob težavah (usmeritev na dodatne preiskave / specialiste)"
+  ];
+  const priceComparison = [
+    { service: "UZ vratnih žil", individual: "80–120 €", package: "vključeno" },
+    { service: "UZ arterij nog", individual: "80–120 €", package: "vključeno" },
+    { service: "UZ ven nog", individual: "80–120 €", package: "vključeno" },
+    { service: "EKG", individual: "25–35 €", package: "vključeno" },
+    { service: "Lipidni profil + Lp(a)", individual: "40–90 €", package: "vključeno" },
+    { service: "Interpretacija izvidov", individual: "30–60 €", package: "vključeno" },
+    { service: "Ocena kardiovaskularnega tveganja", individual: "30–60 €", package: "vključeno" },
+    { service: "Osebni preventivni plan", individual: "50–100 €", package: "vključeno" }
+  ];
   const timeline = [{
     week: "1. teden",
-    title: "Aktivacijski pregled",
-    description: "Internist + laboratorij + EKG + ultrazvok žil"
+    title: "Preventivni pregled",
+    description: "UZ žil + EKG + lipidni profil + ocena tveganja"
   }, {
     week: "2. teden",
-    title: "Pregled rezultatov",
-    description: "Osebni zdravstveni načrt in priporočila"
+    title: "Interpretacija izvidov",
+    description: "Osebni preventivni plan in naslednji koraki"
   }, {
-    week: "Vsak mesec",
-    title: "Kontrolni posvet",
-    description: "V živo ali online – spremljanje napredka"
+    week: "Po pregledu (opcijsko)",
+    title: "Naročniški posvet",
+    description: "V živo ali online – spremljanje in koordinacija"
   }, {
-    week: "3.–12. mesec",
-    title: "Spremljanje napredka",
-    description: "Prilagoditve prehrane, gibanja in zdravljenja"
+    week: "Skozi leto (opcijsko)",
+    title: "Spremljanje in prilagoditve",
+    description: "Spremljanje simptomov, tlaka, lipidov po potrebi"
   }, {
-    week: "12. mesec",
-    title: "Letni pregled",
-    description: "Laboratorij + ocena tveganja + zaključni plan"
+    week: "Po potrebi",
+    title: "Kontrolni pregled",
+    description: "Kontrola in posodobitev plana (po dogovoru)"
   }];
-  const targetAudience = [{
-    icon: Users,
-    text: "Starost 30–75 let"
-  }, {
-    icon: HeartPulse,
-    text: "Osebe s povišanim krvnim tlakom, sladkorjem, holesterolom"
-  }, {
-    icon: Shield,
-    text: "Ljudje z družinsko obremenjenostjo (infarkt, kap)"
-  }, {
-    icon: Activity,
-    text: "Osebe s težkimi nogami, mravljinci, oteklinami"
-  }, {
-    icon: Scale,
-    text: "Posamezniki z odvečnimi kilogrami, utrujenostjo, slabo energijo"
-  }, {
-    icon: Target,
-    text: "Vsi, ki želijo preprečiti, ne le zdraviti"
-  }];
+  const targetAudience = [
+    { icon: Users, text: "Starost 25–75 let" },
+    { icon: HeartPulse, text: "Osebe s povišanim holesterolom (npr. LDL) – za oceno tveganja in odločitev o zdravilih (statini)" },
+    { icon: Shield, text: "Osebe z družinsko obremenjenostjo ali nagnjenostjo k srčno-žilnim boleznim (infarkt, kap)" },
+    { icon: Scale, text: "Osebe s prekomerno telesno težo, utrujenostjo ali slabšo energijo" },
+    { icon: ClipboardList, text: "Osebe, ki prejemajo večje število zdravil (polifarmacija) in želijo pregled tveganj ter koordinacijo" },
+    { icon: Target, text: "Osebe, ki jih skrbi za lastno zdravje in želijo preventivo (ne samo zdravljenje posledic)" }
+  ];
   const testimonials = [{
     text: "Končno program, ki ni zahtevan samo enkrat letno, ampak me vodi vsak mesec.",
     author: "Marko, 52 let"
@@ -115,27 +87,39 @@ const SrceOziljePage = () => {
     text: "Prvič imam občutek, da nekdo spremlja moje zdravje, ne le zdravi posledic.",
     author: "Peter, 61 let"
   }];
-  const faqs = [{
-    question: "Ali lahko opravim aktivacijo brez nakupa naročnine?",
-    answer: "Ne, aktivacija je prvi korak 12-mesečnega programa. Program je zasnovan kot celota – začetna diagnostika in mesečno vodenje delujeta skupaj za najboljše rezultate."
-  }, {
-    question: "Zakaj naročnina traja vsaj 3 mesece?",
-    answer: "Preventiva potrebuje čas. Minimalni čas naročnine zagotavlja, da program deluje in da lahko spremljamo vaš napredek ter prilagodimo pristop."
-  }, {
-    question: "Kaj če zamudim mesečni posvet?",
-    answer: "Prenese se 1 mesec, največ 2× letno. Poskrbimo, da ne izgubite koristi programa."
-  }, {
-    question: "Ali lahko opravim UZ srca?",
-    answer: "Da, ultrazvok srca (ehokardiografija) je na voljo s popustom za člane programa."
-  }, {
-    question: "Kaj če imam simptome med meseci?",
-    answer: "Člani imajo dostop do zdravnika preko online kanala za vsa vprašanja in dodatno svetovanje."
-  }];
-  const legalTerms = ["Program Srce & Ožilje je 12-mesečni preventivni program.", "Aktivacijska cena 169 € se plača ob prvem obisku in ni vračljiva.", "Minimalno trajanje naročnine je 3 mesece.", "Odpoved z 30-dnevnim rokom po minimalnem obdobju.", "Preventivne storitve ne nadomeščajo urgentne medicine.", "Storitve se črpajo skozi leto po presoji zdravnika."];
+  const faqs = [
+    {
+      question: "Ali lahko kupim samo preventivni pregled brez naročnine?",
+      answer: "Da. Celostni preventivni kardiovaskularni pregled je samostojna storitev. Po pregledu se lahko odločite, ali želite nadaljevati v naročniškem modelu."
+    },
+    {
+      question: "Kaj dobim v naročnini 39 €/mesec?",
+      answer: "1× mesečni posvet (v živo ali online), prioritetno naročanje, koordinacijo ob težavah ter članske popuste (npr. -20% na medicinske posege in dodatne preiskave)."
+    },
+    {
+      question: "Ali se naročnina lahko kadarkoli prekine?",
+      answer: "Da. Naročnina je brez vezave. Odpoved je možna z 30-dnevnim odpovednim rokom."
+    },
+    {
+      question: "Ali lahko opravim UZ srca (ehokardiografijo)?",
+      answer: "Da, UZ srca je na voljo po indikaciji ali po želji – z ugodnejšo člansko ceno, če ste vključeni v naročnino."
+    },
+    {
+      question: "Kaj če imam simptome ali vprašanja po pregledu?",
+      answer: "Če ste v naročnini, imate dostop do zdravnika preko online kanala in možnost hitrejše usmeritve na dodatne preiskave."
+    }
+  ];
+  const legalTerms = [
+    "Celostni preventivni kardiovaskularni pregled je samostojna storitev (enkratno).",
+    "Naročnina 39 €/mesec je opcijska in brez vezave.",
+    "Odpoved naročnine je možna z 30-dnevnim odpovednim rokom.",
+    "Preventivne storitve ne nadomeščajo urgentne medicine.",
+    "Obseg dodatnih preiskav in posegov je po presoji zdravnika in/ali po želji pacienta."
+  ];
   return <Layout>
       <Helmet>
-        <title>Srce & Ožilje – Preventivni program za srce in presnovo | ASANTIS</title>
-        <meta name="description" content="Celosten 12-mesečni preventivni program za srce in ožilje. Aktivacijski pregled z internistom, laboratorijem, EKG in ultrazvoki žil + mesečna strokovna podpora." />
+        <title>Srce & Ožilje – Celostni preventivni kardiovaskularni pregled | ASANTIS</title>
+        <meta name="description" content="Celostni preventivni kardiovaskularni pregled: UZ žil + EKG + lipidni profil (vključno z Lp(a)) + ocena tveganja + osebni plan. Po pregledu opcijska naročnina 39 €/mesec za spremljanje in članske ugodnosti." />
         <meta name="keywords" content="srce, ožilje, preventiva, ultrazvok žil, internist, EKG, holesterol, krvni tlak, Ljubljana" />
         <link rel="canonical" href="https://asantis.si/paketi/srce-ozilje" />
       </Helmet>
@@ -151,38 +135,38 @@ const SrceOziljePage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Heart className="w-4 h-4" />
-              <span>12-mesečni preventivni program</span>
+              <span>Brez vezave • preventivni pregled + opcijska naročnina</span>
             </div>
             
             <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              🫀 Srce & Ožilje – Celosten program za srce, ožilje in presnovo
+              🫀 Srce & Ožilje – Celostni preventivni kardiovaskularni pregled
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">Preventivni pregled + ultrazvok žil + mesečna strokovna podpora. Za varno, stabilno in dolgoročno zdravo srce in ožilje.</p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">To ni klasičen pregled. To je sistematična ocena vašega zdravja in tveganj – z jasnim načrtom naprej. Po pregledu se lahko (če želite) vključite v naročnino za dolgoročno spremljanje.</p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
               <div className="flex items-center gap-2 text-foreground">
                 <CheckCircle className="w-5 h-5 text-primary" />
-                <span>Celovit začetni pregled s celotno diagnostiko</span>
+                <span>Celostni pregled z ultrazvoki žil + EKG + lipidnim profilom</span>
               </div>
               <div className="flex items-center gap-2 text-foreground">
                 <CheckCircle className="w-5 h-5 text-primary" />
-                <span>1× mesečni posvet + spremljanje</span>
+                <span>Po pregledu: opcijska naročnina za spremljanje in prioriteto</span>
               </div>
               <div className="flex items-center gap-2 text-foreground">
                 <CheckCircle className="w-5 h-5 text-primary" />
-                <span className="font-semibold">Le 1 € na dan</span>
+                <span className="font-semibold">Članski popust -20% na medicinske posege</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-red-600 hover:bg-red-700 shadow-lg">
                 <Heart className="w-5 h-5 mr-2" />
-                Rezerviraj aktivacijski pregled – 169 €
+                Rezerviraj preventivni pregled – 279 €
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/5">
                 <Calendar className="w-5 h-5 mr-2" />
-                Postani član – 39 € / mesec
+                Naročnina (neobvezno) – 39 € / mesec
               </Button>
             </div>
           </div>
@@ -274,15 +258,15 @@ const SrceOziljePage = () => {
                   <div className="flex items-center justify-between mb-6">
                     <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">
                       <Sparkles className="w-4 h-4" />
-                      <span>1. dan</span>
+                      <span>Enkratno</span>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm text-muted-foreground line-through">300–420 €</p>
-                      <p className="text-2xl font-bold text-red-600">169 €</p>
+                      <p className="text-sm text-muted-foreground line-through">390–540 €</p>
+                      <p className="text-2xl font-bold text-red-600">279 €</p>
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-6">A) Aktivacijski pregled</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">A) Preventivni pregled</h3>
                   
                   <div className="space-y-3">
                     {programFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
@@ -300,8 +284,8 @@ const SrceOziljePage = () => {
                         <FileText className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-foreground">Osebni zdravstveni načrt</h4>
-                        <p className="text-sm text-muted-foreground">+ Ocena srčno-žilnega tveganja</p>
+                        <h4 className="font-medium text-foreground">Osebni preventivni plan</h4>
+                        <p className="text-sm text-muted-foreground">+ Ocena kardiovaskularnega tveganja</p>
                       </div>
                     </div>
                   </div>
@@ -321,7 +305,7 @@ const SrceOziljePage = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-6">B) Mesečna naročnina</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">B) Naročnina (opcijsko)</h3>
                   
                   <div className="space-y-3">
                     {monthlyBenefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
@@ -332,7 +316,7 @@ const SrceOziljePage = () => {
 
                   <div className="mt-6 p-4 bg-primary/10 rounded-xl border border-primary/20">
                     <p className="text-center font-medium text-foreground">
-                      = Le <span className="text-2xl font-bold text-primary">1 €</span> na dan za celovito preventivo
+                      = <span className="font-semibold">Opcijsko nadaljevanje</span> za dolgoročno spremljanje in ugodnosti
                     </p>
                   </div>
                 </CardContent>
@@ -357,7 +341,7 @@ const SrceOziljePage = () => {
                       Najpogostejši ugovor
                     </h3>
                     <p className="text-lg text-muted-foreground italic">
-                      "Zakaj ne bi opravil vsega v prvem mesecu za 39 € in nato prekinil?"
+                      "Ali lahko kupim samo pregled in ne naročnine?"
                     </p>
                   </div>
                 </div>
@@ -365,20 +349,20 @@ const SrceOziljePage = () => {
                 <div className="space-y-4 pl-4 border-l-4 border-primary/30">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground">Ker program vključuje celoletno spremljanje zdravja z diagnostiko (UZ + laboratorij + internist).<strong>drago diagnostiko</strong> (UZ + laboratorij + internist), ki skupaj vreden 300–420 €.</p>
+                    <p className="text-foreground">Da. <strong>Celostni preventivni pregled</strong> je samostojna storitev z jasno vrednostjo (UZ žil + EKG + lipidni profil z Lp(a) + ocena tveganja + plan).</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground"><strong>Aktivacijski pregled</strong>Aktivacijski pregled. Aktivacijski pregled je začetni strošek, s katerim opravimo celovito oceno zdravstvenega stanja.</p>
+                    <p className="text-foreground">Naročnina <strong>ni obvezna</strong>. Je logična nadgradnja, če želite dolgoročno spremljanje, prioritetni dostop in koordinacijo ob težavah.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground">Mesečna naročnina je za strokovno vodenje in spremljanje zdravstvenega stanja, kar je bistvo preventive za strokovno vodenje in spremljanje vašega zdravstvenega stanja.<strong>strokovno vodenje in spremljanje</strong>, kar je bistvo preventive.</p>
+                    <p className="text-foreground">V naročnini dobite tudi <strong>članske ugodnosti</strong> (npr. -20% na medicinske posege in dodatne preiskave), zato se splača tudi, ko nimate akutnih težav.</p>
                   </div>
-                </div>
+</div>
 
                 <div className="mt-6 p-4 bg-white rounded-xl">
-                  <p className="text-muted-foreground text-center">Z naročilom dobite izjemen začetni paket diagnostike za nizko ceno aktivacije, nato pa z naročnino pridobite celostno strokovno spremljanje zdravja skozi celo leto.</p>
+                  <p className="text-muted-foreground text-center">Najprej opravite celostni preventivni pregled. Nato se sami odločite, ali želite nadaljevati v naročniškem modelu za spremljanje, hitrejši dostop in članske popuste.</p>
                 </div>
               </CardContent>
             </Card>
@@ -427,16 +411,16 @@ const SrceOziljePage = () => {
               <div className="bg-gradient-to-r from-primary/10 to-red-50 p-6">
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Skupna vrednost</p>
-                    <p className="text-xl font-bold text-foreground">1.065–1.355 €</p>
+                    <p className="text-sm text-muted-foreground mb-1">Vrednost preiskav</p>
+                    <p className="text-xl font-bold text-foreground">415–585 €</p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Cena paketa</p>
-                    <p className="text-xl font-bold text-primary">169 € + 39 € × 12 = 637 €</p>
+                    <p className="text-sm text-muted-foreground mb-1">Cena pregleda</p>
+                    <p className="text-xl font-bold text-primary">279 € (enkratno)</p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Prihranek</p>
-                    <p className="text-xl font-bold text-red-600">428–718 € (40–55 %)</p>
+                    <p className="text-sm text-muted-foreground mb-1">Prihranek pri pregledu</p>
+                    <p className="text-xl font-bold text-red-600">136–306 €</p>
                   </div>
                 </div>
               </div>
@@ -499,7 +483,7 @@ const SrceOziljePage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-                Za koga je program primeren?
+                Za koga je pregled in naročnina primerna?
               </h2>
             </div>
 
@@ -604,11 +588,11 @@ const SrceOziljePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-red-600 hover:bg-red-700 shadow-lg">
                 <Heart className="w-5 h-5 mr-2" />
-                Rezerviraj aktivacijski pregled – 169 €
+                Rezerviraj preventivni pregled – 279 €
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/5">
                 <Calendar className="w-5 h-5 mr-2" />
-                Postani član – 39 € / mesec
+                Naročnina (neobvezno) – 39 € / mesec
               </Button>
             </div>
 
